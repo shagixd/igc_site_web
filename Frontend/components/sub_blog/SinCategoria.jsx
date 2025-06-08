@@ -1,6 +1,6 @@
 import React from 'react';
-import PropsVariados from '../props/propsblog';
-import posts from '../props/posts.js';
+import PropsVariados from '../../props/propsblog.jsx';
+import posts from '../../props/posts.js';
 
 function SinCategoria() {
   // Filtra los posts por categoría, por ejemplo 'educacion'

@@ -1,5 +1,5 @@
 import React from 'react';
-import DiplomaCard from './props/moldeprops';
+import DiplomaCard from '../props/moldeprops';
 
 const diplomas = [
   {

@@ -1,4 +1,9 @@
 import React from 'react';
+import { FaFacebook } from 'react-icons/fa';
+import { RiWhatsappFill } from 'react-icons/ri';
+import { BiLogoInstagramAlt } from 'react-icons/bi';
+import { SiTiktok } from "react-icons/si";
+import { IoLogoYoutube } from "react-icons/io";
 
 export default function Footer() {
   return (
@@ -10,11 +15,11 @@ export default function Footer() {
           <p>Capacitación para Funcionarios y Servidores Públicos</p>
           {/* Si tienes iconos de redes sociales, pon sus rutas */}
           <div>
-            <img src="/img/1.png" alt="1" style={{ width: 24, marginRight: 5 }} />
-            <img src="/img/2.png" alt="2" style={{ width: 24, marginRight: 5 }} />
-            <img src="/img/3.png" alt="3" style={{ width: 24, marginRight: 5 }} />
-            <img src="/img/4.png" alt="4" style={{ width: 24, marginRight: 5 }} />
-            <img src="/img/5.png" alt="5" style={{ width: 24, marginRight: 5 }} />
+            <FaFacebook />
+            <RiWhatsappFill />
+            <BiLogoInstagramAlt />
+            <SiTiktok />
+            <IoLogoYoutube />
           </div>
         </div>
         <div className="footer-programs">

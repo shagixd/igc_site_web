@@ -1,108 +1,42 @@
+import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import Inicio from './Inicio.jsx';
-import Diploma_Especialidad from './Diplomas_Especialidad.jsx';
-import Diploma_Catalogos from './Diplomas_Catalogos.jsx';
-import Blog from './Blog.jsx';
-
-// Componentes para cada sección
-function Cursos() {
-  return <div>Aquí puedes ver nuestros cursos.</div>;
-}
-function Congresos() {
-  return <div>Próximos congresos y eventos.</div>;
-}
-function House() {
-  return <div>Información sobre House.</div>;
-}
-function Asesoria_Consultoria() {
-  return <div>Servicios de asesoría.</div>;
-}
-
-const sections = [
-  { key: 'inicio', label: 'Inicio', component: <Inicio /> },
-  { key: 'cursos', label: 'Cursos', component: <Cursos /> },
-  // Diplomas tendrá submenú, así que no se agrega aquí
-  { key: 'congresos', label: 'Congresos', component: <Congresos /> },
-  { key: 'blog', label: 'Blog', component: <Blog /> },
-  { key: 'house', label: 'House', component: <House /> },
-  { key: 'asesoria', label: 'Asesoría', component: <Asesoria_Consultoria /> },
-];
-
-const diplomasOptions = [
-  { key: 'diplomaA', label: 'Diploma Tipo A', component: <Diploma_Especialidad /> },
-  { key: 'diplomaB', label: 'Diploma Tipo B', component: <Diploma_Catalogos /> },
-];
+import { IoHome } from "react-icons/io5";
+import { TbBooks } from "react-icons/tb";
+import { FaBlogger } from "react-icons/fa6";
+import { MdGroups, MdOutlineHomeWork, MdSupportAgent } from "react-icons/md";
+import { PiCertificateFill } from "react-icons/pi";
+import { FaMedal, FaRegListAlt } from "react-icons/fa";
 
 function Nav() {
-  const [active, setActive] = useState('inicio');
-  const [showDiplomas, setShowDiplomas] = useState(false);
-
-  const handleDiplomasClick = () => {
-    setShowDiplomas(!showDiplomas);
-  };
-
-  const handleDiplomaOptionClick = (key) => {
-    setActive(key);
-    setShowDiplomas(false);
-  };
+  const [open, setOpen] = useState(false);
 
   return (
-    <div>
-      <nav>
-        {sections.map(section => (
-          <button
-            key={section.key}
-            onClick={() => setActive(section.key)}
-            style={{
-              fontWeight: active === section.key ? 'bold' : 'normal',
-              background: active === section.key ? '#eee' : 'white'
-            }}
-          >
-            {section.label}
-          </button>
-        ))}
-        {/* Botón de diplomas con submenú */}
-        <span style={{ position: 'relative', display: 'inline-block' }}>
-          <button
-            onClick={handleDiplomasClick}
-            style={{
-              fontWeight: active.startsWith('diploma') ? 'bold' : 'normal',
-              background: active.startsWith('diploma') ? '#eee' : 'white'
-            }}
-          >
-            Diplomas ▼
-          </button>
-          {showDiplomas && (
-            <div style={{
-              position: 'absolute',
-              background: 'white',
-              border: '1px solid #ccc',
-              zIndex: 1,
-              minWidth: '150px'
-            }}>
-              {diplomasOptions.map(option => (
-                <div
-                  key={option.key}
-                  onClick={() => handleDiplomaOptionClick(option.key)}
-                  style={{
-                    padding: '8px',
-                    cursor: 'pointer',
-                    background: active === option.key ? '#eee' : 'white'
-                  }}
-                >
-                  {option.label}
-                </div>
-              ))}
-            </div>
-          )}
-        </span>
-      </nav>
-      <div>
-        {/* Renderiza la sección activa o el diploma seleccionado */}
-        {sections.find(section => section.key === active)?.component ||
-          diplomasOptions.find(option => option.key === active)?.component}
+    <nav>
+      <Link to="/"><IoHome style={{ verticalAlign: 'middle', marginRight: 4 }} />Inicio</Link>
+      <Link to="/cursos"><TbBooks style={{ verticalAlign: 'middle', marginRight: 4 }} />Cursos</Link>
+      <Link to="/congresos"><MdGroups style={{ verticalAlign: 'middle', marginRight: 4 }} />Congresos</Link>
+      <Link to="/blog"><FaBlogger style={{ verticalAlign: 'middle', marginRight: 4 }} />Blog</Link>
+      <Link to="/house"><MdOutlineHomeWork style={{ verticalAlign: 'middle', marginRight: 4 }} />House</Link>
+      <Link to="/asesoria"><MdSupportAgent style={{ verticalAlign: 'middle', marginRight: 4 }} />Asesoría</Link>
+      <div style={{ display: 'inline-block', position: 'relative' }}>
+        <button
+          type="button"
+          onClick={() => setOpen((prev) => !prev)}
+          style={{ background: 'none', border: 'none', cursor: 'pointer', padding: 0 }}
+        >
+          <PiCertificateFill style={{ verticalAlign: 'middle', marginRight: 4 }} />
+          Diplomas ▼
+        </button>
+        {open && (
+          <div style={{ position: 'absolute', background: 'white', border: '1px solid #ccc', zIndex: 1 }}>
+            <Link to="/diplomas/especialidad" onClick={() => setOpen(false)}>
+            <FaMedal style={{ verticalAlign: 'middle', marginRight: 4 }} />Diplomas de Especialización</Link>
+            <Link to="/diplomas/catalogos" onClick={() => setOpen(false)}>
+            <FaRegListAlt style={{ verticalAlign: 'middle', marginRight: 4 }} />Catálogo de Diplomas</Link>
+          </div>
+        )}
       </div>
-    </div>
+    </nav>
   );
 }
 
