@@ -1,5 +1,5 @@
 import React from 'react';
-import PropsVariados from '../../props/propsblog.jsx';
+import PropBlog from '../../props/PropBlog.jsx';
 import posts from '../../props/posts.js';
 
 function Educacion() {
@@ -10,7 +10,7 @@ function Educacion() {
   return (
     <div>
       {postsFiltrados.map(post => (
-        <PropsVariados
+        <PropBlog
           key={post.id}
           {...post}
         />
