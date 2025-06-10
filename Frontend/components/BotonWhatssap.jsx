@@ -11,7 +11,7 @@ const style = {
   bottom: 24,
   right: 24,
   zIndex: 9999,
-  background: '#25D168',
+  background: '#10B850',
   color: '#fff',
   borderRadius: 30,
   width: 'auto',

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import FormularioCursosCatalogo from '../props/Formulario';
+import '../public/styles/House.css'; // <-- Vincula el CSS aquí
+import BotonConsultodo from '../props/BotonConsultodo';
 
 const seccion2Data = [
   {
@@ -46,7 +48,7 @@ function House() {
         <div>
           <h1>Programas de Capacitación IN HOUSE</h1>
           <p>Ofrecemos una amplia gama de servicios que incluyen conferencias, cursos, diplomados, seminarios y talleres. Nuestros programas están diseñados para satisfacer las necesidades específicas de su institución o área en particular.</p>
-          <button>Consulte al whatssap</button>
+          <BotonConsultodo texto="Contactanos" />
         </div>
       </div>
 
@@ -68,10 +70,14 @@ function House() {
             flex: 1
           }}>
           {seccion2Data.map((item, i) => (
-            <div key={i} className='icon-block' style={{ textAlign: 'center', padding: '12px 0' }}>
-              <div style={{ fontSize: '2rem' }}>{item.icon}</div>
-              <h4>{item.titulo}</h4>
-              <p>{item.descripcion}</p>
+            <div key={i} className='icon-block'>
+              <div className="icon-block-content">
+                <span className="icon-block-icon">{item.icon}</span>
+                <div>
+                  <h4>{item.titulo}</h4>
+                  <p>{item.descripcion}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>

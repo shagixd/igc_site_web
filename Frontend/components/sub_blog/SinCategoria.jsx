@@ -1,11 +1,11 @@
 import React from 'react';
 import PropsVariados from '../../props/PropBlog.jsx';
-import posts from '../../props/posts.js';
+import Datos from '../../props/ContenidoBlog.js';
 
 function SinCategoria() {
   // Filtra los posts por categoría, por ejemplo 'educacion'
   const categoriaSeleccionada = 'sincategoria'; // Cambia esto según la categoría que quieras mostrar
-  const postsFiltrados = posts.filter(post => post.categoria === categoriaSeleccionada);
+  const postsFiltrados = Datos.filter(post => post.categoria === categoriaSeleccionada);
 
   return (
     <div>

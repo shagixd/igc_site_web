@@ -1,0 +1,79 @@
+.nav-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff; /* azul claro */
+  padding: 0.5rem 1.5rem;
+}
+
+.nav-logo {
+  grid-column: 1 / 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  white-space: nowrap;
+  height: 100%;
+  width: 100%;
+}
+
+.nav-item > a,
+.nav-item > button,
+.nav-item > span {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  color: #005ec9 !important;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+/* Hover para todos los links del nav */
+.nav-item a:hover,
+.nav-item button:hover,
+.nav-item span:hover {
+  background: #e3f0ff !important;
+  color: #003366 !important;
+}
+
+/* Estilo para los links de los menús desplegables */
+.nav-item div[style*="position: absolute"] {
+  /* Quita el borde y mejora el padding */
+  border: none !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 0.3em 0.2em;
+  min-width: 220px;
+}
+
+.nav-item div[style*="position: absolute"] a,
+.nav-item div[style*="position: absolute"] span {
+  color: #005ec9 !important;
+  background: #fff !important;
+  padding: 0.4em 1em;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.2em 0;
+  width: 100%;
+  height: auto;
+  transition: background 0.2s, color 0.2s;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.nav-item div[style*="position: absolute"] a:hover,
+.nav-item div[style*="position: absolute"] span:hover {
+  background: #e3f0ff !important;
+  color: #003366 !important;
+}

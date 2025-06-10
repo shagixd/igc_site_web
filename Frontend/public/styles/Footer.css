@@ -1,0 +1,83 @@
+.footer {
+  background: #003366;
+  color: #fff;
+  padding: 1.5rem 0;
+}
+
+.grid-footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 1.5rem;
+  justify-items: start;
+  align-items: start;
+}
+
+.footer-logo,
+.footer-programs,
+.footer-about,
+.footer-contact {
+  margin: 0 1.5rem;
+}
+
+.footer-programs ul,
+.footer-about ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.footer-programs li,
+.footer-about li {
+  margin: 0;
+  padding: 0;
+}
+
+.footer-social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  margin-top: 18px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.footer-social-icon {
+  flex: 1 1 0;
+  max-width: 40px;
+  min-width: 28px;
+  width: 32px;
+  height: 32px;
+  background: #14508a;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border 0.2s;
+  margin: 0;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px 0 rgba(20, 80, 138, 0.1);
+}
+
+.footer-social-icon:nth-child(2) {
+  background: #25d366;
+}
+.footer-social-icon:nth-child(3) {
+  background: #e4405f;
+}
+.footer-social-icon:nth-child(4) {
+  background: #000;
+}
+.footer-social-icon:nth-child(5) {
+  background: #ff0000;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1.5px solid #2d4a6a;
+  padding-top: 16px;
+}

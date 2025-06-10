@@ -1,11 +1,11 @@
 import React from 'react';
 import PropBlog from '../../props/PropBlog.jsx';
-import posts from '../../props/posts.js';
+import Datos from '../../props/ContenidoBlog.js';
 
 function Educacion() {
   // Filtra los posts por categoría, por ejemplo 'educacion'
   const categoriaSeleccionada = 'educacion'; // Cambia esto según la categoría que quieras mostrar
-  const postsFiltrados = posts.filter(post => post.categoria === categoriaSeleccionada);
+  const postsFiltrados = Datos.filter(post => post.categoria === categoriaSeleccionada);
 
   return (
     <div>

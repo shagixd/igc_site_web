@@ -38,7 +38,7 @@ const PropsVariados = ({ titulo, descripcion, descripcion2, descripcionExtra, im
         }}
         onClick={() => setMostrarMas(!mostrarMas)}
       >
-        {mostrarMas ? 'Ocultar información' : 'Más información'}
+        {mostrarMas ? 'Ocultar informacion' : 'Mostrar más información'}
       </button>
     </div>
   );

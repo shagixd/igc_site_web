@@ -4,7 +4,7 @@ function Eventos() {
   return (
     <div>
       {/* Tu contenido aquí */}
-      <h1>All Post</h1>
+      <h1>Sin contenido</h1>
     </div>
   );
 }

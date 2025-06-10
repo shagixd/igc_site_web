@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaClipboardList, FaUniversity, FaLaptopCode, FaBoxes } from 'react-icons/fa';
+import FormularioSimple from '../props/FormularioSimple';
 
 function Asesoria_Consultoria() {
   return (
@@ -35,29 +36,7 @@ function Asesoria_Consultoria() {
       </div>
       <div>
         <h3>¡Solicita una cotización sin costo y compromiso!</h3>
-        <form>
-          <div>
-            <label htmlFor="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required />
-          </div>
-          <div>
-            <label htmlFor="apellido">Apellido:</label>
-            <input type="text" id="apellido" name="apellido" required />
-          </div>
-          <div>
-            <label htmlFor="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div>
-            <label htmlFor="telefono">Número telefónico:</label>
-            <input type="tel" id="telefono" name="telefono" required />
-          </div>
-          <div>
-            <label htmlFor="comentario">Comentario:</label>
-            <textarea id="comentario" name="comentario" rows="3" required />
-          </div>
-          <button type="submit">Enviar</button>
-        </form>
+        <FormularioSimple />
       </div>
     </>
   );

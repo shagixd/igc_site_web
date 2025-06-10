@@ -4,32 +4,43 @@ import { RiWhatsappFill } from 'react-icons/ri';
 import { BiLogoInstagramAlt } from 'react-icons/bi';
 import { SiTiktok } from "react-icons/si";
 import { IoLogoYoutube } from "react-icons/io";
+import '../public/styles/Footer.css'; // Asegúrate de tener este archivo CSS
 
 export default function Footer() {
   return (
-    <footer style={{ background: '#222', color: '#fff', padding: '2rem 0' }}>
-      <div className="footer-content" style={{ display: 'flex', justifyContent: 'space-around', flexWrap: 'wrap' }}>
+    <footer className="footer">
+      <div className="footer-content grid-footer">
         <div className="footer-logo">
-          {/* Coloca la ruta real de tu logo */}
-          <img src="/img/logo.png" alt="logo empresa" style={{ width: 120, marginBottom: 10 }} />
+          {/* Ruta real de tu logo */}
+          <img src="../img/LOGO-IGC-1.png" alt="logo empresa" style={{ width: 120, marginBottom: 10 }} />
           <p>Capacitación para Funcionarios y Servidores Públicos</p>
-          {/* Si tienes iconos de redes sociales, pon sus rutas */}
-          <div>
-            <FaFacebook />
-            <RiWhatsappFill />
-            <BiLogoInstagramAlt />
-            <SiTiktok />
-            <IoLogoYoutube />
+          {/* Iconos de redes sociales con enlaces personalizables */}
+          <div className="footer-social-icons">
+            <a href="https://www.facebook.com/IGCinstituto/" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+              <FaFacebook color="#fff" />
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=51945504555&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+              <RiWhatsappFill color="#fff" />
+            </a>
+            <a href="https://www.instagram.com/igcintercontinental/#" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+              <BiLogoInstagramAlt color="#fff" />
+            </a>
+            <a href="https://www.tiktok.com/@institutodegerenciaigc" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+              <SiTiktok color="#fff" />
+            </a>
+            <a href="https://www.youtube.com/@intercontinentaligcsac7674" target="_blank" rel="noopener noreferrer" className="footer-social-icon">
+              <IoLogoYoutube color="#fff" />
+            </a>
           </div>
         </div>
         <div className="footer-programs">
           <h3>Programas</h3>
           <ul>
-            <li><a href="#">Cursos Especiales</a></li>
-            <li><a href="#">Diplomas</a></li>
-            <li><a href="#">In-House</a></li>
-            <li><a href="#">Catálogo de Diplomas</a></li>
-            <li><a href="#">Catálogo de Cursos</a></li>
+            <li>Cursos Especiales</li>
+            <li>Diplomas</li>
+            <li>In-House</li>
+            <li>Catálogo de Diplomas</li>
+            <li>Catálogo de Cursos</li>
           </ul>
         </div>
         <div className="footer-about">
@@ -45,7 +56,7 @@ export default function Footer() {
           <p>Teléfono: 945 504 555</p>
         </div>
       </div>
-      <div className="copyright" style={{ textAlign: 'center', marginTop: 20 }}>
+      <div className="copyright">
         <p>Copyright © 2022 Instituto de Gerencia Intercontinental. Todos los derechos reservados.</p>
       </div>
     </footer>

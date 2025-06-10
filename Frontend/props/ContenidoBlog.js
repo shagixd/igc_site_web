@@ -1,4 +1,4 @@
-const posts = [
+const Datos = [
   {
     id: 1,
     titulo: 'GESTIÓN DE OBRAS PUBLICAS',
@@ -199,4 +199,4 @@ const posts = [
   }
 ];
 
-export default posts;
+export default Datos;
