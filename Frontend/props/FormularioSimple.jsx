@@ -4,7 +4,7 @@ function FormularioSimple() {
   return (
     <form
       style={{
-        maxWidth: '400px',
+        width: '80%',
         margin: '0 auto',
         display: 'flex',
         flexDirection: 'column',

@@ -45,51 +45,36 @@ function House() {
   return (
     <>
       <div className='fondo'>
-        <div>
+        <div className='fondo-texto'>
           <h1>Programas de Capacitación IN HOUSE</h1>
           <p>Ofrecemos una amplia gama de servicios que incluyen conferencias, cursos, diplomados, seminarios y talleres. Nuestros programas están diseñados para satisfacer las necesidades específicas de su institución o área en particular.</p>
           <BotonConsultodo texto="Contactanos" />
         </div>
       </div>
 
-      <div
-        className='seccion2-main'
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          gap: '32px',
-          marginTop: '24px',
-          alignItems: 'center'
-        }}>
-        <div
-          className='seccion2-list'
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '24px',
-            flex: 1
-          }}>
-          {seccion2Data.map((item, i) => (
-            <div key={i} className='icon-block'>
-              <div className="icon-block-content">
-                <span className="icon-block-icon">{item.icon}</span>
-                <div>
-                  <h4>{item.titulo}</h4>
-                  <p>{item.descripcion}</p>
+      <div className='seccion2-contenedor'>
+        <div className='seccion2-main'>
+          <div className='seccion2-list'>
+            {seccion2Data.map((item, i) => (
+              <div key={i} className='icon-block'>
+                <div className="icon-block-content">
+                  <span className="icon-block-icon">
+                    {item.icon}
+                  </span>
+                  <div>
+                    <h4 style={{ margin: 0 }}>{item.titulo}</h4>
+                    <p style={{ margin: 0 }}>{item.descripcion}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-        <div className='seccion2-image' style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
-          <img
-            src={images[current]}
-            alt="IN HOUSE"
-            style={{ width: '100%', maxWidth: '400px', borderRadius: '12px', objectFit: 'cover', transition: 'all 0.5s' }}
-          />
+        <div className='seccion2-image'>
+          <img src={images[current]} alt="IN HOUSE" className="seccion2-img"/>
         </div>
       </div>
-      <h3>Completa el formulario y te ayudaremos a preparar la capacitación para tu entidad.</h3>
+      <h3 className='sub_titulo'>Completa el formulario y te ayudaremos a preparar la capacitación para tu entidad.</h3>
       <div className='formulario-cursos'>
         <FormularioCursosCatalogo />
       </div>

@@ -5,6 +5,7 @@ import Educacion from './sub_blog/Educacion.jsx';
 import Eventos from './sub_blog/Eventos.jsx';
 import Innovacion from './sub_blog/Innovacion.jsx';
 import SinCategoria from './sub_blog/SinCategoria.jsx';
+import '../public/styles/Blog.css'; // Asegúrate de tener este archivo CSS
 
 // Componente para mostrar el contenido según la categoría seleccionada
 function BlogSectionContent({ section }) {
@@ -30,12 +31,11 @@ function Blog() {
 
     return (
         <>
-            <div>
-                <h4>NOTICIAS</h4>
-                <h2>Últimas publicaciones y noticias</h2>
+            <div className='blog-titulo'>
+                <h2>NOTICIAS</h2>
                 <p>Bienvenido al blog del Instituto de Gerencia Intercontinental</p>
             </div>
-            <nav>
+            <nav className='blog-nav'>
                 <button onClick={() => setActiveSection('AllPost')}>All Post</button>
                 <button onClick={() => setActiveSection('Digital')}>Digital</button>
                 <button onClick={() => setActiveSection('Educación')}>Educación</button>

@@ -1,4 +1,5 @@
 import React from 'react';
+import '../public/styles/Formulario.css';
 
 const cursos = [
   "El Nuevo Sistema de Inversión Pública Invierte.pe",
@@ -51,36 +52,38 @@ const cursos = [
   "Ofimática."
 ];
 
-const inputStyle = { width: '100%', marginBottom: '12px', boxSizing: 'border-box' };
-
 const FormularioCursosCatalogo = () => (
-  <form method="post" action="" style={{ maxWidth: '400px', margin: '32px auto', padding: '16px', boxSizing: 'border-box' }}>
-    <div>
-      <label>Nombre:</label><br />
-      <input type="text" name="nombre" required style={inputStyle} />
+  <form
+    method="post"
+    action=""
+    className="formulario-catalogo"
+  >
+    <div className="form-group">
+      <label className="form-label">Nombre:</label>
+      <input type="text" name="nombre" required className="form-input" />
     </div>
-    <div>
-      <label>Apellido:</label><br />
-      <input type="text" name="apellido" required style={inputStyle} />
+    <div className="form-group">
+      <label className="form-label">Apellido:</label>
+      <input type="text" name="apellido" required className="form-input" />
     </div>
-    <div>
-      <label>Correo:</label><br />
-      <input type="email" name="correo" required style={inputStyle} />
+    <div className="form-group">
+      <label className="form-label">Correo:</label>
+      <input type="email" name="correo" required className="form-input" />
     </div>
-    <div>
-      <label>Catálogo de Cursos:</label><br />
-      <select name="catalogo" required defaultValue="" style={inputStyle}>
+    <div className="form-group">
+      <label className="form-label">Catálogo de Cursos:</label>
+      <select name="catalogo" required defaultValue="" className="form-input">
         <option value="" disabled>Seleccione un curso</option>
         {cursos.map((curso, idx) => (
           <option key={idx} value={curso}>{curso}</option>
         ))}
       </select>
     </div>
-    <div>
-      <label>Comentario:</label><br />
-      <textarea name="comentario" rows="3" style={inputStyle}></textarea>
+    <div className="form-group">
+      <label className="form-label">Comentario:</label>
+      <textarea name="comentario" rows="3" className="form-input"></textarea>
     </div>
-    <button type="submit" style={{ width: '100%' }}>Enviar solicitud</button>
+    <button type="submit" className="form-btn">Enviar solicitud</button>
   </form>
 );
 
