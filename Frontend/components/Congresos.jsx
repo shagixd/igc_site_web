@@ -1,124 +1,117 @@
 import React from 'react';
 import DiplomaCard from '../props/PropInfo';
+import '../public/styles/Congresos.css'; // Asegúrate de tener este archivo CSS
 
 const congresos = [
   {
     titulo: 'CONGRESO INTERNACIONAL DE ASISTENTES DE GERENCIA Y SECRETARIAS',
     descripcion: 'Actualízate en normativas y tendencias tributarias.',
     imagen: '/img/congreso-tributacion.png',
-    colorFondo: '#e3f2fd',
-    colorTexto: '#1565c0',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-internacional-asistentes-gerencia'
   },
   {
-    titulo: 'CONGRESO INTERNACIONAL DE ASISTENTES DE GERENCIA Y SECRETARIAS',
+    titulo: 'CONGRESO DE INNOVACION SECRETARIAL Y TECNOLOGIA',
     descripcion: 'Innovación y buenas prácticas en la gestión pública.',
     imagen: '/img/congreso-gestion.png',
-    colorFondo: '#e8f5e9',
-    colorTexto: '#2e7d32',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-innovacion-secretarial'
   },
   {
-    titulo: 'CONGRESO INTERNACIONAL DE ASISTENTES DE GERENCIA Y SECRETARIAS',
+    titulo: '12° Congreso Nacional de secretarias y Asistentes de Gerencia en Gestión Pública',
     descripcion: 'Nuevas estrategias en finanzas estatales.',
     imagen: '/img/congreso-finanzas.png',
-    colorFondo: '#fff3e0',
-    colorTexto: '#ef6c00',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
-  },
-  {
-    titulo: 'C12° Congreso Nacional de secretarias y Asistentes de Gerencia en Gestión Pública',
-    descripcion: 'Profundiza en procesos y normativas de contrataciones.',
-    imagen: '/img/congreso-contrataciones.png',
-    colorFondo: '#f3e5f5',
-    colorTexto: '#6a1b9a',
-    inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-nacional-secretarias-12'
   },
   {
     titulo: 'Congreso Internacional de Gerencia y Gestión de finanzas públicas',
     descripcion: 'Tendencias en gestión de talento en el sector público.',
     imagen: '/img/congreso-rrhh.png',
-    colorFondo: '#e0f7fa',
-    colorTexto: '#00838f',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-gerencia-finanzas-publicas'
   },
   {
     titulo: '11° congreso nacional de secretarias y asistentes de gerencia en gestión pública',
     descripcion: 'Ética y transparencia en la función pública.',
     imagen: '/img/congreso-etica.png',
-    colorFondo: '#fce4ec',
-    colorTexto: '#ad1457',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-nacional-secretarias-11'
   },
   {
     titulo: 'XIV congreso nacional de asistentes de gerencia y secretaria',
     descripcion: 'Nuevas tecnologías en la administración pública.',
     imagen: '/img/congreso-tecnologia.png',
-    colorFondo: '#ede7f6',
-    colorTexto: '#4527a0',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-nacional-asistentes-xiv'
   },
   {
     titulo: 'IV congreso nacional de presupuesto y finanzas públicos.',
     descripcion: 'Desarrollo sostenible y políticas públicas.',
     imagen: '/img/congreso-sostenible.png',
-    colorFondo: '#fffde7',
-    colorTexto: '#f9a825',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-nacional-presupuesto-iv'
   },
   {
     titulo: '3er. Congreso Nacional de Presupuesto Público y Gestión de Finanzas Públicas',
     descripcion: 'Liderazgo y gestión del cambio en el sector público.',
     imagen: '/img/congreso-liderazgo.png',
-    colorFondo: '#e3f2fd',
-    colorTexto: '#1565c0',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-nacional-presupuesto-3er'
   },
   {
     titulo: '2do. Congreso Internacional de Gerencia y Gestión De Finanzas Públicas',
     descripcion: 'Innovación en servicios públicos y atención al ciudadano.',
     imagen: '/img/congreso-servicios.png',
-    colorFondo: '#e8f5e9',
-    colorTexto: '#2e7d32',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-internacional-gerencia-2do'
   },
   {
     titulo: '1er. Congreso Nacional de Administración Financiera del Sector Publico',
     descripcion: 'Estrategias de comunicación efectiva en el sector público.',
     imagen: '/img/congreso-comunicacion.png',
-    colorFondo: '#fff3e0',
-    colorTexto: '#ef6c00',
     inicioClases: 'Agosto 2024',
-    certificado: 'Certificado de Participación'
+    certificado: 'Certificado de Participación',
+    link: '/congresos/congreso-nacional-administracion-1er'
   }
 ];
 
 const Congresos = () => (
   <div>
-    <h2>Congresos</h2>
-    <p>Instituto de Gerencia Intercontinental</p>
-    <div className="diplomas-container">
-      {congresos.map((congreso, idx) => (
+    <div className="congresos-titulo">
+      <h2>Congresos</h2>
+      <p>Instituto de Gerencia Intercontinental</p>
+    </div>
+    <div className="congresos-container">
+      {congresos.map((congreso) => (
         <DiplomaCard
-          key={idx}
+          key={congreso.link}
           titulo={congreso.titulo}
           //descripcion={congreso.descripcion}//
           imagen={congreso.imagen}
-          colorFondo={congreso.colorFondo}
-          colorTexto={congreso.colorTexto}
           inicioClases={congreso.inicioClases}
           certificado={congreso.certificado}
-          style={((idx + 1) % 3 === 0) ? { marginRight: 0 } : {}}
+          boton={
+            <a
+              href={`${congreso.link}?titulo=${encodeURIComponent(
+                congreso.titulo
+              )}&inicioClases=${encodeURIComponent(
+                congreso.inicioClases
+              )}`}
+              className="congreso-boton"
+            >
+              Más información
+            </a>
+          }
         />
       ))}
     </div>

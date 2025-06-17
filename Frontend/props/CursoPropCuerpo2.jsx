@@ -3,10 +3,8 @@ import FormularioSimple from './FormularioSimple';
 
 const labels = [
   'Presentacion',
-  'Objetivo',
-  'Metodologia',
   'Dirigido a',
-  'Metodo de evaluacion'
+  '¿Por qué debemos asistir al congreso?'
 ];
 
 const boxStyle = {
@@ -20,7 +18,7 @@ const boxStyle = {
   transition: 'height 0.2s'
 };
 
-const CursoPropCuerpo = ({contenidos }) => {
+const CursoPropCuerpo2 = ({contenidos }) => {
   const [selected, setSelected] = useState(null);
   const [showCert, setShowCert] = useState(false);
   const [showBenef, setShowBenef] = useState(false);
@@ -68,48 +66,45 @@ const CursoPropCuerpo = ({contenidos }) => {
             </div>
           </div>
           {/* Caja de beneficio y certificado */}
-          <div style={{ ...boxStyle, width: '100%', background: 'none', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 0 }}>
+          <div style={{ ...boxStyle, width: '100%', background: 'none', border: 'none' }}>
             {/* Beneficio section */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '14px',
-              marginBottom: '14px',
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '10px', 
+              marginBottom: '8px',
               background: '#fff',
               border: '1.5px solid #7c3aed',
               borderRadius: 0,
-              padding: 0,
-              minHeight: 70,
-              width: 760,
-              maxWidth: '100%',
-              justifyContent: 'center'
+              padding: '0 0 0 0',
+              minHeight: 56
             }}>
-              <div style={{
-                fontSize: '2.7rem',
-                background: '#7c3aed',
-                width: 70,
-                height: 70,
-                display: 'flex',
-                alignItems: 'center',
+              <div style={{ 
+                fontSize: '2rem', 
+                background: '#7c3aed', 
+                width: 56, 
+                height: 56, 
+                display: 'flex', 
+                alignItems: 'center', 
                 justifyContent: 'center',
                 color: '#fff',
                 borderRadius: 0
               }}>🎁</div>
-              <div style={{ fontWeight: 'bold', flex: 1, color: '#4b2996', fontSize: 26, paddingLeft: 16, textAlign: 'center' }}>Beneficio</div>
+              <div style={{ fontWeight: 'bold', flex: 1, color: '#4b2996', fontSize: 18, paddingLeft: 12 }}>Beneficio</div>
               <button
                 style={{
-                  fontSize: '2rem',
+                  fontSize: '1.5rem',
                   background: '#c7b6f7',
                   border: 'none',
                   borderRadius: 0,
                   color: '#4b2996',
-                  width: 54,
-                  height: 54,
+                  width: 36,
+                  height: 36,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginRight: 16
+                  marginRight: 12
                 }}
                 onClick={() => setShowBenef((prev) => !prev)}
                 aria-label="Mostrar información de beneficio"
@@ -117,68 +112,81 @@ const CursoPropCuerpo = ({contenidos }) => {
                 {showBenef ? '−' : '+'}
               </button>
             </div>
-            <div style={{ width: 760, maxWidth: '100%', textAlign: 'center' }}>
+            <div style={{ width: '100%' }}>
               {showBenef && (
-                <div style={{ marginBottom: '22px', border: '1.5px solid #7c3aed', padding: 28, fontSize: 21 }}>
-                  <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
+                <div style={{ marginBottom: '16px', border: '1.5px solid #7c3aed', padding: 12 }}>
+                  <ul style={{ margin: 0, paddingLeft: 20 }}>
                     <li>Al concluir el curso de capacitación recibirá el certificado correspondiente válido por la cantidad de horas realizadas</li>
                     <li>Materiales impresos de todo el curso</li>
                     <li>Material del contenido de las clases en DVD o formato digital</li>
                     <li>Examen por módulos (opcional)</li>
                   </ul>
-                  <div style={{ marginTop: 16, textAlign: 'left' }}>
-                    <b>Plataforma Virtual:</b> Acceso a nuestra plataforma virtual donde podrás seguir las clases en vivo, descargar material y resolver las evaluaciones de cada sesión.<br />
-                    <b>Soporte Constante:</b> Nuestros asesores estarán pendientes en lo que usted pueda necesitar apoyo académico.<br />
-                    <b>Descargas de Clases:</b> Puedes descargar la grabación de tus sesiones desarrolladas en vivo una vez concluida la clase.<br />
-                    <b>Envío a Domicilio:</b> Enviaremos los materiales y certificados correspondientes a tu domicilio a nivel nacional previo adicional de pago para el envío.<br />
-                    <b>Clases en Vivo:</b> Tus clases en vivo desde nuestra plataforma virtual.<br />
-                    <b>50 Horas Académicas:</b> Recibirás 50 horas académicas a lo largo del ciclo lectivo.
-                  </div>
+                  <h4 style={{ marginBottom: 4, marginTop: 16 }}>Plataforma Virtual</h4>
+                  <p style={{ marginTop: 0, marginBottom: 12 }}>
+                    Acceso a nuestra plataforma virtual donde podrás seguir las clases en vivo, descargar material y resolver las evaluaciones de cada sesión.
+                  </p>
+                  <h4 style={{ marginBottom: 4 }}>Soporte Constante</h4>
+                  <p style={{ marginTop: 0, marginBottom: 12 }}>
+                    Nuestros asesores estarán pendientes en lo que usted pueda necesitar apoyo académico.
+                  </p>
+                  <h4 style={{ marginBottom: 4 }}>Descargas de Clases</h4>
+                  <p style={{ marginTop: 0, marginBottom: 12 }}>
+                    Puedes descargar la grabación de tus sesiones desarrolladas en vivo una vez concluida la clase.
+                  </p>
+                  <h4 style={{ marginBottom: 4 }}>Envío a Domicilio</h4>
+                  <p style={{ marginTop: 0, marginBottom: 12 }}>
+                    Enviaremos los materiales y certificados correspondientes a tu domicilio a nivel nacional previo adicional de pago para el envío.
+                  </p>
+                  <h4 style={{ marginBottom: 4 }}>Clases en Vivo</h4>
+                  <p style={{ marginTop: 0, marginBottom: 12 }}>
+                    Tus clases en vivo desde nuestra plataforma virtual.
+                  </p>
+                  <h4 style={{ marginBottom: 4 }}>50 Horas Académicas</h4>
+                  <p style={{ marginTop: 0, marginBottom: 12 }}>
+                    Recibirás 50 horas académicas a lo largo del ciclo lectivo.
+                  </p>
                 </div>
               )}
             </div>
             {/* Certificado section */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '14px',
-              marginBottom: '14px',
-              marginTop: '26px',
+            <div style={{ 
+              display: 'flex', 
+              alignItems: 'center', 
+              gap: '10px', 
+              marginBottom: '8px', 
+              marginTop: '16px',
               background: '#fff',
               border: '1.5px solid #7c3aed',
               borderRadius: 0,
-              padding: 0,
-              minHeight: 70,
-              width: 760,
-              maxWidth: '100%',
-              justifyContent: 'center'
+              padding: '0 0 0 0',
+              minHeight: 56
             }}>
-              <div style={{
-                fontSize: '2.7rem',
-                background: '#7c3aed',
-                width: 70,
-                height: 70,
-                display: 'flex',
-                alignItems: 'center',
+              <div style={{ 
+                fontSize: '2rem', 
+                background: '#7c3aed', 
+                width: 56, 
+                height: 56, 
+                display: 'flex', 
+                alignItems: 'center', 
                 justifyContent: 'center',
                 color: '#fff',
                 borderRadius: 0
               }}>🏅</div>
-              <div style={{ fontWeight: 'bold', flex: 1, color: '#4b2996', fontSize: 26, paddingLeft: 16, textAlign: 'center' }}>Certificado</div>
+              <div style={{ fontWeight: 'bold', flex: 1, color: '#4b2996', fontSize: 18, paddingLeft: 12 }}>Certificado</div>
               <button
                 style={{
-                  fontSize: '2rem',
+                  fontSize: '1.5rem',
                   background: '#c7b6f7',
                   border: 'none',
                   borderRadius: 0,
                   color: '#4b2996',
-                  width: 54,
-                  height: 54,
+                  width: 36,
+                  height: 36,
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginRight: 16
+                  marginRight: 12
                 }}
                 onClick={() => setShowCert((prev) => !prev)}
                 aria-label="Mostrar información de certificado"
@@ -186,19 +194,19 @@ const CursoPropCuerpo = ({contenidos }) => {
                 {showCert ? '−' : '+'}
               </button>
             </div>
-            <div style={{ width: 760, maxWidth: '100%', textAlign: 'center' }}>
+            <div style={{ width: '100%' }}>
               {showCert && (
-                <div style={{ border: '1.5px solid #7c3aed', padding: 28, fontSize: 21 }}>
-                  <p style={{ marginBottom: 16 }}>La CERTIFICACIÓN es válida de acuerdo a los estándares de SERVIR, según la Normativa de la Presidencia Ejecutiva Nº 141-2016-SERVIR-PE sobre “Normas para la gestión del proceso de capacitación en las entidades públicas”.</p>
-                  <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
+                <div style={{ border: '1.5px solid #7c3aed', padding: 12 }}>
+                  <p>La CERTIFICACIÓN es válida de acuerdo a los estándares de SERVIR, según la Normativa de la Presidencia Ejecutiva Nº 141-2016-SERVIR-PE sobre “Normas para la gestión del proceso de capacitación en las entidades públicas”.</p>
+                  <ul style={{ margin: 0, paddingLeft: 20 }}>
                     <li>Asimismo los participantes que cumplan con los requisitos del Congreso y que obtengan nota aprobatoria en las evaluaciones del Congreso obtendrán el certificado otorgado por EGG (Indispensable aprobar el curso y récord de Asistencia al 90%).</li>
                     <li>Un Certificado válido para postular a convocatorias Públicas y Privadas</li>
                   </ul>
-                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 22 }}>
+                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 20 }}>
                     <img
                       src="https://www.universia.net/content/dam/universia/images/certificado-ejemplo.png"
                       alt="Ejemplo de certificado"
-                      style={{ maxWidth: '520px', width: '100%', height: '220px', objectFit: 'contain', border: '1px solid #ccc', borderRadius: 0, display: 'block' }}
+                      style={{ maxWidth: '480px', width: '100%', height: '260px', objectFit: 'contain', border: '1px solid #ccc', borderRadius: 0, display: 'block' }}
                     />
                   </div>
                 </div>
@@ -215,4 +223,4 @@ const CursoPropCuerpo = ({contenidos }) => {
   );
 };
 
-export default CursoPropCuerpo;
+export default CursoPropCuerpo2;

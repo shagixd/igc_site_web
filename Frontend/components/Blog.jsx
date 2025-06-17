@@ -8,32 +8,33 @@ import SinCategoria from './sub_blog/SinCategoria.jsx';
 import '../public/styles/Blog.css'; // Asegúrate de tener este archivo CSS
 
 // Componente para mostrar el contenido según la categoría seleccionada
-function BlogSectionContent({ section }) {
+function BlogSectionContent({ section, onExpandChange }) {
     switch (section) {
         case 'Digital':
-            return <Digital />;
+            return <Digital onExpandChange={onExpandChange} />;
         case 'Educación':
-            return <Educacion />;
+            return <Educacion onExpandChange={onExpandChange} />;
         case 'Eventos':
-            return <Eventos />;
+            return <Eventos onExpandChange={onExpandChange} />;
         case 'Innovación':
-            return <Innovacion />;
+            return <Innovacion onExpandChange={onExpandChange} />;
         case 'Sin categoría':
-            return <SinCategoria />;
+            return <SinCategoria onExpandChange={onExpandChange} />;
         case 'AllPost':
         default:
-            return <AllPost />;
+            return <AllPost onExpandChange={onExpandChange} />;
     }
 }
 
 function Blog() {
     const [activeSection, setActiveSection] = useState('AllPost');
+    const [expandView, setExpandView] = useState(false);
 
     return (
         <>
             <div className='blog-titulo'>
-                <h2>NOTICIAS</h2>
-                <p>Bienvenido al blog del Instituto de Gerencia Intercontinental</p>
+                <h2>BLOG</h2>
+                <p>Instituto de Gerencia Intercontinental</p>
             </div>
             <nav className='blog-nav'>
                 <button onClick={() => setActiveSection('AllPost')}>All Post</button>
@@ -43,7 +44,15 @@ function Blog() {
                 <button onClick={() => setActiveSection('Innovación')}>Innovación</button>
                 <button onClick={() => setActiveSection('Sin categoría')}>Sin categoría</button>
             </nav>
-            <BlogSectionContent section={activeSection} />
+            <div className='blog-subtitulo'>
+                <h4>NOTICIAS</h4>
+                <h3>Últimas publicaciones y noticias</h3>
+                <p>Bienvenido al blog del Instituto de Gerencia Intercontinental</p>
+            </div>
+            <div className={`blog-content${expandView ? " expand" : ""}`}>
+                <BlogSectionContent section={activeSection} onExpandChange={setExpandView} />
+            </div>
+            
         </>
     );
 }

@@ -8,29 +8,32 @@
   justify-content: flex-start;
   padding-left: 5vw;
   padding-right: 5vw;
+  border: 1px solid #000000;
 }
 
 .asesoria-titulo-texto {
   background: rgba(255,255,255,0.92);
   padding: 2rem 2.5rem;
-  border-radius: 12px;
-  max-width: 600px;
+  max-width: 740px;
   margin-left: 0;
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin: 3rem;
+  border-radius: 12px;
 }
 
 .asesoria-titulo-texto h1 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-  color: #222;
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #0d1e4a;
+  text-align: center;
+  letter-spacing: 0.5px;
+  padding: 18px 0;
+  margin-bottom: 0.5rem;
 }
 
 .asesoria-titulo-texto p {
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
-  color: #444;
+  color: #333;
+  font-size: 2rem;
 }
 
 .cubo-grid {

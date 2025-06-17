@@ -2,7 +2,7 @@ import React from 'react';
 import PropsVariados from '../../props/PropBlog.jsx';
 import Datos from '../../props/ContenidoBlog.js';
 
-function SinCategoria() {
+function SinCategoria({ onExpandChange }) {
   // Filtra los posts por categoría, por ejemplo 'educacion'
   const categoriaSeleccionada = 'sincategoria'; // Cambia esto según la categoría que quieras mostrar
   const postsFiltrados = Datos.filter(post => post.categoria === categoriaSeleccionada);
@@ -13,6 +13,7 @@ function SinCategoria() {
         <PropsVariados
           key={post.id}
           {...post}
+          onExpandChange={onExpandChange}
         />
       ))}
     </div>

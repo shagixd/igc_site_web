@@ -7,7 +7,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#e53935',
     categoria: 'educacion'
   },
   {
@@ -18,7 +17,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#8e24aa',
     categoria: 'innovacion'
   },
   {
@@ -29,7 +27,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#3949ab',
     categoria: 'sincategoria'
   },
   {
@@ -40,7 +37,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#039be5',
     categoria: 'educacion'
   },
   {
@@ -51,7 +47,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#00897b',
     categoria: 'educacion'
   },
   {
@@ -62,7 +57,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#43a047',
     categoria: 'educacion'
   },
   {
@@ -73,7 +67,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#fbc02d',
     categoria: 'innovacion'
   },
   {
@@ -84,7 +77,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#fb8c00',
     categoria: 'sincategoria'
   },
   {
@@ -95,7 +87,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#6d4c41',
     categoria: 'innovacion'
   },
   {
@@ -106,7 +97,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#d81b60',
     categoria: 'sincategoria'
   },
   {
@@ -117,7 +107,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#5e35b1',
     categoria: 'sincategoria'
   },
   {
@@ -128,7 +117,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#3949ab',
     categoria: 'innovacion'
   },
   {
@@ -139,7 +127,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#00838f',
     categoria: 'sincategoria'
   },
   {
@@ -150,7 +137,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#c0ca33',
     categoria: 'sincategoria'
   },
   {
@@ -161,7 +147,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#f4511e',
     categoria: 'educacion'
   },
   {
@@ -172,7 +157,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#6d4c41',
     categoria: 'innovacion'
   },
   {
@@ -183,7 +167,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#00acc1',
     categoria: 'innovacion'
   },
   {
@@ -194,7 +177,6 @@ const Datos = [
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
     imagen: '/img/digital1.png',
     colorTexto: '#000000',
-    colorBorde: '#7e57c2',
     categoria: 'educacion'
   }
 ];

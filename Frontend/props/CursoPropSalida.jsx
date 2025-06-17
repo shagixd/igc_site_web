@@ -12,10 +12,21 @@ const CursoPropSalida = ({ secciones }) => {
   };
 
   return (
-    <div>
+    <div style={{ width: '100%', height: '100%' }}>
       {Array.isArray(secciones) && secciones.length > 0 ? (
         secciones.map((seccion, idx) => (
-          <div key={idx} style={{ marginBottom: '1rem', border: '1px solid #e0e0e0', borderRadius: 8, padding: 12 }}>
+          <div
+            key={idx}
+            style={{
+              marginBottom: '1.5rem',
+              border: '1px solid #e0e0e0',
+              borderRadius: 12,
+              padding: 24,
+              width: '100%',
+              boxSizing: 'border-box',
+              minHeight: 90
+            }}
+          >
             <button
               onClick={() => toggleSeccion(idx)}
               style={{
@@ -25,19 +36,27 @@ const CursoPropSalida = ({ secciones }) => {
                 border: 'none',
                 width: '100%',
                 textAlign: 'left',
-                fontSize: '1rem',
+                fontSize: '1.35rem',
                 cursor: 'pointer',
-                fontWeight: 'bold'
+                fontWeight: 'bold',
+                minHeight: 64,
+                paddingTop: 16,
+                paddingBottom: 16,
+                borderRadius: 8
               }}
             >
               <span style={{ flex: 1 }}>{seccion.titulo}</span>
-              <span style={{ fontSize: '1.5rem', transition: 'transform 0.2s', transform: abiertas.includes(idx) ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+              <span style={{
+                fontSize: '2rem',
+                transition: 'transform 0.2s',
+                transform: abiertas.includes(idx) ? 'rotate(180deg)' : 'rotate(0deg)'
+              }}>
                 ▼
               </span>
             </button>
             {abiertas.includes(idx) && (
-              <div style={{ marginTop: 8 }}>
-                <p>{seccion.texto}</p>
+              <div style={{ marginTop: 16, fontSize: '1.15rem', minHeight: 60, width: '100%' }}>
+                <div dangerouslySetInnerHTML={{ __html: seccion.texto }} />
               </div>
             )}
           </div>

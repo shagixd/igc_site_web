@@ -14,12 +14,21 @@
 .fondo > div {
   background: rgba(255,255,255,0.92);
   padding: 2rem 2.5rem;
-  border-radius: 12px;
-  max-width: 540px;
+  max-width: 740px;
   margin-left: 0;
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  margin: 3rem;
 }
-
+.fondo-texto h1 {
+  font-size: 3.3rem;
+  font-weight: bold;
+  color: #525252;
+  margin-bottom: 0.5rem;
+}
+.fondo-texto p {
+  color: #333;
+  font-size: 2rem;
+}
 /* Nuevos estilos para House.jsx */
 .seccion2-main {
   flex: 1;
@@ -30,16 +39,18 @@
   /* Elimina padding y border para evitar doble espacio */
   padding: 0;
   border: none;
+  margin: 3rem;
 }
 
 .seccion2-contenedor {
   display: flex;
   flex-direction: row;
-  gap: 48px; /* Espacio entre las cajas */
+  gap: 84px; /* Espacio entre las cajas */
   justify-content: center;
   align-items: flex-start;
   padding-left: 180px; /* Más espacio a la izquierda para mover a la derecha */
   margin-top: 32px;
+  border: 1px solid #000000;
 }
 
 .seccion2-list {
@@ -48,6 +59,7 @@
   gap: 32px;
   flex: 1;
   position: relative;
+  background-color: rgba(rgba(0, 19, 105, 0.466), 0.1);
 }
 
 .seccion2-list::before {
@@ -57,7 +69,6 @@
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #d0e3fa;
   border-radius: 2px;
   z-index: 0;
 }
@@ -81,26 +92,26 @@
 
 .icon-block-icon {
   font-size: 2.2rem;
-  min-width: 2.2rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   z-index: 2;
+  background: #fff;
+  border: 3px solid #010101;
+  border-radius: 8px;
+  width: 54px;      /* ancho fijo para evitar que se estiren */
+  height: 54px;     /* alto fijo para mantener proporción */
+  min-width: 54px;
+  min-height: 54px;
+  max-width: 54px;
+  max-height: 54px;
+  box-sizing: border-box;
+  margin-right: 0.5rem;
 }
 
 .icon-block-icon::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 38px;
-  height: 38px;
-  background: #fff;
-  border: 3px solid #010101;
-  border-radius: 50%;
-  z-index: -1;
+  content: none;
 }
 
 .seccion2-image {
@@ -115,8 +126,10 @@
   min-width: 320px;
   min-height: 320px;
   box-sizing: border-box;
-  /* Centrado vertical y horizontal */
-  margin-right: 180px; /* Más espacio al lado derecho */
+  margin-right: 180px;
+  /* Centrado absoluto en ambos sentidos */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .seccion2-img {

@@ -10,11 +10,11 @@ function useQuery() {
 }
 
 const contenidos = [
-  "Presentación del planeamiento estratégico y su relevancia in las organizaciones.",
-  "Desarrollar habilidades para la formulación, implementación y evaluación de planes estratégicos.",
-  "Metodología con talleres, análisis de casos y simulaciones prácticas.",
-  "Directivos, gerentes, profesionales y estudiantes interesados en la gestión estratégica.",
-  "Evaluación por participación, desarrollo de planes y exposición final."
+  "El planeamiento estratégico es fundamental para la gestión efectiva de cualquier organización. Este curso ofrece un enfoque práctico para desarrollar estrategias que permitan alcanzar objetivos a largo plazo, optimizando recursos y adaptándose a un entorno en constante cambio.",
+  "Capacitar a los participantes en la formulación, implementación y evaluación de planes estratégicos, proporcionando herramientas que faciliten la toma de decisiones y la gestión eficiente en organizaciones públicas y privadas.",
+  "El curso combina teoría y práctica a través de estudios de caso, ejercicios aplicados y herramientas de planificación estratégica. Se promoverá el análisis crítico, la resolución de problemas y el trabajo en equipo.",
+  "Profesionales, directivos, líderes de organizaciones, emprendedores y funcionarios públicos interesados en mejorar la planificación estratégica y la gestión organizacional.",
+  "La evaluación del participante será constante y acumulativa, teniendo un examen al iniciar y finalizar el curso con la mínima nota aprobatorio de 14, ya que se deberá considerar la participación y trabajos prácticos realizados en cada sesión, la asistencia con puntos extras sumados al promedio final."
 ];
 
 const CursoPlaneamientoEstrategico = () => {
@@ -39,7 +39,19 @@ const CursoPlaneamientoEstrategico = () => {
         />
       </section>
       <section>
-        <h3>Temario</h3>
+        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
+        <h3 style={{
+          fontSize: '2em',
+          fontWeight: 'bold',
+          color: '#888',
+          marginBottom: '2rem',
+          letterSpacing: '1px',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          textShadow: '1px 2px 8px #bbb'
+        }}>
+          Temario
+        </h3>
         <CursoPropSalida secciones={contenidoCursos.planeamientoEstrategico} />
       </section>
     </div>

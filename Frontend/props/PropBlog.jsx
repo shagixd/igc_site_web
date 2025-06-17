@@ -1,23 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
-const PropsVariados = ({ titulo, descripcion, descripcion2, descripcionExtra, imagen, colorFondo, colorTexto, colorBorde }) => {
+const PropsVariados = ({ titulo, descripcion, descripcion2, descripcionExtra, imagen, colorFondo, colorTexto, colorBorde, onExpandChange }) => {
   const [mostrarMas, setMostrarMas] = useState(false);
 
-  // Debug: mostrar props recibidas
-  console.log({ titulo, descripcion, descripcion2, descripcionExtra, imagen, colorFondo, colorTexto, colorBorde });
+  useEffect(() => {
+    if (onExpandChange) {
+      onExpandChange(mostrarMas);
+    }
+    // Solo notificar cuando mostrarMas cambie
+    // eslint-disable-next-line
+  }, [mostrarMas]);
 
   return (
-    <div
-      style={{
-        // backgroundColor: colorFondo, // <-- Eliminado, sin color de fondo
-        color: colorTexto,
-        padding: '20px',
-        borderRadius: '8px',
-        margin: '10px 0',
-        border: `2px solid ${colorBorde || colorTexto}` // <-- Usar colorBorde del prop
-      }}
-    >
-      <img src={imagen} alt={titulo} style={{ width: '100px', height: '100px', objectFit: 'cover' }} />
+    <div>
+      <img src={imagen} alt={titulo} />
       <h1>{titulo}</h1>
       <p>{descripcion}</p>
       <p>
@@ -27,15 +23,6 @@ const PropsVariados = ({ titulo, descripcion, descripcion2, descripcionExtra, im
         )}
       </p>
       <button
-        style={{
-          margin: '10px 0',
-          padding: '8px 16px',
-          background: colorTexto, // <-- Usar colorTexto para fondo del botón
-          color: '#fff',
-          border: `2px solid ${colorBorde || colorTexto}`, 
-          borderRadius: '4px',
-          cursor: 'pointer'
-        }}
         onClick={() => setMostrarMas(!mostrarMas)}
       >
         {mostrarMas ? 'Ocultar informacion' : 'Mostrar más información'}

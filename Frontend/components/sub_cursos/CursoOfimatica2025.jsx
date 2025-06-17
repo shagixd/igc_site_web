@@ -10,11 +10,22 @@ function useQuery() {
 }
 
 const contenidos = [
-  "Presentación de las herramientas de ofimática más utilizadas en el entorno laboral.",
-  "Desarrollar habilidades en el uso de Word, Excel, PowerPoint y herramientas colaborativas.",
-  "Metodología práctica con ejercicios y proyectos aplicados a situaciones reales.",
-  "Estudiantes, profesionales y público en general que deseen mejorar su productividad digital.",
-  "Evaluación por ejercicios prácticos, participación y proyecto final."
+  "El diplomado Ofimática Profesional apuesta a la optimización de estrategias y metodologías informáticas, a fin de alcanzar un manejo exitoso de las tareas y proyectos laborales dentro de la oficina; mediante sistemas operativos actualizados, y también gubernamentales, que contribuyan con el registro, comunicación y organización en el entorno laboral. La ofimática incluye un conglomerado de aplicaciones y elementos de carácter informático, manejados en la ejecución de las funciones administrativas. Todo ello, con el objetivo de automatizar, corregir, actualizar, gestionar y organizar la información, registros de datos, sistematizar las actividades dentro del espacio de trabajo.",
+  "Apropósito de esto, se ha diseñado un amplio contenido temático, donde se estudiarán los elementos más relevantes que conlleva la ofimática, como el manejo de Windows e Internet, los programas del paquete de Microsoft Office, como Power Point, Word, Excel; y otros aspectos actualizados, que son claves para el cumplimiento de tareas en el contexto profesional.",
+  <>
+    <p>Las clases se desarrollarán en la modalidad virtual con exposiciones con soporte audiovisual en un entorno dinámico, analítico y participativo en el que los docentes y participantes interactúan para una retroalimentación eficaz mediante prácticas, chat, foros y debates.</p>
+    <p>Las clases se dan en vivo por la plataforma Zoom y aula virtual.</p>
+    <p>Se fortalece el trabajo en equipo para el desarrollo de ejercicios bajo supervisión de los docentes.</p>
+    <p>Se cuenta, además, con selección de casos y lecturas de estudio para reforzar la comprensión de los participantes.</p>
+  </>,
+  <>
+  <p>Funcionarios y servidores públicos que desean optimizar su desempeño en actividades administrativas mediante herramientas de ofimática.</p>
+  <p>Personal administrativo, técnico y operativo que emplea software de ofimática en sus labores diarias.</p>
+  <p>Profesionales de diversas áreas que necesitan fortalecer sus habilidades digitales para la gestión pública.</p>
+  <p>Practicantes y jóvenes profesionales que buscan prepararse para las exigencias tecnológicas del entorno laboral en instituciones del sector público.</p>
+  <p>Miembros de equipos técnicos encargados de la elaboración de reportes, análisis de datos y presentaciones dentro de entidades estatales.</p>
+  </>,
+  "La evaluación del participante será constante y acumulativa, teniendo un examen al iniciar y finalizar el curso con la mínima nota aprobatorio de 14, ya que se deberá considerar la participación y trabajos prácticos realizados en cada sesión, la asistencia con puntos extras sumados al promedio final."
 ];
 
 const CursoOfimatica2025 = () => {
@@ -39,7 +50,19 @@ const CursoOfimatica2025 = () => {
         />
       </section>
       <section>
-        <h3>Temario</h3>
+        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
+        <h3 style={{
+          fontSize: '2em',
+          fontWeight: 'bold',
+          color: '#888',
+          marginBottom: '2rem',
+          letterSpacing: '1px',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          textShadow: '1px 2px 8px #bbb'
+        }}>
+          Temario
+        </h3>
         <CursoPropSalida secciones={contenidoCursos.ofimatica2025} />
       </section>
     </div>

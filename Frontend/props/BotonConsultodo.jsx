@@ -36,11 +36,12 @@ function BotonConsultodo({ texto, style = {}, ...props }) {
           : isHovered
             ? '#fff'
             : '#003ec9',
-        border: 'none',
+        border: isActive
+          ? '1px solid #005ec9'
+          : isHovered
+            ? '1px solid #001ec9'
+            : '1px solid #003ec9',
         cursor: 'pointer',
-        boxShadow: isActive
-          ? '0 1px 4px 0 rgba(67, 132, 206, 0.3)'
-          : '0 2px 10px 0 rgba(67, 132, 206, 0.5)',
         display: 'block',
         margin: '0 auto',
         textAlign: 'center',

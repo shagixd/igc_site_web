@@ -10,11 +10,11 @@ function useQuery() {
 }
 
 const contenidos = [
-  "El curso inicia con una presentación general sobre la importancia del rol de asistente de gerencia.",
-  "Desarrollar habilidades profesionales, tecnológicas y emocionales para destacar en el entorno laboral actual.",
-  "Clases teóricas y prácticas, talleres y simulaciones de situaciones reales de oficina.",
-  "Personas interesadas en desempeñarse como asistentes de gerencia o secretariado.",
-  "Evaluación continua mediante trabajos prácticos y examen final.",
+  "El Curso Especializado para Secretarias y Asistentes de Gerencia, organizado por el Instituto de Gerencia Intercontinental, se llevará a cabo en modalidad presencial y virtual durante los meses de marzo y abril de 2025. Este programa tiene como objetivo fortalecer competencias profesionales y personales, con énfasis en habilidades gerenciales, tecnológicas y el desarrollo del equilibrio emocional para enfrentar los desafíos del entorno laboral actual.",
+  ".",
+  ".",
+  "Profesionales de apoyo administrativo y gerencial como asistentes, secretarias y recepcionistas, interesados en adquirir herramientas y tendencias que mejoren su desempeño organizacional.",
+  ".",
 ];
 
 const CursoAsistenteGerencia = () => {
@@ -39,7 +39,19 @@ const CursoAsistenteGerencia = () => {
         />
       </section>
       <section>
-        <h3>Temario</h3>
+        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
+        <h3 style={{
+          fontSize: '2em',
+          fontWeight: 'bold',
+          color: '#888',
+          marginBottom: '2rem',
+          letterSpacing: '1px',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          textShadow: '1px 2px 8px #bbb'
+        }}>
+          Temario
+        </h3>
         <CursoPropSalida secciones={contenidoCursos.asistenteGerencia} />
       </section>
     </div>

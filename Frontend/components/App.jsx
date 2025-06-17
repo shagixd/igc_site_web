@@ -35,6 +35,16 @@ import DiplomaAdministracionFinanciera from './sub_diplomas/DiplomaAdministracio
 import DiplomaFinanzasPublicas from './sub_diplomas/DiplomaFinanzasPublicas.jsx';
 import DiplomaRedaccionOrtografia from './sub_diplomas/DiplomaRedaccionOrtografia.jsx';
 import DiplomaSistemasInformaticos from './sub_diplomas/DiplomaSistemasInformaticos.jsx';
+import CongresoInternacionalAsistentesGerencia from './sub_congresos/CongresoInternacionalAsistentesGerencia.jsx';
+import CongresoInnovacionSecretarial from './sub_congresos/CongresoInnovacionSecretarial.jsx';
+import CongresoNacionalSecretarias12 from './sub_congresos/CongresoNacionalSecretarias12.jsx';
+import CongresoGerenciaFinanzasPublicas from './sub_congresos/CongresoGerenciaFinanzasPublicas.jsx';
+import CongresoNacionalSecretarias11 from './sub_congresos/CongresoNacionalSecretarias11.jsx';
+import CongresoNacionalAsistentesXIV from './sub_congresos/CongresoNacionalAsistentesXIV.jsx';
+import CongresoNacionalPresupuestoIV from './sub_congresos/CongresoNacionalPresupuestoIV.jsx';
+import CongresoNacionalPresupuesto3er from './sub_congresos/CongresoNacionalPresupuesto3er.jsx';
+import CongresoInternacionalGerencia2do from './sub_congresos/CongresoInternacionalGerencia2do.jsx';
+import CongresoNacionalAdministracion1er from './sub_congresos/CongresoNacionalAdministracion1er.jsx';
 
 function App() {
   return (
@@ -74,6 +84,16 @@ function App() {
         <Route path="/diplomas/finanzas-publicas" element={<DiplomaFinanzasPublicas />} />
         <Route path="/diplomas/redaccion-documentos-ortografia-eficaz" element={<DiplomaRedaccionOrtografia />} />
         <Route path="/diplomas/sistemas-informaticos-gestion-publica-2022" element={<DiplomaSistemasInformaticos />} />
+        <Route path="/congresos/congreso-internacional-asistentes-gerencia" element={<CongresoInternacionalAsistentesGerencia />} />
+        <Route path="/congresos/congreso-innovacion-secretarial" element={<CongresoInnovacionSecretarial />} />
+        <Route path="/congresos/congreso-nacional-secretarias-12" element={<CongresoNacionalSecretarias12 />} />
+        <Route path="/congresos/congreso-gerencia-finanzas-publicas" element={<CongresoGerenciaFinanzasPublicas />} />
+        <Route path="/congresos/congreso-nacional-secretarias-11" element={<CongresoNacionalSecretarias11 />} />
+        <Route path="/congresos/congreso-nacional-asistentes-xiv" element={<CongresoNacionalAsistentesXIV />} />
+        <Route path="/congresos/congreso-nacional-presupuesto-iv" element={<CongresoNacionalPresupuestoIV />} />
+        <Route path="/congresos/congreso-nacional-presupuesto-3er" element={<CongresoNacionalPresupuesto3er />} />
+        <Route path="/congresos/congreso-internacional-gerencia-2do" element={<CongresoInternacionalGerencia2do />} />
+        <Route path="/congresos/congreso-nacional-administracion-1er" element={<CongresoNacionalAdministracion1er />} />
       </Routes>
       <Footer />
       <BotonWhatssap />
