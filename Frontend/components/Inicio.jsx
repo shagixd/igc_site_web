@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect , useRef} from 'react';
 import '../public/styles/Inicio.css'; 
 import { HiChevronRight } from "react-icons/hi";
 import BotonConsultodo from '../props/BotonConsultodo';
@@ -11,23 +11,62 @@ const textos = [
 ];
 
 export default function Inicio() {
+  const [seccion5Visible, setSeccion5Visible] = useState(false);
+  const seccion5Ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSeccion5Visible(true);
+          observer.disconnect(); // Solo una vez
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (seccion5Ref.current) {
+      observer.observe(seccion5Ref.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+  
   const [indice, setIndice] = useState(0);
+  const [textoAnimado, setTextoAnimado] = useState("");
 
   useEffect(() => {
     const intervalo = setInterval(() => {
       setIndice((prev) => (prev + 1) % textos.length);
-    }, 3000); // Cambia cada 2 segundos
+    }, 5000);
     return () => clearInterval(intervalo);
   }, []);
+
+  useEffect(() => {
+    setTextoAnimado("");
+    const texto = textos[indice];
+    let i = 0;
+    let timeout;
+    function animar() {
+      setTextoAnimado(texto.slice(0, i + 1));
+      i++;
+      if (i < texto.length) {
+        timeout = setTimeout(animar, 60);
+      }
+    }
+    animar();
+    return () => clearTimeout(timeout);
+  }, [indice]);
 
   return (
     <>
       <div className='inicio'>
-        <h2>INSTITUTO DE GERENCIA INTERNACIONAL</h2>
-        <h1>{textos[indice]}</h1>
-        <button className='invalidado'> 
-          Cotizaciones <HiChevronRight />
-        </button>
+        <img src="/img/INICIO.jpg" alt="Imagen de inicio" />
+        <div className='inicio-texto'>
+          <h2>INSTITUTO DE GERENCIA INTERNACIONAL</h2>
+          <h1>{textoAnimado}</h1>
+          <button className='invalidado'> 
+            Cotizaciones <HiChevronRight />
+          </button>
+        </div>
       </div>
 
       <div className='seccion1'>
@@ -44,7 +83,7 @@ export default function Inicio() {
 
       <div className='seccion2'>
         <div className="seccion2-img">
-          <img src="/img/mision.jpg" alt="Misión IGC" />
+          <img src="/img/INICIO2.jpg" alt="imagen referencial" />
         </div>
         <div className="seccion2-texto">
           <h3>OBJETIVO</h3>
@@ -86,33 +125,35 @@ export default function Inicio() {
         </div>
         <div className='seccion4-cajas'>
           <div className='caja-1'>
-              <img src="" alt="img" />
+              <img src="/img/i1.png" alt="img" />
               <h3>Programas de Educación Ejecutiva</h3>
               <p>Capacitación para profesionales en gestión pública y empresarial, fortaleciendo competencias administrativas y de liderazgo.</p>
           </div>
           <div className='caja-2'>
-              <img src="" alt="img" />
+              <img src="/img/i2.png" alt="img" />
               <h3>Congresos</h3>
               <p>Organización de congresos, foros y convenciones de alto impacto a nivel nacional e internacional.</p>
           </div>
           <div className='caja-3'>
-              <img src="" alt="img" />
+              <img src="/img/i3.png" alt="img" />
               <h3>Cursos de Especializacion</h3>
               <p>Programas técnicos y operativos en gestión administrativa, financiera y tecnológica para el sector público y privado</p>
           </div>
           <div className='caja-4'>
-              <img src="../img/1.png" alt="img" />
+              <img src="/img/i4.png" alt="img" />
               <h3>Cursos In-House a Medida</h3>
               <p>Diseño personalizado de programas de capacitación adaptados a las necesidades específicas de empresas y entidades públicas.</p>
           </div>
           <div className='caja-5'>
-              <img src="../img/INICIO-S5.jpg" alt="img" />
+              <img src="/img/i5.png" alt="img" />
               <h3>Diplomas de Especializacion</h3>
               <p>Formación de nivel postgrado en áreas como administración, contabilidad, finanzas, logística, TI y habilidades blandas.</p>
           </div>
         </div>
-        <div className='seccion5'>
-          <img src="" alt="1" /><img src="" alt="2" /><img src="" alt="3" /><img src="" alt="4" /><img src="" alt="5" />
+        <div
+          className={`seccion5${seccion5Visible ? ' visible' : ''}`}
+          ref={seccion5Ref}>
+          <img src="/img/I-1.png" alt="1" /><img src="/img/I-2.png" alt="2" /><img src="/img/I-3.jpg" alt="3" /><img src="/img/I-4.jpg" alt="4" /><img src="/img/I-5.png" alt="5" />
         </div>
       </div>
     </>

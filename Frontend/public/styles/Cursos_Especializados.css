@@ -78,7 +78,7 @@
 .cursos-container img {
   display: block;
   margin: 0 auto;
-  height: 120px;
+  height: 240px;
   width: auto;
   object-fit: contain;
 }

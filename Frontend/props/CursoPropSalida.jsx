@@ -18,13 +18,16 @@ const CursoPropSalida = ({ secciones }) => {
           <div
             key={idx}
             style={{
-              marginBottom: '1.5rem',
+              marginBottom: '2rem',
               border: '1px solid #e0e0e0',
               borderRadius: 12,
-              padding: 24,
+              padding: '20px 24px', // Más espacio lateral
               width: '100%',
+              maxWidth: 1500,        // Más angosto
+              margin: '24px auto',  // Centrado y espacio arriba/abajo
               boxSizing: 'border-box',
-              minHeight: 90
+              minHeight: 90,
+              background: '#fff'    // Opcional: fondo blanco para destacar
             }}
           >
             <button
@@ -32,7 +35,7 @@ const CursoPropSalida = ({ secciones }) => {
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                background: 'none',
+                background: abiertas.includes(idx) ? '#7c3aed' : 'none', // Fondo morado si está abierto
                 border: 'none',
                 width: '100%',
                 textAlign: 'left',
@@ -42,7 +45,8 @@ const CursoPropSalida = ({ secciones }) => {
                 minHeight: 64,
                 paddingTop: 16,
                 paddingBottom: 16,
-                borderRadius: 8
+                borderRadius: 8,
+                color: abiertas.includes(idx) ? '#fff' : '#222' // Texto blanco si está abierto
               }}
             >
               <span style={{ flex: 1 }}>{seccion.titulo}</span>

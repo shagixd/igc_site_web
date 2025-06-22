@@ -1,58 +1,102 @@
 .formulario-catalogo {
-  background: #fff;
-  border: 1px solid #000;
-  border-radius: 8px;
-  max-width: 400px;
+  backdrop-filter: blur(10px);
+  background: transparent;
+  border: none;
+  border-radius: 18px;
+  max-width: 420px;
   margin: 40px auto;
-  padding: 32px 32px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 32px 28px 24px 28px;
+  box-shadow: 0 6px 32px rgba(255, 255, 255, 0.694), 0 1.5px 6px rgba(255, 255, 255, 0.511);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
 }
 
 .form-group {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin-bottom: 22px;
+  position: relative;
 }
 
 .form-label {
-  color: #000000;
-  font-weight: bold;
-  margin-bottom: 4px;
-  display: block;
-  text-align: left;
-  width: 100%;
+  display: none;
 }
 
-.form-input {
+.form-input,
+.formulario-catalogo textarea {
   width: 100%;
-  padding: 10px;
-  margin: 8px 0 18px 0;
-  border: 1px solid #3e7bdd;
-  border-radius: 4px;
+  padding: 12px 14px;
+  border: 1.5px solid #fff;
+  border-radius: 8px;
   font-size: 1rem;
-  background: #f6faff;
-  color: #4d7cc6;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
   box-sizing: border-box;
-  display: block;
+  margin-top: 2px;
+  margin-bottom: 0;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(242, 248, 255, 0.08);
   resize: none;
 }
 
-.form-input[type="textarea"], .form-input textarea {
-  resize: vertical;
+/* Solo el select tendrá la flecha personalizada */
+.formulario-catalogo select {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #fff;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+  box-sizing: border-box;
+  margin-top: 2px;
+  margin-bottom: 0;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(242, 248, 255, 0.08);
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* Custom arrow for select */
+  background-image:
+    linear-gradient(45deg, #fff 40%, transparent 41%),
+    linear-gradient(135deg, #fff 40%, transparent 41%);
+  background-position:
+    calc(100% - 24px) calc(50% - 4px),
+    calc(100% - 19px) calc(50% - 4px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.formulario-catalogo select:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px #fff;
+  background: rgba(255,255,255,0.16);
+  color: #fff;
+}
+
+.formulario-catalogo select option {
+  background: #222;
+  color: #fff;
 }
 
 .form-btn {
-  background: #0a3d91;
-  color: #fff;
+  background: #fff;
+  color: #0356a8;
   border: none;
   border-radius: 4px;
-  padding: 10px 24px;
-  font-weight: bold;
+  padding: 10px 0;
+  width: 100%;
   font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: background 0.2s, transform 0.1s, color 0.2s;
   margin-top: 10px;
+}
+
+.form-btn:active {
+  background: #e3e9f0;
+  color: #0550a6;
+  transform: scale(0.97);
 }

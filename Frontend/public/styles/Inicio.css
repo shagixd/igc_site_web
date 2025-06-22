@@ -1,22 +1,21 @@
 .inicio {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: row-reverse;
   min-height: 420px;
-  padding-left: 6vw;
   width: 100%;
-  margin-bottom: 40px;
   border: 1px solid #000000;
-  background-image: "url('../../img/fondo1.jpg')";
+  background: linear-gradient(to right, #fff 0%, #0041a4 80%);
 }
-
+.inicio img, .inicio-texto {
+    width: 50%;
+    height: 500px;
+    text-align: center;
+}
 .inicio h2 {
   font-size: 1.9rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #1a73e8;
 }
-
 .inicio h1 {
   font-size: 7.5rem;
   font-weight: 800;
@@ -45,20 +44,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1200px; /* antes 900px */
-    width: 95%;
+    width: 1100px;
+    height: 300px;
     margin: 40px auto;
-    padding: 32px 24px;
     background: #fff;
-    gap: 40px;
+    gap: 20px;
 }
-
 .seccion1 .seccion1-texto {
     flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 70%;
+    opacity: 0.9;
 }
 .seccion1 .seccion1-texto h2 {
     font-size: 2.6rem;
@@ -68,18 +65,26 @@
 .seccion1 .seccion1-texto p {
     font-size: 1.2rem;
 }
+.seccion1-img {
+    display: inline-block;
+    height: 100%;
+    width: auto;
+    border: #000000 1px solid;
+}
 
 .seccion1 .seccion1-img {
-    flex: 0 0 300px;
+    flex: 0 0 0500px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
 .seccion1 .seccion1-img img {
-    max-width: 300px;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain;
     display: block;
 }
 
@@ -91,10 +96,10 @@
     max-width: 1200px; /* antes 900px */
     width: 95%;
     margin: 40px auto;
-    padding: 32px 24px;
     background: #fff;
     gap: 40px;
     flex-direction: row;
+    height: 400px; /* <--- Añadido para asegurar altura */
 }
 
 .seccion2 .seccion2-texto {
@@ -121,18 +126,24 @@
 .seccion2 .seccion2-texto ul li {
     opacity: 0.8;
 }
-.seccion2 .seccion2-img {
-    flex: 0 0 300px;
+.seccion2-img {
+    flex: 0 0 50%;
+    width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 0;
 }
 
 .seccion2 .seccion2-img img {
-    max-width: 300px;
     width: 100%;
-    height: auto;
+    height: 100%;
+    min-height: 0;
+    min-width: 0;
+    object-fit: contain;
     display: block;
+    margin: 0;
 }
 .seccion2 .seccion2-texto ul li {
     position: relative;
@@ -222,10 +233,7 @@
 }
 
 .seccion4 {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 32px 24px;
-    background: #fff;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -234,11 +242,9 @@
 }
 
 .seccion4-texto {
-    width: 90%;
+    width: 100%;
     border: 1px solid #000;
-    border-radius: 8px;
-    padding: 24px 18px;
-    background: #f9f9f9;
+    background: #e7f6ff;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -257,11 +263,11 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    gap: 24px;
+    gap: 12px;
     position: relative;
     border: 1px solid #000;
     border-radius: 8px;
-    padding: 32px 18px;
+    padding: 0 15%;
     box-sizing: border-box;
 }
 
@@ -296,6 +302,7 @@
     justify-self: center;
 }
 
+
 .seccion4-cajas > div {
     background: #fff;
     border-radius: 8px;
@@ -305,6 +312,11 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.seccion4-cajas > div:hover {
+    transform: rotateY(360deg);
 }
 
 .seccion4-cajas > div h3 {
@@ -320,21 +332,56 @@
     opacity: 0.8;
 }
 
+.seccion4-cajas > div img {
+    max-width: 90px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 10px auto;
+    display: block;
+    object-fit: contain;
+}
+
 .seccion5 {
     width: 100%;
     display: flex;
     gap: 10px;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin: 40px auto;
+}
+
+@keyframes slideInLeftSec5 {
+  0% {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.9);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(8px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
 }
 
 .seccion5 img {
-    flex: 1 1 0;
-    max-width: 100%;
-    height: 180px;
-    object-fit: cover;
+    width: 200px;
+    height: 150px;
+    object-fit: contain;
     border-radius: 8px;
     border: 1px solid #e0e0e0;
     min-width: 0;
+    margin: 0 auto;
+    display: block;
+    opacity: 0;
 }
+.seccion5.visible img {
+    animation: slideInLeftSec5 0.7s cubic-bezier(0.4,0.2,0.2,1) forwards;
+}
+
+.seccion5.visible img:nth-child(1) { animation-delay: 0.1s; }
+.seccion5.visible img:nth-child(2) { animation-delay: 0.3s; }
+.seccion5.visible img:nth-child(3) { animation-delay: 0.5s; }
+.seccion5.visible img:nth-child(4) { animation-delay: 0.7s; }
+.seccion5.visible img:nth-child(5) { animation-delay: 0.9s; }
