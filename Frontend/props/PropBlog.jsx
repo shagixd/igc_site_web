@@ -1,33 +1,44 @@
+// PropsVariados.jsx
 import React, { useState, useEffect } from 'react';
 
-const PropsVariados = ({ titulo, descripcion, descripcion2, descripcionExtra, imagen, colorFondo, colorTexto, colorBorde, onExpandChange }) => {
+const PropsVariados = ({
+  titulo,
+  descripcion,
+  descripcion2,
+  descripcionExtra,
+  imagen,
+  onExpandChange
+}) => {
   const [mostrarMas, setMostrarMas] = useState(false);
 
   useEffect(() => {
     if (onExpandChange) {
       onExpandChange(mostrarMas);
     }
-    // Solo notificar cuando mostrarMas cambie
     // eslint-disable-next-line
   }, [mostrarMas]);
 
   return (
-    <div>
-      <img src={imagen} alt={titulo} />
-      <h1>{titulo}</h1>
+    <>
+      <div className="card-imagen">
+        <img src={imagen} alt={titulo} />
+      </div>
+      <h3>{titulo}</h3>
       <p>{descripcion}</p>
       <p>
         {descripcion2}
-        {mostrarMas && (
-          <span> {descripcionExtra}</span>
-        )}
+        {mostrarMas && <span> {descripcionExtra}</span>}
       </p>
-      <button
-        onClick={() => setMostrarMas(!mostrarMas)}
-      >
-        {mostrarMas ? 'Ocultar informacion' : 'Mostrar más información'}
-      </button>
-    </div>
+      <a
+        href="#"
+        className="btn"
+        onClick={(e) => {
+          e.preventDefault();
+          setMostrarMas(!mostrarMas);
+        }}>
+        {mostrarMas ? 'Ocultar información' : 'Mostrar más información'}
+      </a>
+    </>
   );
 };
 

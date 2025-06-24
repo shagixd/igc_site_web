@@ -59,9 +59,8 @@
   gap: 32px;
   flex: 1;
   position: relative;
-  background-color: rgba(rgba(0, 19, 105, 0.466), 0.1);
+  background-color: rgba(227, 239, 255, 0.521);
 }
-
 .seccion2-list::before {
   content: '';
   position: absolute;
@@ -71,6 +70,7 @@
   width: 4px;
   border-radius: 2px;
   z-index: 0;
+  background-color: rgba(32, 129, 255, 1);
 }
 
 .icon-block {

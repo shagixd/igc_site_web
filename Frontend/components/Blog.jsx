@@ -36,6 +36,11 @@ function Blog() {
                 <h2>BLOG</h2>
                 <p>Instituto de Gerencia Intercontinental</p>
             </div>
+            <div className='blog-subtitulo'>
+                <h4>NOTICIAS</h4>
+                <h3>Últimas publicaciones y noticias</h3>
+                <p>Bienvenido al blog del Instituto de Gerencia Intercontinental</p>
+            </div>
             <nav className='blog-nav'>
                 <button onClick={() => setActiveSection('AllPost')}>All Post</button>
                 <button onClick={() => setActiveSection('Digital')}>Digital</button>
@@ -44,15 +49,11 @@ function Blog() {
                 <button onClick={() => setActiveSection('Innovación')}>Innovación</button>
                 <button onClick={() => setActiveSection('Sin categoría')}>Sin categoría</button>
             </nav>
-            <div className='blog-subtitulo'>
-                <h4>NOTICIAS</h4>
-                <h3>Últimas publicaciones y noticias</h3>
-                <p>Bienvenido al blog del Instituto de Gerencia Intercontinental</p>
+            <div className="blog-content-flex-container">
+                <div className={`blog-content${expandView ? " expand" : ""}`}>
+                    <BlogSectionContent section={activeSection} onExpandChange={setExpandView} />
+                </div>
             </div>
-            <div className={`blog-content${expandView ? " expand" : ""}`}>
-                <BlogSectionContent section={activeSection} onExpandChange={setExpandView} />
-            </div>
-            
         </>
     );
 }

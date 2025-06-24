@@ -1,19 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropBlog from '../../props/PropBlog.jsx';
 import Datos from '../../props/ContenidoBlog.js';
 
-function Educacion() {
-  // Filtra los posts por categoría, por ejemplo 'educacion'
-  const categoriaSeleccionada = 'educacion'; // Cambia esto según la categoría que quieras mostrar
+function Educacion({ onExpandChange }) {
+  const [expandedId, setExpandedId] = useState(null); // Controla cuál está expandido
+
+  const categoriaSeleccionada = 'educacion';
   const postsFiltrados = Datos.filter(post => post.categoria === categoriaSeleccionada);
 
+  const handleClick = (id) => {
+    const newId = expandedId === id ? null : id;
+    setExpandedId(newId);
+    if (onExpandChange) onExpandChange(newId !== null);
+  };
+
   return (
-    <div>
+    <div className="blog-section-list">
       {postsFiltrados.map(post => (
-        <PropBlog
+        <div
+          className={`blog-section-card ${expandedId === post.id ? 'expanded' : ''}`}
           key={post.id}
-          {...post}
-        />
+          onClick={() => handleClick(post.id)}
+        >
+          <PropBlog {...post} />
+        </div>
       ))}
     </div>
   );

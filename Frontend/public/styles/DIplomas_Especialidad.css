@@ -33,7 +33,6 @@
   text-align: left;
   width: 100%;
 }
-
 .diplomas-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -53,6 +52,22 @@
   align-items: center;
   justify-content: center;
   background: #fcfcfc;
+  animation: dropIn 0.8s ease-out forwards;
+  opacity: 0;
+}
+.diplomas-container:hover {
+  transform: scale(1.1);
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .diplomas-container > * h2,

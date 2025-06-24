@@ -49,20 +49,35 @@ const cursos = [
   "Gestión Tributaria",
   "Gestión de Recursos Humanos",
   "Seguridad y Salud en el Trabajo Administrativo",
-  "Ofimática."
+  "Ofimatica."
 ];
 
 function Cursos_Catalogos() {
   return (
-    <div className='fondo-catalogo' style={{ background: 'black'}}>
-      <h2 className="catalogo-title">Catalogo de Cursos</h2>
-      <p className="catalogo-desc">Solicita el curso en la cual quieres especializarte y potenciar tu conocimiento para mejorar tus oportunidades laborales.</p>
-      <FormularioCatalogo
-        opciones={cursos}
-        labelSelect="Catálogo de Cursos"
-        placeholderSelect="Seleccione un curso"
-      />
-    </div>
+    <>
+      <div style={{ textAlign: 'center', marginTop: '50px', backgroundImage: 'linear-gradient(to bottom,rgb(0, 64, 255) 0%,rgb(119, 139, 253) 100%)', padding: '30px' }}>
+        <h2 style={{ fontSize: '50px', margin: '0', color: 'white'}}>Catalogo de Cursos</h2>
+        <p style={{ color: 'white', fontSize: '28px'}}>Solicita el curso en la cual quieres especializarte y potenciar tu conocimiento para mejorar tus oportunidades laborales.</p>
+      </div>
+      <div style={{
+          display: 'flex',
+          justifyContent: 'flex-start',  // Alinea horizontalmente al inicio (izquierda)
+          alignItems: 'flex-start',
+          backgroundImage: "url('/img/1.jpg')", // ✅ Formato correcto
+          backgroundSize: 'cover',              // Cubre todo el contenedor
+          backgroundPosition: 'center',         // Centra la imagen
+          padding: '40px 20px',                 // Añade espacio interno
+          width: '100%',
+          minHeight: '200px',                   // Altura mínima para ver bien el fondo
+          boxSizing: 'border-box'
+        }}>
+        <FormularioCatalogo
+          opciones={cursos}
+          labelSelect="Catálogo de Cursos"
+          placeholderSelect="Seleccione un curso"
+        />
+      </div>
+    </>
   );
 }
 

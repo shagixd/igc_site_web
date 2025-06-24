@@ -5,7 +5,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La gestión de obras públicas implica planificar, ejecutar y supervisar proyectos de infraestructura que mejoran la calidad de vida de la comunidad. Incluye etapas clave...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/2.jpg',
     colorTexto: '#000000',
     categoria: 'educacion'
   },
@@ -15,7 +15,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La gestión efectiva de almacenes abarca la planificación, control y supervisión de inventarios para asegurar un flujo eficiente de productos desde la recepción hasta el...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/1.jpg',
     colorTexto: '#000000',
     categoria: 'innovacion'
   },
@@ -25,7 +25,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El nuevo reglamento de la Superintendencia Nacional de Bienes Estatales (SBN) en Perú introduce modificaciones significativas en la gestión de los bienes estatales, con el objetivo de...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/26.jpg',
     colorTexto: '#000000',
     categoria: 'sincategoria'
   },
@@ -35,7 +35,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La digitalización de procesos en la gestión pública peruana consiste en integrar tecnologías para transformar trámites y servicios administrativos en formatos digitales, mejorando eficiencia, transparencia...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/27.jpg',
     colorTexto: '#000000',
     categoria: 'educacion'
   },
@@ -45,7 +45,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La ética e integridad en la gestión pública son fundamentales para construir confianza entre ciudadanos y gobernantes, garantizando transparencia, rendición de cuentas y respeto a...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/8.jpg',
     colorTexto: '#000000',
     categoria: 'educacion'
   },
@@ -55,7 +55,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La Educación Ejecutiva en Gestión Pública y Sistemas Administrativos se centra en proporcionar habilidades prácticas y estrategias directamente aplicables al entorno laboral. Este enfoque está...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/31.jpg',
     colorTexto: '#000000',
     categoria: 'educacion'
   },
@@ -65,7 +65,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'Las finanzas públicas gestionan estratégicamente los recursos del Estado para garantizar un uso eficiente y transparente en beneficio social. Incluyen la planificación del presupuesto, la...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/9.jpg',
     colorTexto: '#000000',
     categoria: 'innovacion'
   },
@@ -75,7 +75,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El presupuesto público es vital para planificar y distribuir los recursos del gobierno, reflejando sus prioridades y asegurando transparencia. Incluye ingresos, principalmente de impuestos, y...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/23.jpg',
     colorTexto: '#000000',
     categoria: 'sincategoria'
   },
@@ -85,7 +85,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El Sistema de Tesorería Pública asegura el uso eficiente y responsable de los fondos del Estado, bajo principios como la Unidad de Caja y economicidad....',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/12.jpg',
     colorTexto: '#000000',
     categoria: 'innovacion'
   },
@@ -95,7 +95,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El Sistema Nacional de Endeudamiento Público es un conjunto integral de órganos, instituciones, normas y procesos que tiene como propósito garantizar una gestión eficiente y...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/5.jpg',
     colorTexto: '#000000',
     categoria: 'sincategoria'
   },
@@ -105,7 +105,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El Sistema de Contabilidad Pública es clave para una gestión fiscal transparente y eficiente. Regido por el Decreto Legislativo N.º 1438 y supervisado por la...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/32.jpg',
     colorTexto: '#000000',
     categoria: 'sincategoria'
   },
@@ -115,7 +115,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'Los sistemas SIGA, SIAF y SEACE modernizan la gestión pública mediante tecnología que mejora la eficiencia, transparencia y control de recursos. Permiten tomar decisiones estratégicas,...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/33.jpg',
     colorTexto: '#000000',
     categoria: 'innovacion'
   },
@@ -125,7 +125,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El Sistema Nacional de Abastecimiento Público garantiza una provisión eficiente de bienes, servicios y obras en el sector estatal. Abarca desde contrataciones hasta la gestión...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/34.jpg',
     colorTexto: '#000000',
     categoria: 'sincategoria'
   },
@@ -135,7 +135,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La modernización de la administración pública peruana exige una gestión eficiente del talento humano. El Sistema de Gestión de Recursos Humanos, liderado por SERVIR, abarca...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/35.png',
     colorTexto: '#000000',
     categoria: 'sincategoria'
   },
@@ -145,7 +145,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El Derecho Administrativo regula el funcionamiento del Estado y su relación con los ciudadanos, asegurando legalidad, transparencia y eficiencia en la gestión pública. Su marco...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/19.jpg',
     colorTexto: '#000000',
     categoria: 'educacion'
   },
@@ -155,7 +155,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'El control gubernamental es clave para garantizar el buen uso de los recursos públicos y el cumplimiento de políticas del Estado. La Contraloría General de...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/36.jpg',
     colorTexto: '#000000',
     categoria: 'innovacion'
   },
@@ -165,7 +165,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'La Ley N.º 27658 impulsa la modernización de la gestión pública en el Perú, buscando una administración más eficiente, orientada al ciudadano y basada en...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/38.jpg',
     colorTexto: '#000000',
     categoria: 'innovacion'
   },
@@ -175,7 +175,7 @@ const Datos = [
     descripcion: '16 de mayo de 2025 / No Comments',
     descripcion2: 'Las habilidades blandas son competencias interpersonales fundamentales para el éxito personal y profesional. Entre ellas destacan la comunicación, empatía, trabajo en equipo, liderazgo, adaptabilidad y...',
     descripcionExtra: 'para garantizar que se cumplan los estándares de calidad, seguridad y sostenibilidad. Los profesionales en este campo deben coordinar recursos, gestionar presupuestos y cumplir con normativas legales.',
-    imagen: '/img/digital1.png',
+    imagen: '/img/37.jpg',
     colorTexto: '#000000',
     categoria: 'educacion'
   }

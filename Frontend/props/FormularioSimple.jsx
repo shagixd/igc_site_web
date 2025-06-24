@@ -5,6 +5,8 @@ function FormularioSimple() {
     <form
       style={{
         width: '80%',
+        height: '100%',
+        maxHeight: '600px',
         margin: '0 auto',
         display: 'flex',
         flexDirection: 'column',

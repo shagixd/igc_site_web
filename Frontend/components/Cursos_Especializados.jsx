@@ -6,7 +6,7 @@ const diplomas = [
   {
     titulo: 'GESTION PUBLICA Y MODERNIZACION DEL ESTADO',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/react.png',
+    imagen: '/img/BannerGestionPublica.png',
     colorFondo: '#1565c0',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
@@ -15,7 +15,7 @@ const diplomas = [
   {
     titulo: 'PLANEAMIENTO ESTRATEGICO',
     descripcion: 'Modalidad: Presencial',
-    imagen: '/img/node.png',
+    imagen: '/img/BannerPlaneamientoEstrategico.png',
     colorFondo: '#2e7d32',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
@@ -24,7 +24,7 @@ const diplomas = [
   {
     titulo: 'SISTEMA NACIONAL DE INVERSIONES INVIERTE.PE',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/python.png',
+    imagen: '/img/BannerInviertePE.png',
     colorFondo: '#ef6c00',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
@@ -33,8 +33,8 @@ const diplomas = [
   {
     titulo: 'OBRAS PUBLICAS POR ADMINISTRACION DIRECTA',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/data-science.png',
-    colorFondo: '#6a1b9a',
+    imagen: '/img/BannerObrasPublicasDirecta.png',
+    colorFondo: '#404040',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
     link: '/cursos/obras-publicas-por-administracion-directa'
@@ -42,8 +42,8 @@ const diplomas = [
   {
     titulo: 'OFIMATICA PROFESIONAL 2025',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/devops.png',
-    colorFondo: '#00838f',
+    imagen: '/img/BannerOfimaticaProfesional.png',
+    colorFondo: '#1200a1',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
     link: '/cursos/ofimatica-profesional-2025'
@@ -51,8 +51,8 @@ const diplomas = [
   {
     titulo: 'GESTION DE CONTRATACIONES DEL ESTADO',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/uxui.png',
-    colorFondo: '#ad1457',
+    imagen: '/img/BannerGestiondecontratacionesdelestado.png',
+    colorFondo: '#910000',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
     link: '/cursos/gestion-de-contrataciones-del-estado'
@@ -60,8 +60,8 @@ const diplomas = [
   {
     titulo: 'GESTION DE PRESUPUESTO PUBLICO',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/cybersecurity.png',
-    colorFondo: '#4527a0',
+    imagen: '/img/BannerPresupuestopublico.png',
+    colorFondo: '#00825f',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
     link: '/cursos/gestion-de-presupuesto-publico'
@@ -69,8 +69,8 @@ const diplomas = [
   {
     titulo: 'CURSO ESPECIALIZADO: GESTIÓN DOCUMENTAL Y ARCHIVOS ELECTRÓNICOS',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/ai.png',
-    colorFondo: '#f9a825',
+    imagen: '/img/BannerGestionDocumental.png',
+    colorFondo: '#a16000',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
     link: '/cursos/gestion-documental-y-archivos-electronicos'
@@ -78,8 +78,8 @@ const diplomas = [
   {
     titulo: 'ASISTENTE DE GERENCIA Y SECRETARIAS',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/cloud.png',
-    colorFondo: '#0277bd',
+    imagen: '/img/BannerAsistentedeGerencia.png',
+    colorFondo: '#b302bd',
     inicioClases: 'Julio 2024',
     certificado: 'Diploma de Especialidad',
     link: '/cursos/asistente-de-gerencia-y-secretarias'

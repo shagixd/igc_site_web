@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropBlog from '../../props/PropBlog.jsx';
 import Datos from '../../props/ContenidoBlog.js';
 
-function Digital() {
-  const categoriaSeleccionada = 'digital'; // Cambia esto según la categoría que quieras mostrar
+function Digital({ onExpandChange }) {
+  const [expandedId, setExpandedId] = useState(null); // Controla cuál está expandido
+
+  const categoriaSeleccionada = 'digital';
   const postsFiltrados = Datos.filter(post => post.categoria === categoriaSeleccionada);
 
+  const handleClick = (id) => {
+    const newId = expandedId === id ? null : id;
+    setExpandedId(newId);
+    if (onExpandChange) onExpandChange(newId !== null);
+  };
+
   return (
-    <div className="sub-blog-container">
+    <div className="blog-section-list">
       {postsFiltrados.map(post => (
-        <div className="sub-blog-item" key={post.id}>
-          <PropBlog {...post}/>
+        <div
+          className={`blog-section-card ${expandedId === post.id ? 'expanded' : ''}`}
+          key={post.id}
+          onClick={() => handleClick(post.id)}
+        >
+          <PropBlog {...post} />
         </div>
       ))}
     </div>

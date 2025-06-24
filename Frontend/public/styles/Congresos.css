@@ -2,8 +2,9 @@
   background: linear-gradient(to bottom, #005fbe 0%, #002468 100%);
   color: #fff;
   padding: 32px;
-  /* otros estilos existentes */
 }
+
+/* ===== Congresos ===== */
 .congresos-titulo {
   text-align: start;
   margin-top: 2rem;
@@ -40,14 +41,39 @@
   place-items: center;
 }
 
+/* ===== Estilos para cada carta del grid ===== */
 .congresos-container > * {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: #eeeeee;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
 }
 
+/* ==== Animación de aparición ==== */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== Efecto hover en las cartas ==== */
+.congresos-container > *:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==== Estilos adicionales ==== */
 .congresos-container > * h2,
 .congresos-container > * p {
   text-align: center;
@@ -75,6 +101,12 @@
   margin-top: 1rem;
 }
 
+.congresos-container p {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* ==== Botón ==== */
 .congresos-container a,
 .congreso-boton {
   display: inline-block;
@@ -100,6 +132,6 @@
 
 .congresos-container a:hover,
 .congreso-boton:hover {
-  background: none !important;
-  color: #fff !important;
+  background: #252525;
+  color: #fff;
 }
