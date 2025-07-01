@@ -3,7 +3,7 @@ import FormularioSimple from '../props/FormularioSimple';
 import BotonConsultodo from '../props/BotonConsultodo';
 import '../public/styles/Asesoria_Consultoria.css'; // Asegúrate de tener este archivo CSS
 
-function Asesoria_Consultoria() {
+function Consultoria() {
   return (
     <>
       <div className='asesoria-titulo'>
@@ -43,4 +43,4 @@ function Asesoria_Consultoria() {
   );
 }
 
-export default Asesoria_Consultoria;
+export default Consultoria;

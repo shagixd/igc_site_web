@@ -13,7 +13,7 @@ const style = {
   zIndex: 9999,
   background: '#10B850',
   color: '#fff',
-  borderRadius: 30,
+  borderRadius: 20,
   width: 'auto',
   height: 60,
   display: 'flex',

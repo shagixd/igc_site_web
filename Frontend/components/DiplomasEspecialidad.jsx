@@ -1,6 +1,6 @@
 import React from 'react';
 import DiplomaCard from '../props/PropInfo';
-import '../public/styles/Diplomas_Especialidad.css'; // Asegúrate de tener este archivo CSS
+import '../public/styles/DiplomasEspecialidad.css'; // Asegúrate de tener este archivo CSS
 
 const diplomas = [
 	{
@@ -125,7 +125,7 @@ const diplomas = [
 	}
 ];
 
-const Diplomas_Especialidad = () => (
+const DiplomasEspecialidad = () => (
 	<div>
 		<div className="diplomas-titulo">
 			<h2>Diplomas de Especializacion</h2>
@@ -157,4 +157,4 @@ const Diplomas_Especialidad = () => (
 	</div>
 );
 
-export default Diplomas_Especialidad;
+export default DiplomasEspecialidad;

@@ -1,4 +1,4 @@
-.congresos-titulo {
+.diplomas-titulo {
   position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
   background: url(../img/prueba.jpg) no-repeat center center / cover;
   width: 100%;
@@ -8,7 +8,7 @@
   overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
 }
 
-.congresos-titulo::before {
+.diplomas-titulo::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -17,27 +17,27 @@
   pointer-events: none; /* para que no bloquee interacciones con el contenido */
 }
 
-.congresos-titulo * {
+.diplomas-titulo * {
   position: relative;
   z-index: 2; /* para que el texto esté encima del overlay */
 }
 
 
-.congresos-titulo h2 {
+.diplomas-titulo h2 {
   font-size: 3.5rem;
   color: #000d81;
   margin: 0;
   text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
   text-align: center;
 }
-.congresos-titulo p {
+.diplomas-titulo p {
   font-size: 28px;
   color: #ffffff;
   margin: 0;
   text-align: center;
 }
 
-.congresos-container {
+.diplomas-container {
     display: flex;
     width: 90%;
     margin: 10px auto;

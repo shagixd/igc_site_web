@@ -1,0 +1,14 @@
+.caja-central{
+    margin: 30px;
+    width: 80%;
+    display: flex;
+    gap: 1px;
+}
+.caja-central div {
+    border-right: 1px solid black;
+    border-left: 1px solid #000000;
+    flex-grow: 1;
+    margin: 1px;
+    padding: 1px;
+    
+}

@@ -1,4 +1,4 @@
-.congresos-titulo {
+.titulo-cursos {
   position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
   background: url(../img/prueba.jpg) no-repeat center center / cover;
   width: 100%;
@@ -8,7 +8,7 @@
   overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
 }
 
-.congresos-titulo::before {
+.titulo-cursos::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -17,27 +17,27 @@
   pointer-events: none; /* para que no bloquee interacciones con el contenido */
 }
 
-.congresos-titulo * {
+.titulo-cursos * {
   position: relative;
   z-index: 2; /* para que el texto esté encima del overlay */
 }
 
 
-.congresos-titulo h2 {
+.titulo-cursos h2 {
   font-size: 3.5rem;
   color: #000d81;
   margin: 0;
   text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
   text-align: center;
 }
-.congresos-titulo p {
+.titulo-cursos p {
   font-size: 28px;
   color: #ffffff;
   margin: 0;
   text-align: center;
 }
 
-.congresos-container {
+.cursos-container {
     display: flex;
     width: 90%;
     margin: 10px auto;
@@ -54,26 +54,26 @@
     flex-direction: row;
     flex-wrap: wrap;
     color: rgb(0, 0, 0);
-    box-shadow: 0 0 1px black;
+    box-shadow: 0 0 2px black;
     padding: 0;
     animation: aparecerTarjeta 0.6s ease forwards;
     animation-fill-mode: both;
 }
-.seccion0 {
+.cubo0 {
     width: 100%; height: auto;
     margin: 0;
 }
-.seccion1{
-    width: 60%;
+.cubo1{
+    width: 65%;
     height: auto;
     margin: 0; padding: 0;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-items: center;
     text-align: center;
     font-size: 20px;
 }
-.seccion2{
-    width: 40%;
+.cubo2{
+    width: 35%;
     height: auto;
     margin: 0; padding: 0;
     background-color: rgb(133, 224, 252);
@@ -85,16 +85,19 @@
     color: white;
     overflow: hidden;
 }
-.seccion1 a {
+.cubo1 p {
+    margin: 16% 0;
+}
+.cubo1 a {
   background-color: #9b9b9b;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 40px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  margin-bottom: 3%;
+  margin-bottom: 1px;
 }
 @keyframes aparecerTarjeta {
   0% {

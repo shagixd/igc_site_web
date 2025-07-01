@@ -1,6 +1,7 @@
 import React from 'react';
 import DiplomaCard from '../props/PropInfo';
-import '../public/styles/Cursos_Especializados.css';
+import '../public/styles/CursosEspecialidad.css';
+import { SlArrowRight } from "react-icons/sl";
 
 const diplomas = [
   {
@@ -86,29 +87,26 @@ const diplomas = [
   }
 ];
 
-const Cursos_Especializados = () => (
+const CursosEspecialidad = () => (
   <>
     <div className='titulo-cursos'>
       <h2>Cursos Especializados</h2>
       <p>Instituto de gerencia Intercontinental</p>
     </div>
     <div className="cursos-container">
-        {diplomas.map((diploma) => (
-          <div key={diploma.link} style={{ '--color-fondo': diploma.colorFondo }}>
+        {diplomas.map((diploma, index) => (
+          <div key={diploma.link} style={{ '--color-fondo': diploma.colorFondo, animationDelay: `${index * 0.1}s`  }}>
             <DiplomaCard
-              titulo={diploma.titulo}
+              /*titulo={diploma.titulo}*/
               descripcion={diploma.descripcion}
               imagen={diploma.imagen}
               colorFondo={diploma.colorFondo}
               inicioClases={diploma.inicioClases}
               certificado={diploma.certificado}
               boton={
-                <a
-                  href={`${diploma.link}?titulo=${encodeURIComponent(diploma.titulo)}&inicioClases=${encodeURIComponent(diploma.inicioClases)}`}
-                  className="btn"
-                >
-                  Más información
-                </a>
+                <a href={`${diploma.link}?titulo=${encodeURIComponent(diploma.titulo)}&inicioClases=${encodeURIComponent(diploma.inicioClases)}`}
+                  className="btn">
+                  Ver mas <SlArrowRight style={{fontSize: '12px'}}/></a> 
               }
             />
           </div>
@@ -117,4 +115,4 @@ const Cursos_Especializados = () => (
   </>
 );
 
-export default Cursos_Especializados;
+export default CursosEspecialidad;

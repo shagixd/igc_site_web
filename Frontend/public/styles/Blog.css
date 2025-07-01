@@ -12,7 +12,6 @@
     rgb(0, 101, 253),
     rgb(0, 24, 133)
   );
-  border: #000 1px solid;
   padding-right: 100px;
   box-sizing: border-box;
 }
@@ -125,7 +124,6 @@
 
 .blog-content-flex-container {
   display: flex;
-  border: 1px solid #000;
   margin: 25px;
   gap: 0;
   background: #fff;
@@ -133,7 +131,6 @@
 
 .blog-section-box {
   width: 50%;
-  border: 1px solid #000;
   box-sizing: border-box;
   padding: 1.5rem 1rem;
   min-height: 400px;

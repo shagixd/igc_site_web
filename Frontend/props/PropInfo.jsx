@@ -15,13 +15,17 @@ const DiplomaCard = ({
       ...style
     }}
   >
-    <img src={imagen} alt={titulo} className="diploma-card-img" />
-    <h2>{titulo}</h2>
-    <p>{descripcion}</p>
-    {inicioClases && <p>Inicio de clases: {inicioClases}</p>}
-    {certificado && <p>Certificado: {certificado}</p>}
-    {boton}
-    <p>Contáctanos</p>
+    <div className='cuboo0'>
+    <img style={{width: '100%', height: 'auto'}} src={imagen} alt={titulo}/>
+    </div>
+    <div className='cubo1'>
+      <p>{descripcion}</p>
+      {certificado && <p className='p2'>Certificado: {certificado}</p>}
+      {boton}
+    </div>
+    <div className='cubo2'>
+      {inicioClases && <p className='p1'>Inicio<br />{inicioClases}</p>}
+    </div>
   </div>
 );
 
