@@ -1,0 +1,93 @@
+.asesoria-titulo {
+  position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
+  background: url(../img/prueba.jpg) no-repeat center center / cover;
+  width: 100%;
+  padding: 6% 0;
+  margin: 0;
+  /* No uses height: auto aquí, deja que el contenido defina la altura */
+  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
+}
+
+.asesoria-titulo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* capa negra semitransparente */
+  z-index: 1;
+  pointer-events: none; /* para que no bloquee interacciones con el contenido */
+}
+
+.asesoria-titulo * {
+  position: relative;
+  z-index: 2; /* para que el texto esté encima del overlay */
+}
+
+.asesoria-titulo-texto {
+  background: rgba(255, 255, 255, 0.856);
+  width: 40%; height: auto;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  border-radius: 12px;
+  padding: 2% 3%;
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.asesoria-titulo-texto h2 {
+  font-size: clamp(18px, 4vw, 54px);
+  font-weight: bold;
+  color: #0d1e4a;
+  text-align: center;
+  margin: 1%;
+}
+
+.asesoria-titulo-texto p {
+  color: #242424;
+  font-size: clamp(12px, 3vw, 30px);
+  text-align: center;
+  margin: 1% 0;
+}
+
+.caja-flex {
+  display: flex;
+  width: 80%; height: auto;
+  background-color: white;
+  box-shadow: 0 0 2px black;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% auto;
+}
+.cubo-flex {
+  min-width: 300px; height: auto; width: 40%;
+  box-shadow: 0 0 2px black;
+  background-color: white;
+  margin: 2% 4%;
+  padding: 2% 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cubo-flex h3 {
+  font-size: clamp(15px, 3vw, 30px);
+  text-align: center;
+}
+.cubo-flex p {
+  font-size: clamp(10px, 3vw, 20px);
+  text-align: center;
+}
+.cubo-flex span {
+  font-size: clamp(28px, 4vw, 48px);
+  text-align: center;
+}
+
+.asesoria-formulario {
+  width: 50%; height: auto;
+  margin: 3% auto;
+  background-color: rgba(230, 230, 230, 0.61);
+  padding: 2% 1%;
+}
+.asesoria-formulario h3 {
+  text-align: center;
+  font-size: clamp(12px, 3vw, 24px);
+}

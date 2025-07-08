@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="footer">
         <div className="footer-flex">
-          <div className='cuerpo'>
+          <div className='cuerpo1'>
             <img src="/img/logoigc.png" alt="logo empresa" />
             <p>Capacitación para Funcionarios y Servidores Públicos</p>
             <div className='footer-enlaces'>
@@ -31,7 +31,7 @@ export default function Footer() {
             </a>
             </div>
           </div>
-          <div className='cuerpo'>
+          <div className='cuerpo2'>
             <h3>Programas</h3>
           <ul>
             <li>Cursos Especiales</li>
@@ -41,17 +41,17 @@ export default function Footer() {
             <li>Catálogo de Cursos</li>
           </ul>
           </div>
-          <div className='cuerpo'>
+          <div className='cuerpo3'>
             <h3>Bienvenidos a IGC</h3>
           <ul>
             <li>Asesoría y Consultoría</li>
             <li>Convenios Realizados</li>
           </ul>
           </div>
-          <div className='cuerpo'>
+          <div className='cuerpo4'>
             <h3>Contáctanos</h3>
-            <p>Visítanos en: Av. Gral. Juan Antonio Álvarez de Arenales 2081, Lince 15046</p>
             <p>Teléfono: 945 504 555</p>
+            <p>Correos: </p>
           </div>
         </div>
         <div className='zona-abajo'>

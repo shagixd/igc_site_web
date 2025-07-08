@@ -1,5 +1,5 @@
 .footer {
-  background-image: linear-gradient(to bottom, rgb(0, 27, 182), rgb(0, 9, 90));
+  background-image: linear-gradient(to bottom, rgb(0, 16, 107), rgb(0, 6, 56));
   width: 100%; height: auto;
   color: #fff;
   padding: 1% 0%;
@@ -10,24 +10,26 @@
   width: 80%;
   margin: 0 auto;
 }
-.cuerpo {
-  width: 25%; height: auto;
-  margin: 0;
+.cuerpo1, .cuerpo2, .cuerpo3, .cuerpo4 {
+  width: 23%; height: auto;
+  margin: 0; padding: 1%;
+  justify-content: center;
 }
-.cuerpo img {
-  width: 80%; height: auto;
+.cuerpo1 img {
+  width: 90%; height: auto;
   margin: 5% auto;
 }
-.cuerpo p {
+.footer-flex p {
   width: 80%;
-  margin: 3% auto;
+  margin: 5% auto;
+  font-size: clamp(9px, 3vw, 22px);
 }
 .cuerpo h3 {
   text-align: center;
+  font-size: clamp(8px, 1vw, 20px);
 }
 .footer-enlaces {
   width: 100%; height: auto;
-  height: auto;
   display: flex;
   justify-content: space-around;
 
@@ -66,11 +68,71 @@
   border-radius: 5px;
   margin: 2%;
 }
+.footer-flex h3{
+  text-align: center;
+  font-size: clamp(10px, 4vw, 28px);
+}
+.footer-flex ul{
+  padding-left: 5%;
+}
+.footer-flex li{
+  margin: 2% 0;
+  font-size: clamp(8px, 3vw, 22px);
+}
 .zona-abajo {
   width: 80%;
-  margin: 3% auto;
+  margin: 1% auto;
   border-top: 5px double white;
+  padding: 1%;
 }
 .zona-abajo p {
   text-align: center;
+  font-size: clamp(10px, 3vw, 22px);
+}
+
+/*----------------DISEÑO PARA TABLET---------------*/
+@media screen and (max-width: 1100px){
+  .footer-flex {
+    width: 95%;
+  }
+  .zona-abajo {
+    width: 95%;
+  }
+}
+
+/*----------------DISEÑO PARA MOVIL---------------*/
+@media screen and (max-width: 700px){
+  .footer-flex {
+    width: 100%;
+  }
+  .cuerpo1 {
+    width: 100%;
+    order: 10;
+    padding: 1%;
+    display: flex;
+    border-top: 5px double white;
+  }
+  .cuerpo1 img {
+    width: 20%; height: auto;
+    margin: 0;
+  }
+  .footer-enlaces {
+  width: 50%; height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  }
+  .footer-flex p {
+  width: 80%;
+  margin: 0 auto;
+  }
+  .cuerpo2, .cuerpo3, .cuerpo4 {
+    width: 31%;
+  }
+  .footer-flex ul{
+  padding-left: 10%;
+  }
+  .zona-abajo {
+    width: 100%;
+  }
 }

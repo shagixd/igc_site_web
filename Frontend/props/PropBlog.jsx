@@ -24,10 +24,10 @@ const PropsVariados = ({
         <img src={imagen} alt={titulo} />
       </div>
       <h3>{titulo}</h3>
-      <p>{descripcion}</p>
-      <p>
+      <p className='descripcion-1'>{descripcion}</p>
+      <p className='descripcion-2'>
         {descripcion2}
-        {mostrarMas && <span> {descripcionExtra}</span>}
+        {mostrarMas && <span className='descripcion-3'> {descripcionExtra}</span>}
       </p>
       <a
         href="#"

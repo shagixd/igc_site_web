@@ -1,6 +1,8 @@
 import React, { useState, useEffect , useRef} from 'react';
+import { FaBullseye, FaEye } from "react-icons/fa";
 import '../public/styles/SobreIGC.css'; 
 import BotonConsultodo from '../props/BotonConsultodo';
+import { MdOutlineStarBorder } from "react-icons/md";
 
 export default function Sobreigc() {
   const textos = [
@@ -92,17 +94,18 @@ export default function Sobreigc() {
 
       <div className='seccion-3'>
           <div className="seccion3-vision">
-            <div className='imagenes-vision'> <img src="/img/prueba.jpg" alt="" /> <img src="/img/prueba.jpg" alt="" /> <img src="/img/prueba.jpg" alt="" /> </div>
-            <h3>🌟   Visión   🌟</h3>
-            <p>Ser líderes en la industria de la capacitación convirtiéndonos en el aliado estratégico de las organizaciones y en el desarrollo del talento profesional y empresarial.</p>
+            <div className='caja-icon'>< FaBullseye className='icon'/></div>
+            <h3>Visión</h3>
+            <p>Ser líderes en la industria de la capacitación, consolidándonos como el aliado estratégico preferido de las organizaciones, promoviendo el desarrollo continuo del talento profesional y empresarial mediante programas innovadores, eficaces y adaptados a las exigencias del entorno global y competitivo.</p>
           </div>
           <div className="seccion3-mision">
-            <div className='imagenes-mision'><img src="/img/prueba.jpg" alt="" /> <img src="/img/prueba.jpg" alt="" /> <img src="/img/prueba.jpg" alt="" /> </div>
-            <h3>🎯   Misión    🎯</h3>
+            <div className='caja-icon'>< FaEye className='icon'/></div>
+            <h3>Misión</h3>
             <p>Desarrollar Soluciones Estratégicas de Aprendizaje vanguardistas y orientadas a resultados para profesionales competentes bajo el desarrollo integral de conocimientos, habilidades, aptitudes y actitudes para potencializar la productividad individual y organizacional.</p>
           </div>
           <div className="seccion3-metodologia">
-            <h3>💡    Metodología    💡</h3>
+            <div className='caja-icon'>< MdOutlineStarBorder className='icon'/></div>
+            <h3>Metodología</h3>
             <p>La metodología de la capacitación es con enfoque Andragógico, a través del cual se considera la enseñanza para adultos incorporando principios fundamentales como la participación, experiencia horizontalidad y flexibilidad. También se aplicará la metodología teórica y práctica, mediante el desarrollo de casos de aplicación de la Ley del Procedimiento Administrativo General con exposiciones de alto contenido en las que se propiciará el diálogo y el intercambio de experiencias entre el profesor y los participantes.</p>
           </div>
       </div>
@@ -197,12 +200,11 @@ export default function Sobreigc() {
           </div>
 
         </div>
-
-        <div
-          className={`seccion5${seccion5Visible ? ' visible' : ''}`}
-          ref={seccion5Ref}>
-          <img src="/img/I-1.png" alt="1" /><img src="/img/I-2.png" alt="2" /><img src="/img/I-3.jpg" alt="3" /><img src="/img/I-4.jpg" alt="4" /><img src="/img/I-5.png" alt="5" />
-        </div>
+      </div>
+      <div
+        className={`seccion5${seccion5Visible ? ' visible' : ''}`}
+        ref={seccion5Ref}>
+        <img src="/img/I-1.png" alt="1" /><img src="/img/I-2.png" alt="2" /><img src="/img/I-3.jpg" alt="3" /><img src="/img/I-4.jpg" alt="4" /><img src="/img/I-5.png" alt="5" />
       </div>
     </>
   );
