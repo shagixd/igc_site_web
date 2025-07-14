@@ -2,7 +2,7 @@ import React from 'react';
 import '../public/styles/Formulario.css';
 import emailjs from 'emailjs-com';
 
-const FormularioCatalogo = ({
+const FormularioEmail = ({
   opciones = [],
   placeholderSelect = "Seleccione una opción"
 }) => {
@@ -151,7 +151,7 @@ const FormularioCatalogo = ({
             if (counter) counter.textContent = `${count}/200`;
           }}
         ></textarea>
-        <div style={{ fontSize: "0.8rem", textAlign: "right", marginTop: "-8px" }}>
+        <div style={{ fontSize: "25px", color: "black", textAlign: "right" }}>
           <span id="contador-comentario">0/200</span>
         </div>
       </div>
@@ -160,4 +160,4 @@ const FormularioCatalogo = ({
   );
 };
 
-export default FormularioCatalogo;
+export default FormularioEmail;

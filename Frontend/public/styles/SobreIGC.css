@@ -1,3 +1,6 @@
+body {
+    background-color: #ffffff;
+}
 .fondo-inicio-central {
   position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
   background: url(../img/prueba.jpg) no-repeat center center / cover;

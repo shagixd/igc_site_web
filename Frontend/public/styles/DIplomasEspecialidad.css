@@ -54,9 +54,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     color: rgb(0, 0, 0);
-    box-shadow: 0 0 1px black;
+    box-shadow: 0 0 6px black;
     padding: 0;
-    animation: aparecerTarjeta 0.6s ease forwards;
+    animation: aparecerTarjeta 0.7s ease forwards;
     animation-fill-mode: both;
 }
 .seccion0 {

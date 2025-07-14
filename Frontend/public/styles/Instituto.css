@@ -1,0 +1,208 @@
+.instituto-titulo {
+  position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
+  background: url(../img/prueba.jpg) no-repeat center center / cover;
+  width: 100%;
+  padding: 8% 0;
+  margin: 0;
+  /* No uses height: auto aquí, deja que el contenido defina la altura */
+  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
+}
+
+.instituto-titulo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* capa negra semitransparente */
+  z-index: 1;
+  pointer-events: none; /* para que no bloquee interacciones con el contenido */
+}
+
+.instituto-titulo * {
+  position: relative;
+  z-index: 2; /* para que el texto esté encima del overlay */
+}
+
+
+.instituto-titulo h2 {
+  font-size: 3.5rem;
+  color: #000d81;
+  margin: 0;
+  text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
+  text-align: center;
+}
+.instituto-titulo p {
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+
+
+.contenedor-instituto {
+  width: 90%; height: auto;
+  margin: 2% auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.imagen-grande {
+    width: 50%; height: auto;
+    position: relative;
+    padding: 1% 0;
+    margin: 1% 0;
+}
+.imagen-grande img {
+    width: 100%; height: auto;
+    border-radius: 21% 1% 18% 1%;
+    box-shadow: 5px 5px 3px rgb(0, 78, 180) ;
+}
+.texto-central {
+    width: 50%; height: auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    margin: 1% auto;
+}
+.texto-central h3 {
+    font-size: clamp(20px, 3vw, 50px);
+    color: #ffffff;
+    text-shadow: 0 0 5px#00236e;
+    background-color: #0321ca;
+    border-radius: 0 25px 25px 0;
+    margin: 0;
+    text-align: center;
+    padding: 3% 1%;
+}
+.panel-formulario{
+    background: url(../img/prueba.jpg) no-repeat center center / cover;
+    width: 90%; height: auto;
+    margin: 2% auto;
+    display: flex;
+    position: relative;
+    border-radius: 10px;
+}
+.panel-formulario::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* capa negra semitransparente */
+    z-index: 1;
+    pointer-events: none; /* para que no bloquee interacciones con el contenido */
+    border-radius: 10px;
+}
+.panel-formulario * {
+  position: relative;
+  z-index: 2; /* para que el texto esté encima del overlay */
+}
+.texto-relleno {
+    width: 40%; height: auto;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+.texto-relleno p {
+    font-size: clamp(16px, 2vw, 36px);
+    color: #ffffff;
+    text-shadow: 0 0 5px rgb(0, 140, 255);
+    margin: 0;
+    text-align: center;
+}
+.espacio-form {
+    width: 40%; height: auto;
+    margin: 0 auto;
+}
+
+
+.cajas-de-opciones {
+    width: 50%; height: auto;
+    margin: 3% auto;
+    display: flex;
+}
+.caja-opcion {
+    width: 45%; height: auto;
+    margin: 0 2.5%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.877);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.caja-opcion-1 {
+    background-color: rgb(200, 236, 250);
+    width: 25%; height: auto; min-height: 105px;
+    margin: 2% 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja-opcion-2 {
+    background-color: rgb(10, 44, 107);
+    width: 75%; height: auto; min-height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja-opcion h5 {
+    font-size: clamp(10px, 1.5vw, 20px);
+    color: #ffffff;
+    margin: 0 auto;
+    padding: 1% 0;
+    text-align: center;
+}
+.caja-opcion-1 svg {
+    font-size: clamp(20px, 3vw, 50px);
+}
+.cajas-de-opciones p {
+    font-size: clamp(10px, 1.5vw, 20px);
+    color: #00185a;
+    margin: 0 auto;
+    padding: 1% 0;
+}
+
+
+.letras-cierres {
+    width: 100%; height: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1749b6;
+    padding: 1% 0;
+    position: relative;
+}
+.letras-cierres h6 {
+    font-size: clamp(20px, 3vw, 42px);
+    color: #ffffff;
+    margin: 0;
+}
+
+.letras-cierres p {
+    font-size: clamp(10px, 2.2vw, 28px);
+    color: #dbdbdb;
+    margin: 0;
+}
+.publicidad-instituto {
+    width: 75%; height: auto;
+    margin: 3% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.publicidad-instituto h4 {
+    font-size: clamp(16px, 2vw, 32px);
+    color: #000b69;
+    margin: 0;
+    text-align: center;
+}
+.publicidad-instituto img {
+    width: 70%; height: auto;
+    border-radius: 5%;
+    margin: 2% 0;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.877);
+}
+.publicidad-instituto p {
+    font-size: clamp(10px, 2vw, 26px);
+    color: #1a1a1a;
+    margin: 0;
+    text-align: center;
+    border-top: #0537a1 3px solid;
+    padding-top: 1%;
+}

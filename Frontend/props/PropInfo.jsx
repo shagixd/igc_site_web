@@ -15,7 +15,7 @@ const DiplomaCard = ({
       ...style
     }}
   >
-    <div className='cuboo0'>
+    <div className='cubo0'>
     <img style={{width: '100%', height: 'auto'}} src={imagen} alt={titulo}/>
     </div>
     <div className='cubo1'>

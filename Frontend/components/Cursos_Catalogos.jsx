@@ -1,5 +1,5 @@
 import React from 'react';
-import FormularioCatalogo from '../props/Formulario';
+import FormularioEmail from '../props/FormularioEmail';
 
 const cursos = [
   "El Nuevo Sistema de Inversión Pública Invierte.pe",
@@ -71,7 +71,7 @@ function Cursos_Catalogos() {
           minHeight: '200px',                   // Altura mínima para ver bien el fondo
           boxSizing: 'border-box'
         }}>
-        <FormularioCatalogo
+        <FormularioEmail
           opciones={cursos}
           labelSelect="Catálogo de Cursos"
           placeholderSelect="Seleccione un curso"

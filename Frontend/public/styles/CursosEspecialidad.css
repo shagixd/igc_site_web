@@ -54,9 +54,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     color: rgb(0, 0, 0);
-    box-shadow: 0 0 2px black;
+    box-shadow: 0 0 6px black;
     padding: 0;
-    animation: aparecerTarjeta 0.6s ease forwards;
+    animation: aparecerTarjeta 0.7s ease forwards;
     animation-fill-mode: both;
 }
 .cubo0 {
@@ -76,7 +76,7 @@
     width: 35%;
     height: auto;
     margin: 0; padding: 0;
-    background-color: rgb(133, 224, 252);
+    background-color: rgb(83, 215, 255);
 }
 .p1 {
     font-size: 50px;
@@ -86,7 +86,7 @@
     overflow: hidden;
 }
 .cubo1 p {
-    margin: 16% 0;
+    margin: 10% 0;
 }
 .cubo1 a {
   background-color: #9b9b9b;
@@ -97,7 +97,7 @@
   text-decoration: none;
   display: inline-block;
   font-size: 20px;
-  margin-bottom: 1px;
+  margin-bottom: 5%;
 }
 @keyframes aparecerTarjeta {
   0% {

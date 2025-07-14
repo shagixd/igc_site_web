@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../public/styles/CursosalaMedida.css';
+import { FcContacts, FcGraduationCap, FcLineChart, FcNegativeDynamic } from "react-icons/fc";
 
 function CursosalaMedida() {
   const imagenes = [
@@ -44,7 +45,7 @@ function CursosalaMedida() {
     { text: 'CONGRESOS NACIONALES E INTERNACIONALES', img: 'congresos.jpg' },
   ];
   const items2 = [
-    { text: 'PRESENCIAL', img: 'talleres.jpg' },
+    { text: 'PRESENCIAL', img: '/img/1.jpg' },
     { text: 'HIBRIDAD', img: 'seminarios.jpg' },
     { text: 'VIRTUAL SICRONICO', img: 'cursos.jpg' },
     { text: 'VIRTUAL ASINCRONICO', img: 'especializacion.jpg' },
@@ -119,7 +120,7 @@ function CursosalaMedida() {
                         </p>
                     </div>
                     <div className='carta-cuerpo-icon'>
-                        emoji
+                        <FcContacts />
                     </div>
                 </div>
                 <div className='carta-cuerpo'>
@@ -130,7 +131,7 @@ function CursosalaMedida() {
                         </p>
                     </div>
                     <div className='carta-cuerpo-icon'>
-                        emoji
+                        <FcGraduationCap />
                     </div>
                 </div>
                 <div className='carta-cuerpo'>
@@ -143,7 +144,7 @@ function CursosalaMedida() {
                         </p>
                     </div>
                     <div className='carta-cuerpo-icon'>
-                        emoji
+                        <FcLineChart />
                     </div>
                 </div>
                 <div className='carta-cuerpo'>
@@ -153,21 +154,20 @@ function CursosalaMedida() {
                         </p>
                     </div>
                     <div className='carta-cuerpo-icon'>
-                        emoji
+                        <FcNegativeDynamic />
                     </div>
                 </div>
             </div>
         <div className="minicarruseles">
             <div className="carrusel-1">
-              <h3>DIVERSIDAD DE PROGRAMAS DE ESTUDIOS</h3>
+              <div className='carrusel-1-inicio'><h3>DIVERSIDAD DE PROGRAMAS DE ESTUDIOS</h3></div>
               <div className="carrusel-1-texto">
                 <ul>
                   {items1.map((item, idx) => (
                     <li
                       key={idx}
                       onMouseEnter={() => setImagenSrc1(item.img)}
-                      onMouseLeave={() => setImagenSrc1('')}
-                    >
+                      onMouseLeave={() => setImagenSrc1('')}>
                       {item.text}
                     </li>
                   ))}
@@ -178,15 +178,14 @@ function CursosalaMedida() {
               </div>
             </div>
             <div className="carrusel-1">
-              <h3>MODALIDADES</h3>
+              <div className='carrusel-1-inicio'><h3>MODALIDADES</h3></div>
               <div className="carrusel-1-texto">
                 <ul>
                   {items2.map((item, idx) => (
                     <li
                       key={idx}
                       onMouseEnter={() => setImagenSrc2(item.img)}
-                      onMouseLeave={() => setImagenSrc2('')}
-                    >
+                      onMouseLeave={() => setImagenSrc2('')}>
                       {item.text}
                     </li>
                   ))}

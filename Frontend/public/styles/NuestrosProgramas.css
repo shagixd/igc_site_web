@@ -1,14 +1,162 @@
-.caja-central{
-    margin: 30px;
-    width: 80%;
-    display: flex;
-    gap: 1px;
+.programas-titulo {
+  position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
+  background: url(../img/prueba.jpg) no-repeat center center / cover;
+  width: 100%;
+  padding: 8% 0;
+  margin: 0;
+  /* No uses height: auto aquí, deja que el contenido defina la altura */
+  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
 }
-.caja-central div {
-    border-right: 1px solid black;
-    border-left: 1px solid #000000;
-    flex-grow: 1;
-    margin: 1px;
-    padding: 1px;
-    
+
+.programas-titulo::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* capa negra semitransparente */
+  z-index: 1;
+  pointer-events: none; /* para que no bloquee interacciones con el contenido */
+}
+
+.programas-titulo * {
+  position: relative;
+  z-index: 2; /* para que el texto esté encima del overlay */
+}
+
+.programas-intro-container {
+  width: 90%; height: auto;
+  margin: 3% auto;
+  display: flex;
+  background-color: #0053be;
+  padding: 0;
+  max-height: 500px;
+}
+.programas-intro {
+    width: 50%; height: auto;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.programas-intro h4 {
+    font-size: clamp(20px, 3vw, 50px);
+    color: #ffffff;
+    text-shadow: 0 0 6px #cccccc;
+    margin: 0;
+    text-align: center;
+}
+.programas-intro p {
+    font-size: clamp(16px, 2.5vw, 35px);
+    color: #ffffff;
+    text-shadow: 0 0 6px #a8a8a8;
+    margin: 1% 0;
+    text-align: center;
+}
+.imagen-intro {
+  width: 45%; height: auto;
+  display: flex;
+  justify-content: center;
+}
+.imagen-intro img {
+  width: 100%; height: auto;
+  border-radius: 40% 1% 1% 40%;
+
+}
+.programas-titulo h2 {
+  font-size: clamp(18px, 3vw, 54px);
+  color: #000d81;
+  margin: 0;
+  text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
+  text-align: center;
+}
+.programas-titulo p {
+  font-size: clamp(14px, 2vw, 34px);
+  color: #ffffff;
+  margin: 0;
+  text-align: center;
+}
+.caja-programas-padre {
+    width: 90%; height: auto;
+    margin: 2% auto;
+}
+.caja-programas {
+  border: 1px solid #0053be;
+  position: relative;
+  flex: 1 1 calc(50% - 20px); /* dos por fila */
+  min-width: 300px;
+  padding-bottom: 3%;
+}
+.caja-programas h2 {
+    font-size: clamp(14px, 2.5vw, 34px);
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color: #0053be;
+    padding: 2% 0;
+    margin: 0 auto;
+}
+.caja-programas p {
+    font-size: clamp(12px, 1.5vw, 26px);
+    text-align: center;
+    width: 70%; height: auto;
+    margin: 1% auto;
+    color: #1a1a1a;
+    text-shadow: 0 0 1px #141414;
+}
+.caja-programas ul {
+    list-style: none;
+    text-align: center;
+    width: 70%; height: auto;
+    margin: 0 auto;
+    color: #000000;
+    text-shadow: 0 0 3px #cce2ff;
+}
+.caja-programas li::before {
+    font-size: clamp(12px, 1.5vw, 24px);
+    content: "💎";
+}
+.galeria-imagenes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 2% 2% 0 2%;
+}
+
+.galeria-imagenes img {
+  width: calc(25% - 7.5px);
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.galeria-imagenes img:hover {
+  transform: scale(1.06);
+}
+
+/* Modal de imagen grande */
+.modal-imagen-grande {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.452);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-imagen-grande img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 8px;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
