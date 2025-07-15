@@ -2,82 +2,85 @@
   background-image: linear-gradient(to bottom, rgb(0, 16, 107), rgb(0, 6, 56));
   width: 100%; height: auto;
   color: #fff;
-  padding: 1% 0%;
+  padding: 1% 2%;
 }
-.footer-flex {
+.footer-contenedor {
   display: flex;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
-.cuerpo1, .cuerpo2, .cuerpo3, .cuerpo4 {
-  width: 23%; height: auto;
+.cuerpo1, .cuerpo2, .cuerpo3 {
+  width: 30%; height: auto;
   margin: 0; padding: 1%;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .cuerpo1 img {
-  width: 90%; height: auto;
-  margin: 5% auto;
+  width: 80%; height: auto;
 }
-.footer-flex p {
+.footer-contenedor p {
   width: 80%;
-  margin: 5% auto;
-  font-size: clamp(9px, 3vw, 22px);
-}
-.cuerpo h3 {
   text-align: center;
-  font-size: clamp(8px, 1vw, 20px);
+  margin: 0.5% 0;
+  font-size: clamp(11px, 1vw, 20px);
+}
+.cuerpo3 ul {
+  padding-left: 5%;
+}
+.cuerpo3 li {
+  margin: 0;
+  font-size: clamp(10px, 1vw, 18px);
+}
+.footer-contenedor h3 {
+  text-align: center;
+  font-size: clamp(9px, 1vw, 30px);
+  margin: 1% 0;
 }
 .footer-enlaces {
-  width: 100%; height: auto;
+  width: 50%; height: auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
 
 }
+.footer-enlaces svg {
+  font-size: clamp(20px, 2.5vw, 40px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .footer-icon.facebook {
   background-color: #3b5998;
-  padding: 3%;
-  border-radius: 5px;
-  margin: 2%;
+  padding: 1%;
+  border-radius: 25%;
 }
 
 .footer-icon.whatsapp {
   background-color: #25D366;
-  padding: 3%;
-  border-radius: 5px;
-  margin: 2%;
+  padding: 1%;
+  border-radius: 25%;
 }
 
 .footer-icon.instagram {
   background-color: #E4405F;
-  padding: 3%;
-  border-radius: 5px;
-  margin: 2%;
+  padding: 1%;
+  border-radius: 25%;
 }
 
 .footer-icon.tiktok {
   background-color: #000000;
-  padding: 3%;
-  border-radius: 5px;
-  margin: 2%;
+  padding: 1%;
+  border-radius: 25%;
 }
 
 .footer-icon.youtube {
   background-color: #FF0000;
-  padding: 3%;
-  border-radius: 5px;
-  margin: 2%;
-}
-.footer-flex h3{
-  text-align: center;
-  font-size: clamp(10px, 4vw, 28px);
-}
-.footer-flex ul{
-  padding-left: 5%;
-}
-.footer-flex li{
-  margin: 2% 0;
-  font-size: clamp(8px, 3vw, 22px);
+  padding: 1%;
+  border-radius: 25%;
 }
 .zona-abajo {
   width: 80%;
@@ -87,7 +90,7 @@
 }
 .zona-abajo p {
   text-align: center;
-  font-size: clamp(10px, 3vw, 22px);
+  font-size: clamp(10px, 1vw, 22px);
 }
 
 /*----------------DISEÑO PARA TABLET---------------*/
@@ -102,37 +105,4 @@
 
 /*----------------DISEÑO PARA MOVIL---------------*/
 @media screen and (max-width: 700px){
-  .footer-flex {
-    width: 100%;
-  }
-  .cuerpo1 {
-    width: 100%;
-    order: 10;
-    padding: 1%;
-    display: flex;
-    border-top: 5px double white;
-  }
-  .cuerpo1 img {
-    width: 20%; height: auto;
-    margin: 0;
-  }
-  .footer-enlaces {
-  width: 50%; height: auto;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  }
-  .footer-flex p {
-  width: 80%;
-  margin: 0 auto;
-  }
-  .cuerpo2, .cuerpo3, .cuerpo4 {
-    width: 31%;
-  }
-  .footer-flex ul{
-  padding-left: 10%;
-  }
-  .zona-abajo {
-    width: 100%;
-  }
 }

@@ -12,46 +12,55 @@ const CursoPropSalida = ({ secciones }) => {
   };
 
   return (
-    <div style={{ width: '100%', height: '100%' }}>
+    <>
+    |<div>
+      <hr style={{ border: 'none', borderTop: '5px solid #e0e0e0', margin: '2% auto', width:'80%' }} />
+        <h3 style={{
+          fontSize: 'clamp(24px, 2.5vw, 36px)',
+          fontWeight: 'bold',
+          color: '#888',
+          marginBottom: '2rem',
+          letterSpacing: '1px',
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          textShadow: '1px 2px 8px #bbb'
+        }}>
+          Temario
+        </h3>
+    </div>
+    <div style={{ width: '100%', height: 'auto' }}>
       {Array.isArray(secciones) && secciones.length > 0 ? (
         secciones.map((seccion, idx) => (
           <div
             key={idx}
             style={{
-              marginBottom: '2rem',
               border: '1px solid #e0e0e0',
               borderRadius: 12,
-              padding: '20px 24px', // Más espacio lateral
-              width: '100%',
-              maxWidth: 1500,        // Más angosto
-              margin: '24px auto',  // Centrado y espacio arriba/abajo
+              padding: '1% 1%',
+              width: '75%',
+              margin: '2% auto',  // Centrado y espacio arriba/abajo
               boxSizing: 'border-box',
-              minHeight: 90,
               background: '#fff'    // Opcional: fondo blanco para destacar
-            }}
-          >
+            }}>
             <button
               onClick={() => toggleSeccion(idx)}
               style={{
                 display: 'flex',
                 alignItems: 'center',
-                background: abiertas.includes(idx) ? '#7c3aed' : 'none', // Fondo morado si está abierto
+                background: abiertas.includes(idx) ? '#0051ffff' : 'none', // Fondo morado si está abierto
                 border: 'none',
                 width: '100%',
                 textAlign: 'left',
-                fontSize: '1.35rem',
+                fontSize: 'clamp(16px, 1.2vw, 30px)',
                 cursor: 'pointer',
                 fontWeight: 'bold',
-                minHeight: 64,
-                paddingTop: 16,
-                paddingBottom: 16,
+                padding: '1% 2%',
                 borderRadius: 8,
                 color: abiertas.includes(idx) ? '#fff' : '#222' // Texto blanco si está abierto
-              }}
-            >
+              }}>
               <span style={{ flex: 1 }}>{seccion.titulo}</span>
               <span style={{
-                fontSize: '2rem',
+                fontSize: 'clamp(16px, 1.2vw, 30px)',
                 transition: 'transform 0.2s',
                 transform: abiertas.includes(idx) ? 'rotate(180deg)' : 'rotate(0deg)'
               }}>
@@ -59,7 +68,7 @@ const CursoPropSalida = ({ secciones }) => {
               </span>
             </button>
             {abiertas.includes(idx) && (
-              <div style={{ marginTop: 16, fontSize: '1.15rem', minHeight: 60, width: '100%' }}>
+              <div style={{ marginTop: 16, fontSize: 'clamp(12px, 1.5vw, 24px)', width: '90%', margin: '1% auto' }}>
                 <div dangerouslySetInnerHTML={{ __html: seccion.texto }} />
               </div>
             )}
@@ -69,6 +78,7 @@ const CursoPropSalida = ({ secciones }) => {
         <p>No hay información disponible.</p>
       )}
     </div>
+    </>
   );
 };
 

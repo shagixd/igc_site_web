@@ -23,7 +23,7 @@
 }
 
 .programas-intro-container {
-  width: 90%; height: auto;
+  width: 80%; height: auto;
   margin: 3% auto;
   display: flex;
   background-color: #0053be;
@@ -32,20 +32,20 @@
 }
 .programas-intro {
     width: 50%; height: auto;
-    margin: 2% auto;
+    margin: 5% auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 .programas-intro h4 {
-    font-size: clamp(20px, 3vw, 50px);
+    font-size: clamp(20px, 3vw, 48px);
     color: #ffffff;
     text-shadow: 0 0 6px #cccccc;
     margin: 0;
     text-align: center;
 }
 .programas-intro p {
-    font-size: clamp(16px, 2.5vw, 35px);
+    font-size: clamp(16px, 2vw, 34px);
     color: #ffffff;
     text-shadow: 0 0 6px #a8a8a8;
     margin: 1% 0;
@@ -75,7 +75,7 @@
   text-align: center;
 }
 .caja-programas-padre {
-    width: 90%; height: auto;
+    width: 80%; height: auto;
     margin: 2% auto;
 }
 .caja-programas {
@@ -83,7 +83,7 @@
   position: relative;
   flex: 1 1 calc(50% - 20px); /* dos por fila */
   min-width: 300px;
-  padding-bottom: 3%;
+  padding-bottom: 4%;
 }
 .caja-programas h2 {
     font-size: clamp(14px, 2.5vw, 34px);
@@ -103,15 +103,19 @@
 }
 .caja-programas ul {
     list-style: none;
-    text-align: center;
     width: 70%; height: auto;
-    margin: 0 auto;
+    margin: 1% auto;
+}
+.caja-programas li {
+    font-size: clamp(10px, 1vw, 18px);
     color: #000000;
-    text-shadow: 0 0 3px #cce2ff;
+    margin: 2% auto;
+    text-align: center;
 }
 .caja-programas li::before {
     font-size: clamp(12px, 1.5vw, 24px);
-    content: "💎";
+    content: "📑";
+    margin-right: 2%;
 }
 .galeria-imagenes {
   display: flex;

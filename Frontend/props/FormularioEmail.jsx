@@ -1,5 +1,5 @@
 import React from 'react';
-import '../public/styles/Formulario.css';
+import '../public/styles/FormularioEmail.css';
 import emailjs from 'emailjs-com';
 
 const FormularioEmail = ({

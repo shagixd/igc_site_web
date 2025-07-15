@@ -64,13 +64,13 @@ body {
     width: 60%;
 }
 .seccion1-texto h2 {
-    font-size: clamp(12px, 5vw, 60px);
+    font-size: clamp(12px, 5vw, 64px);
     margin: 0;
     color: #0067ee;
     text-align: center;
 }
 .seccion1-texto p {
-    font-size: clamp(9px, 3vw, 24px);
+    font-size: clamp(9px, 3vw, 25px);
     text-align: center;
     margin: 0;
     color: #363636;
@@ -186,8 +186,8 @@ body {
 .seccion3-mision h3, .seccion3-vision h3, .seccion3-metodologia h3 {
     text-align: center;
     margin: 0;
-    padding: 1% 0 0 0;
-    font-size: clamp(24px, 5vw, 46px);
+    padding: 1% 0 0.5% 0;
+    font-size: clamp(24px, 4vw, 42px);
     color: #0051ff;                    
     text-shadow: 0px 0px 2px rgb(255, 255, 255);
 }
@@ -195,7 +195,7 @@ body {
     text-align: center;
     color: rgb(65, 65, 65);
     margin: 3%;   
-    font-size: clamp(12px, 3vw, 26px);
+    font-size: clamp(12px, 2vw, 24px);
 }
 .caja-icon {
     display: flex;
@@ -203,11 +203,11 @@ body {
     justify-content: center;
     flex-grow: 1;
     gap: 1%;
-    background-color: #0067ee;
+    background-color: #3481e6;
 }
 .icon {
-    font-size: clamp(40px, 6vw, 85px);
-    margin: 2% auto;
+    font-size: clamp(35px, 5vw, 78px);
+    margin: 2.5% auto;
     color: #ffffff;
 }
 .seccion3-metodologia {
@@ -220,7 +220,7 @@ body {
 }
 
 .seccion-4 {
-    width: 80%;
+    width: 75%;
     margin: 5% auto;
 }
 .seccion4-texto {
@@ -230,16 +230,16 @@ body {
 }
 .seccion4-texto h2 {
     margin: 0;
-    font-size: clamp(20px, 5vw, 56px);
+    font-size: clamp(28px, 5vw, 64px);
     color: #0077ff;
 }
 .seccion4-texto h3 {
     margin: 0;
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(12px, 2vw, 26px);
 }
 .seccion4-texto p {
     margin: 1% auto;
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(12px, 2vw, 26px);
     color: #1f1f1f;
 }
 .seccion4-cajas {
@@ -248,14 +248,14 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    box-shadow: 0 0 1px rgb(0, 102, 255);
+    box-shadow: 0 0 3px rgb(204, 204, 204);
 }
 .cajas {
     min-width: 400px;
     width: 45%; height: auto;
     display: flex;
     margin: 2.5% 1%;
-    box-shadow: 0px 0px 4px rgba(56, 136, 255, 0.897);
+    box-shadow: 0px 0px 2px rgba(56, 136, 255, 0.986),0px 0px 5px rgba(56, 136, 255, 0.753);
 }
 .caja-contenedora1 {
     width: 30%;
@@ -270,7 +270,7 @@ body {
 }
 .caja-contenedora2{
     width: 70%;
-    background-color: rgba(199, 237, 255, 0.521);
+    background-color: rgba(241, 250, 255, 0.836);
     padding: 2%;
     box-sizing: border-box;
 }

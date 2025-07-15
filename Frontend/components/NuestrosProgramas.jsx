@@ -1,4 +1,3 @@
-import Cajaconlinks from '../props/Cajaconlinks.jsx';
 import '../public/styles/NuestrosProgramas.css';
 import React, { useState } from 'react';
 
@@ -56,8 +55,8 @@ function NuestrosProgramas() {
         <h2>Nuestros Programas</h2>
         <p>Instituto de Gerencia Intercontinental</p>
       </div>
-        <div className='programas-intro-container'>
-          <div className='programas-intro'>
+      <div className='programas-intro-container'>
+        <div className='programas-intro'>
           <h4>PROGRAMA DE EDUCACIÓN EJECUTIVA IGC</h4>
           <p>El Instituto de Gerencia Intercontinental-IGC, ha diseñado cinco (05) líneas de
             acción a través de programas académicos y mediante los cuales capacita a

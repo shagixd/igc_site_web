@@ -50,12 +50,12 @@
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-size: clamp(17px, calc(1.3415vw + 2.2435px), 28px);
+  font-size: clamp(14px, 1.1vw, 24px);
 }
-
-
 .nav-item a:hover {
-  text-shadow: 0 0 5px rgb(10, 75, 255);
+  text-shadow: 0 0 6px rgb(0, 41, 153);
+  color: white;
+  scale: 1.05;
   text-decoration: underline;
 }
 
@@ -66,18 +66,18 @@
   background-color: #fff;
   border-top: 1px solid #ddd;
   position: relative;
-  padding: 2% 0;
+  padding: 1% 0;
 }
 
 .mobile-header {
   width: 100%; height: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-.mobile-header .espacio-logo img {
-  height: 40px; /* Tamaño reducido para móvil */
+.espacio-logo img {
+  height: 50px; /* Tamaño reducido para móvil */
   width: auto;
 }
 
@@ -85,13 +85,11 @@
   background: none;
   border: none;
   cursor: pointer;
-  text-align: end;
+  padding: 0 1%;
 }
 .menu-toggle svg {
-  color: #001141;
-  width: 28px;
-  height: 28px;
-  margin-right: 1%;
+  color: #032583;
+  font-size: clamp(24px, 3vw, 36px);
 }
 
 .mobile-menu {
@@ -119,10 +117,10 @@
   position: absolute;
   top: 8px;
   right: 12px;
-  font-size: 1.2rem;
+  font-size: clamp(16px, 2vw, 24px);
   background: none;
   border: none;
-  color: #000000;
+  color: #002f94;
   font-weight: bold;
   cursor: pointer;
 }

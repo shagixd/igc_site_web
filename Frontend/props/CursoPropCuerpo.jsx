@@ -10,10 +10,10 @@ const labels = [
 ];
 
 const boxStyle = {
-  border: '1px solid #e0e0e0',
+  border: '1px solid #0084ffff',
   borderRadius: '10px',
   padding: '16px',
-  background: '#fafafa',
+  background: '#ffffffff',
   width: '680px', // duplicado el ancho
   minHeight: '120px',
   boxSizing: 'border-box',
@@ -26,11 +26,14 @@ const CursoPropCuerpo = ({contenidos }) => {
   const [showBenef, setShowBenef] = useState(false);
 
   return (
-    <div style={{ marginLeft: 128, marginRight: 128 }}>
+    <div style={{ width: '80%', margin: '0 auto', background: '#f5f5f5d7' }}>
+      
       {/* Contenedor principal: cajas a la izquierda, formulario a la derecha */}
-      <div style={{ display: 'flex', gap: '32px', alignItems: 'flex-start', marginTop: '24px' }}>
+      <div style={{ display: 'flex', gap: '5%', alignItems: 'flex-start', marginTop: '2%' }}>
+        
         {/* Columna izquierda: dos cajas */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', width: '60%' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '60%' }}>
+          
           {/* Caja de botones y contenido */}
           <div
             style={{
@@ -48,68 +51,69 @@ const CursoPropCuerpo = ({contenidos }) => {
                   onClick={() => setSelected(idx)}
                   style={{
                     flex: 1,
-                    background: selected === idx ? '#fff' : '#d1d1d1',
+                    background: selected === idx ? '#fff' : '#d1d1d1ff',
                     color: selected === idx ? '#444' : '#222',
                     border: '1px solid #bbb',
-                    padding: '10px 0',
+                    padding: '1% 2%',
+                    width: '20%',
+                    fontSize: 'clamp(8px, 1vw, 18px)',
                     fontWeight: 'bold',
                     cursor: 'pointer',
                     transition: 'background 0.2s, color 0.2s'
-                  }}
-                >
+                  }}>
                   {label}
                 </button>
               ))}
             </div>
             <div>
               {selected !== null && (
-                <p style={{ color: '#222', margin: 0, border: '1px solid #bbb', padding: 12 }}>{contenidos[selected]}</p>
+                <p style={{ color: '#222', margin: 0, border: '1px solid #bbb', padding: '1%',fontSize: 'clamp(11px, 1vw, 21px)' }}>{contenidos[selected]}</p>
               )}
             </div>
           </div>
+
           {/* Caja de beneficio y certificado */}
           <div style={{ ...boxStyle, width: '100%', background: 'none', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 0 }}>
             {/* Beneficio section */}
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '14px',
+              gap: '10px',
               marginBottom: '14px',
               background: '#fff',
-              border: '1.5px solid #7c3aed',
+              border: '1.5px solid #0077ffff',
               borderRadius: 0,
               padding: 0,
-              minHeight: 70,
-              width: 760,
-              maxWidth: '100%',
+              minWidth: '80%',
               justifyContent: 'center'
             }}>
               <div style={{
-                fontSize: '2.7rem',
-                background: '#7c3aed',
-                width: 70,
-                height: 70,
+                fontSize: 'clamp(20px, 2vw, 40px)',
+                padding: '1.5%',
+                background: '#0077ffff',
+                width: '10%',
+                height: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#fff',
                 borderRadius: 0
               }}>🎁</div>
-              <div style={{ fontWeight: 'bold', flex: 1, color: '#4b2996', fontSize: 26, paddingLeft: 16, textAlign: 'center' }}>Beneficio</div>
+              <div style={{ fontWeight: 'bold',color:'#222222ff', flex: 1, fontSize: 'clamp(20px, 1.5vw, 30px)', textAlign: 'center' }}>Beneficio</div>
               <button
                 style={{
-                  fontSize: '2rem',
-                  background: '#c7b6f7',
+                  fontSize: 'clamp(26px, 2vw, 40px)',
+                  background: '#1667fdff',
+                  padding: '2%',
                   border: 'none',
                   borderRadius: 0,
-                  color: '#4b2996',
-                  width: 54,
-                  height: 54,
+                  color: '#ffffffff',
+                  width: '10%',
+                  height: '100%',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginRight: 16
                 }}
                 onClick={() => setShowBenef((prev) => !prev)}
                 aria-label="Mostrar información de beneficio"
@@ -119,7 +123,7 @@ const CursoPropCuerpo = ({contenidos }) => {
             </div>
             <div style={{ width: 760, maxWidth: '100%', textAlign: 'center' }}>
               {showBenef && (
-                <div style={{ marginBottom: '22px', border: '1.5px solid #7c3aed', padding: 28, fontSize: 21 }}>
+                <div style={{ marginBottom: '22px', border: '1.5px solid #0077ffff', padding: 28, fontSize: 'clamp(10px, 1vw, 18px)' }}>
                   <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
                     <li>Al concluir el curso de capacitación recibirá el certificado correspondiente válido por la cantidad de horas realizadas</li>
                     <li>Materiales impresos de todo el curso</li>
@@ -141,44 +145,42 @@ const CursoPropCuerpo = ({contenidos }) => {
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '14px',
+              gap: '10px',
               marginBottom: '14px',
-              marginTop: '26px',
               background: '#fff',
-              border: '1.5px solid #7c3aed',
+              border: '1.5px solid #0077ffff',
               borderRadius: 0,
               padding: 0,
-              minHeight: 70,
-              width: 760,
-              maxWidth: '100%',
+              minWidth: '80%',
               justifyContent: 'center'
             }}>
               <div style={{
-                fontSize: '2.7rem',
-                background: '#7c3aed',
-                width: 70,
-                height: 70,
+                fontSize: 'clamp(20px, 2vw, 40px)',
+                padding: '1.5%',
+                background: '#0077ffff',
+                width: '10%',
+                height: '100%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#fff',
                 borderRadius: 0
               }}>🏅</div>
-              <div style={{ fontWeight: 'bold', flex: 1, color: '#4b2996', fontSize: 26, paddingLeft: 16, textAlign: 'center' }}>Certificado</div>
+              <div style={{ fontWeight: 'bold',color:'#222222ff', flex: 1, fontSize: 'clamp(20px, 1.5vw, 30px)', paddingLeft: 16, textAlign: 'center' }}>Certificado</div>
               <button
                 style={{
-                  fontSize: '2rem',
-                  background: '#c7b6f7',
+                  fontSize: 'clamp(26px, 2vw, 40px)',
+                  background: '#1667fdff',
+                  padding: '2%',
                   border: 'none',
                   borderRadius: 0,
-                  color: '#4b2996',
-                  width: 54,
-                  height: 54,
+                  color: '#ffffffff',
+                  width: '10%',
+                  height: '100%',
                   cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  marginRight: 16
                 }}
                 onClick={() => setShowCert((prev) => !prev)}
                 aria-label="Mostrar información de certificado"
@@ -188,7 +190,7 @@ const CursoPropCuerpo = ({contenidos }) => {
             </div>
             <div style={{ width: 760, maxWidth: '100%', textAlign: 'center' }}>
               {showCert && (
-                <div style={{ border: '1.5px solid #7c3aed', padding: 28, fontSize: 21 }}>
+                <div style={{ border: '1.5px solid #0077ffff', padding: 28, fontSize: 'clamp(10px, 1vw, 18px)' }}>
                   <p style={{ marginBottom: 16 }}>La CERTIFICACIÓN es válida de acuerdo a los estándares de SERVIR, según la Normativa de la Presidencia Ejecutiva Nº 141-2016-SERVIR-PE sobre “Normas para la gestión del proceso de capacitación en las entidades públicas”.</p>
                   <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
                     <li>Asimismo los participantes que cumplan con los requisitos del Congreso y que obtengan nota aprobatoria en las evaluaciones del Congreso obtendrán el certificado otorgado por EGG (Indispensable aprobar el curso y récord de Asistencia al 90%).</li>
@@ -198,7 +200,7 @@ const CursoPropCuerpo = ({contenidos }) => {
                     <img
                       src="https://www.universia.net/content/dam/universia/images/certificado-ejemplo.png"
                       alt="Ejemplo de certificado"
-                      style={{ maxWidth: '520px', width: '100%', height: '220px', objectFit: 'contain', border: '1px solid #ccc', borderRadius: 0, display: 'block' }}
+                      style={{ maxWidth: '520px', width: '100%', height: 'auto', maxheight: '260px', objectFit: 'contain', border: '1px solid #000', borderRadius: 0, display: 'block' }}
                     />
                   </div>
                 </div>

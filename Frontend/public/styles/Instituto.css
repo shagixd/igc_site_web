@@ -39,73 +39,67 @@
 
 
 .contenedor-instituto {
-  width: 90%; height: auto;
-  margin: 2% auto;
+  width: 80%; height: auto;
+  margin: 2% auto; padding: 1%;
   display: flex;
   flex-wrap: wrap;
+  background-color: rgba(243, 243, 243, 0.459);
 }
 .imagen-grande {
-    width: 50%; height: auto;
+    width: 45%; height: auto;
     position: relative;
-    padding: 1% 0;
-    margin: 1% 0;
+    padding: 0;
+    margin: 2% 1%;
 }
 .imagen-grande img {
     width: 100%; height: auto;
-    border-radius: 21% 1% 18% 1%;
-    box-shadow: 5px 5px 3px rgb(0, 78, 180) ;
+    border-radius: 30% 0% 30% 0%;
+    box-shadow: 4px 4px 5px rgb(2, 111, 255) ;
+    border: 1px solid rgb(2, 111, 255);
 }
-.texto-central {
+.texto-grande {
     width: 50%; height: auto;
+    margin: 0 1%;
     display: flex;
-    align-content: center;
+    justify-content: center;
     align-items: center;
-    margin: 1% auto;
 }
-.texto-central h3 {
-    font-size: clamp(20px, 3vw, 50px);
-    color: #ffffff;
-    text-shadow: 0 0 5px#00236e;
-    background-color: #0321ca;
-    border-radius: 0 25px 25px 0;
-    margin: 0;
-    text-align: center;
-    padding: 3% 1%;
+.texto-grande h3 {
+  font-size: clamp(20px, 3.5vw, 42px);
+  color: #006eff;
+  margin: 0;
+  text-shadow: #bbbbbb 0px 0px 4px, #c2c2c2 0px 0px 8px;
+  text-align: center;
 }
+
 .panel-formulario{
-    background: url(../img/prueba.jpg) no-repeat center center / cover;
-    width: 90%; height: auto;
+    background-color: #f1f1f1d8;
+    width: 75%; height: auto;
     margin: 2% auto;
     display: flex;
     position: relative;
     border-radius: 10px;
 }
-.panel-formulario::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0, 0, 0, 0.2); /* capa negra semitransparente */
-    z-index: 1;
-    pointer-events: none; /* para que no bloquee interacciones con el contenido */
-    border-radius: 10px;
-}
-.panel-formulario * {
-  position: relative;
-  z-index: 2; /* para que el texto esté encima del overlay */
-}
 .texto-relleno {
-    width: 40%; height: auto;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
+    width: 50%;
+    height: auto;
+    margin: 2% auto;
+    background: url(../img/prueba.jpg) no-repeat center center / cover;
+    position: relative;
+    border-radius: 10%;
 }
 .texto-relleno p {
     font-size: clamp(16px, 2vw, 36px);
+    border-radius: 10%;
     color: #ffffff;
-    text-shadow: 0 0 5px rgb(0, 140, 255);
+    text-shadow: 0 0 4px rgb(194, 194, 194);
     margin: 0;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.301);
 }
 .espacio-form {
     width: 40%; height: auto;
@@ -114,69 +108,74 @@
 
 
 .cajas-de-opciones {
-    width: 50%; height: auto;
-    margin: 3% auto;
+    width: 65%; height: auto;
+    margin: 2% auto;
     display: flex;
+    flex-wrap: wrap;
 }
 .caja-opcion {
-    width: 45%; height: auto;
-    margin: 0 2.5%;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.877);
+    width: 40%; height: auto;
+    margin: 0 auto;
+    box-shadow: 0px 0px 10px rgba(238, 238, 238, 0.877);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+.caja-opciones {
+    width: 100%; height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% auto;
+}
 .caja-opcion-1 {
-    background-color: rgb(200, 236, 250);
-    width: 25%; height: auto; min-height: 105px;
+    background-color: rgb(241, 241, 241);
+    width: 24%; height: auto; min-height: 105px;
     margin: 2% 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: #000000 1px solid;
 }
 .caja-opcion-2 {
-    background-color: rgb(10, 44, 107);
+    background-color: rgb(14, 71, 179);
     width: 75%; height: auto; min-height: 105px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: #000000 1px solid;
 }
 .caja-opcion h5 {
     font-size: clamp(10px, 1.5vw, 20px);
     color: #ffffff;
     margin: 0 auto;
-    padding: 1% 0;
+    padding: 0;
     text-align: center;
 }
 .caja-opcion-1 svg {
-    font-size: clamp(20px, 3vw, 50px);
+    font-size: clamp(20px, 2.7vw, 50px);
 }
-.cajas-de-opciones p {
-    font-size: clamp(10px, 1.5vw, 20px);
-    color: #00185a;
-    margin: 0 auto;
-    padding: 1% 0;
-}
-
 
 .letras-cierres {
     width: 100%; height: auto;
     margin: 0 auto;
     text-align: center;
-    background-color: #1749b6;
-    padding: 1% 0;
+    background-color: rgba(238, 238, 238, 0.432);
+    padding: 1% 0%;
     position: relative;
 }
 .letras-cierres h6 {
+    width: 100%;
     font-size: clamp(20px, 3vw, 42px);
-    color: #ffffff;
+    color: rgb(2, 111, 255);
+    text-shadow: 0 0 2px rgb(2, 111, 255);
     margin: 0;
 }
 
 .letras-cierres p {
-    font-size: clamp(10px, 2.2vw, 28px);
-    color: #dbdbdb;
+    font-size: clamp(10px, 2.2vw, 26px);
+    color: #acacac;
     margin: 0;
 }
 .publicidad-instituto {
@@ -188,21 +187,30 @@
 }
 .publicidad-instituto h4 {
     font-size: clamp(16px, 2vw, 32px);
-    color: #000b69;
+    color: rgb(2, 111, 255);
+    text-shadow: 0 0 5px rgb(189, 189, 189);
     margin: 0;
     text-align: center;
 }
+.icono-flecha {
+    font-size: clamp(32px, 4vw, 52px);
+    color: #707070;
+    margin: 1% 0;
+    text-align: center;
+}
 .publicidad-instituto img {
-    width: 70%; height: auto;
+    width: 70%; height: auto; max-height: 600px;
     border-radius: 5%;
-    margin: 2% 0;
-    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.877);
+    margin: 1% 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.877);
+    border-bottom: 3px solid rgb(0, 0, 0);
 }
 .publicidad-instituto p {
     font-size: clamp(10px, 2vw, 26px);
     color: #1a1a1a;
-    margin: 0;
+    margin: 1% 0;
     text-align: center;
-    border-top: #0537a1 3px solid;
+    border-top: rgb(2, 111, 255) 4px solid;
     padding-top: 1%;
+    font-weight: 600;
 }

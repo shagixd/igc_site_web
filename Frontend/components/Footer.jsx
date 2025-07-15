@@ -9,11 +9,29 @@ import '../public/styles/Footer.css'; // Asegúrate de tener este archivo CSS
 export default function Footer() {
   return (
     <footer className="footer">
-        <div className="footer-flex">
+        <div className="footer-contenedor">
           <div className='cuerpo1'>
             <img src="/img/logoigc.png" alt="logo empresa" />
-            <p>Capacitación para Funcionarios y Servidores Públicos</p>
-            <div className='footer-enlaces'>
+            <p>Centro de  altos estudios ejecutivos y gerenciales
+                23 años  contribuyendo con al educación ejecutiva</p>
+          </div>
+          <div className='cuerpo2'>
+            <h3>CERTIFICADO</h3>
+            <p>Verifica la validez de tu certificado
+              Verificación de Certificado</p>
+          </div>
+          <div className='cuerpo3'>
+            <h3>CONTACTENOS</h3>
+            <p>Telefonos: 945504555 - 972628566</p>
+            <h3>CORREOS</h3>
+            <ul>
+              <li>igcinstituto@gmail.com</li>
+              <li>capacita@escuelag.com</li>
+              <li>www.escuelag.com</li>
+            </ul>
+          </div>
+        </div>
+        <div className='footer-enlaces'>
             <a href="https://www.facebook.com/IGCinstituto/" target="_blank" rel="noopener noreferrer" className="footer-icon facebook">
               <FaFacebook color="#fff" />
             </a>
@@ -30,30 +48,6 @@ export default function Footer() {
               <IoLogoYoutube color="#fff" />
             </a>
             </div>
-          </div>
-          <div className='cuerpo2'>
-            <h3>Programas</h3>
-          <ul>
-            <li>Cursos Especiales</li>
-            <li>Diplomas</li>
-            <li>In-House</li>
-            <li>Catálogo de Diplomas</li>
-            <li>Catálogo de Cursos</li>
-          </ul>
-          </div>
-          <div className='cuerpo3'>
-            <h3>Bienvenidos a IGC</h3>
-          <ul>
-            <li>Asesoría y Consultoría</li>
-            <li>Convenios Realizados</li>
-          </ul>
-          </div>
-          <div className='cuerpo4'>
-            <h3>Contáctanos</h3>
-            <p>Teléfono: 945 504 555</p>
-            <p>Correos: </p>
-          </div>
-        </div>
         <div className='zona-abajo'>
           <p>Copyright © 2022 Instituto de Gerencia Intercontinental. Todos los derechos reservados.</p>
         </div>
