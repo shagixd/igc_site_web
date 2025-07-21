@@ -1,5 +1,5 @@
 import React from 'react';
-import FormularioSimple from '../props/FormularioSimple';
+import FormularioEmail from '../props/FormularioEmail';
 import BotonConsultodo from '../props/BotonConsultodo';
 import '../public/styles/Consultoria.css'; // Asegúrate de tener este archivo CSS
 
@@ -37,7 +37,9 @@ function Consultoria() {
       </div>
       <div className='asesoria-formulario'>
         <h3>¡Solicita una cotización sin costo y compromiso!</h3>
-        <FormularioSimple />
+        <FormularioEmail 
+                opciones={["Diplomado en Gestión Pública", "Diplomado en Gerencia de Proyectos", "Diplomado en Gerencia de Obras Públicas"]}
+                placeholderSelect="Seleccione un Diplomado"/>
       </div>
     </>
   );

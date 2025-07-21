@@ -179,21 +179,18 @@ body {
     width: 46%; min-width: 250px;
     height: auto;
     margin: 2% 1%;
-    box-shadow: 0 0 9px rgb(13, 139, 241);
-    border: 1px solid rgb(22, 84, 255);
-    border-radius: 0 0 20px 20px;
+    border: 1px solid  #007bff;
 }
 .seccion3-mision h3, .seccion3-vision h3, .seccion3-metodologia h3 {
     text-align: center;
     margin: 0;
-    padding: 1% 0 0.5% 0;
+    padding-top: 2%;
     font-size: clamp(24px, 4vw, 42px);
-    color: #0051ff;                    
-    text-shadow: 0px 0px 2px rgb(255, 255, 255);
+    color: #000000;                    
 }
 .seccion3-mision p, .seccion3-vision p, .seccion3-metodologia p{
     text-align: center;
-    color: rgb(65, 65, 65);
+    color: rgb(26, 26, 26);
     margin: 3%;   
     font-size: clamp(12px, 2vw, 24px);
 }
@@ -203,7 +200,7 @@ body {
     justify-content: center;
     flex-grow: 1;
     gap: 1%;
-    background-color: #3481e6;
+    background-color:  #007bff;
 }
 .icon {
     font-size: clamp(35px, 5vw, 78px);
@@ -214,9 +211,7 @@ body {
     width: 80%; min-width: 250px;
     height: auto;
     margin: 2% 1%;
-    box-shadow: 0 0 9px rgb(13, 139, 241);
-    border: 1px solid rgb(22, 84, 255);
-    border-radius: 0 0 20px 20px;
+    border: 1px solid  #007bff;
 }
 
 .seccion-4 {
@@ -226,12 +221,27 @@ body {
 .seccion4-texto {
     width: 100%;
     text-align: center;
-    border-bottom: 15px double #0077ff;
 }
-.seccion4-texto h2 {
+.titulo-con-lineas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1%;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.titulo-con-lineas h2 {
     margin: 0;
     font-size: clamp(28px, 5vw, 64px);
     color: #0077ff;
+    flex-shrink: 0;
+}
+.linea {
+  flex: 1;
+  height: 3px;
+  background-color: #007bff; /* Color azul, puedes cambiarlo */
+  opacity: 0.9;
 }
 .seccion4-texto h3 {
     margin: 0;
@@ -243,7 +253,7 @@ body {
     color: #1f1f1f;
 }
 .seccion4-cajas {
-    width: 80%; height: auto;
+    width: 90%; height: auto;
     margin: 3% auto;
     display: flex;
     flex-wrap: wrap;
@@ -267,23 +277,31 @@ body {
     width: 100px; height: 100px;
     border-radius: 50%;
     background-color: rgba(12, 137, 255, 0.733);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caja-logo svg {
+    font-size: clamp(28px, 3.5vw, 48px);
+    color: white;
 }
 .caja-contenedora2{
     width: 70%;
-    background-color: rgba(241, 250, 255, 0.836);
+    background-color: rgba(0, 132, 255, 0.61);
     padding: 2%;
     box-sizing: border-box;
 }
 .caja-contenedora2 h3{
     text-align: center;
-    text-shadow: 0 0 1px #969696;
-    color: black;
+    color: rgb(255, 255, 255);
+    margin: 1% 0;
     font-size: clamp(12px, 3vw, 26px);
 }
 .caja-contenedora2 p{
     text-align: center;
     font-size: clamp(9px, 2vw, 18px);
-    color: #2e2e2e;
+    color: #ffffff;
+    margin: 2% 0;
 }
 .caja-contenedora2 ul {
   margin: 0;            /* elimina márgenes */
@@ -291,12 +309,13 @@ body {
   max-width: 100%;      /* para evitar que se pase del contenedor */
   overflow-wrap: break-word;
   list-style: none;
-}
-.caja-contenedora2 li::before {
-    content: '⭐';
+  list-style-type: circle; /* aquí pones circle */
+  padding-left: 20px;
 }
 .caja-contenedora2 li {
   font-size: clamp(8px, 2vw, 18px);
+  color: #ffffff;
+  margin: 1% 0;
 }
 
 .seccion5 {
@@ -304,7 +323,7 @@ body {
     display: flex;
     gap: 1%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     margin: 5% auto;
 }
 
@@ -328,7 +347,6 @@ body {
     height: auto;
     object-fit: contain;
     border-radius: 8px;
-    /*border: 1px solid #cfcfcf;*/
     min-width: 0;
     margin: 0 auto;
     display: block;

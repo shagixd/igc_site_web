@@ -97,7 +97,7 @@ function NuestrosProgramas() {
 
         {/* CURSOS ESPECIALIZADOS */}
         <div className='caja-programas'>
-          <h2>CURSOS ESPECIALIZADOS</h2>
+          <h2>CURSOS DE GESTION PUBLICA</h2>
           <p>Programa diseñados para contribuir a la especialización técnica y profesional en las áreas administrativas, contables, tributarios, financieros, recursos humanos, gestión logística, tecnología y habilidades blandas en el sector público y la gestión empresarial desde 12 horas a 90 horas de duración.</p>
 
           <div className='galeria-imagenes'>

@@ -1,5 +1,5 @@
 import React from 'react';
-import DiplomaCard from '../props/PropInfo';
+import DiplomaCard from '../props/PlantillaCursos.jsx';
 import '../public/styles/CursosEspecialidad.css';
 import { SlArrowRight } from "react-icons/sl";
 

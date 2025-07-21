@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import FormularioSimple from './FormularioSimple';
+import FormularioEmail from "../props/FormularioEmail";
 
 const labels = [
   'Presentacion',
@@ -26,13 +26,13 @@ const CursoPropCuerpo = ({contenidos }) => {
   const [showBenef, setShowBenef] = useState(false);
 
   return (
-    <div style={{ width: '80%', margin: '0 auto', background: '#f5f5f5d7' }}>
+    <div style={{ width: '80%', margin: '0 auto'}}>
       
       {/* Contenedor principal: cajas a la izquierda, formulario a la derecha */}
-      <div style={{ display: 'flex', gap: '5%', alignItems: 'flex-start', marginTop: '2%' }}>
+      <div style={{ display: 'flex', marginTop: '2%', gap: '2%' }}>
         
         {/* Columna izquierda: dos cajas */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', width: '60%' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '3%', width: '60%' }}>
           
           {/* Caja de botones y contenido */}
           <div
@@ -78,10 +78,9 @@ const CursoPropCuerpo = ({contenidos }) => {
             <div style={{
               display: 'flex',
               alignItems: 'center',
-              gap: '10px',
-              marginBottom: '14px',
+              marginBottom: '3%',
               background: '#fff',
-              border: '1.5px solid #0077ffff',
+              border: '1px solid #0077ffff',
               borderRadius: 0,
               padding: 0,
               minWidth: '80%',
@@ -89,7 +88,6 @@ const CursoPropCuerpo = ({contenidos }) => {
             }}>
               <div style={{
                 fontSize: 'clamp(20px, 2vw, 40px)',
-                padding: '1.5%',
                 background: '#0077ffff',
                 width: '10%',
                 height: '100%',
@@ -102,8 +100,8 @@ const CursoPropCuerpo = ({contenidos }) => {
               <div style={{ fontWeight: 'bold',color:'#222222ff', flex: 1, fontSize: 'clamp(20px, 1.5vw, 30px)', textAlign: 'center' }}>Beneficio</div>
               <button
                 style={{
-                  fontSize: 'clamp(26px, 2vw, 40px)',
-                  background: '#1667fdff',
+                  fontSize: 'clamp(20px, 2vw, 40px)',
+                  background: '#0077ffff',
                   padding: '2%',
                   border: 'none',
                   borderRadius: 0,
@@ -121,7 +119,7 @@ const CursoPropCuerpo = ({contenidos }) => {
                 {showBenef ? '−' : '+'}
               </button>
             </div>
-            <div style={{ width: 760, maxWidth: '100%', textAlign: 'center' }}>
+            <div style={{ width: '80%', textAlign: 'center' }}>
               {showBenef && (
                 <div style={{ marginBottom: '22px', border: '1.5px solid #0077ffff', padding: 28, fontSize: 'clamp(10px, 1vw, 18px)' }}>
                   <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
@@ -156,7 +154,6 @@ const CursoPropCuerpo = ({contenidos }) => {
             }}>
               <div style={{
                 fontSize: 'clamp(20px, 2vw, 40px)',
-                padding: '1.5%',
                 background: '#0077ffff',
                 width: '10%',
                 height: '100%',
@@ -170,7 +167,7 @@ const CursoPropCuerpo = ({contenidos }) => {
               <button
                 style={{
                   fontSize: 'clamp(26px, 2vw, 40px)',
-                  background: '#1667fdff',
+                  background: '#0077ffff',
                   padding: '2%',
                   border: 'none',
                   borderRadius: 0,
@@ -188,7 +185,7 @@ const CursoPropCuerpo = ({contenidos }) => {
                 {showCert ? '−' : '+'}
               </button>
             </div>
-            <div style={{ width: 760, maxWidth: '100%', textAlign: 'center' }}>
+            <div style={{ width: '80%', textAlign: 'center' }}>
               {showCert && (
                 <div style={{ border: '1.5px solid #0077ffff', padding: 28, fontSize: 'clamp(10px, 1vw, 18px)' }}>
                   <p style={{ marginBottom: 16 }}>La CERTIFICACIÓN es válida de acuerdo a los estándares de SERVIR, según la Normativa de la Presidencia Ejecutiva Nº 141-2016-SERVIR-PE sobre “Normas para la gestión del proceso de capacitación en las entidades públicas”.</p>
@@ -209,8 +206,10 @@ const CursoPropCuerpo = ({contenidos }) => {
           </div>
         </div>
         {/* Formulario a la derecha */}
-        <div style={{ width: '40%' }}>
-          <FormularioSimple />
+        <div style={{ width: '38%' , height: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f7fbffe3', padding: '1%'}}>
+          <FormularioEmail 
+                opciones={["Diplomado en Gestión Pública", "Diplomado en Gerencia de Proyectos", "Diplomado en Gerencia de Obras Públicas"]}
+                placeholderSelect="Seleccione un Curso"/>
         </div>
       </div>
     </div>

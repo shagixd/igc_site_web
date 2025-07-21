@@ -2,18 +2,19 @@
 .nav-desktop {
   display: flex;
   width: 100%;
-  background-color: rgb(255, 255, 255);
   align-items: center;
-  padding: 10px 0;
+  padding: 1% 0;
 }
 
 .espacio-logo {
-  width: 20%;
-  margin: 0 3%;
+  width: 20%; height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2.5%;
 }
 .espacio-logo img {
-  width: 100%;
-  height: auto;
+  width: 100%; height: auto;
 }
 
 .espacio-nav {
@@ -39,18 +40,19 @@
   flex: 1;
   text-align: center;
   color: rgb(0, 41, 153);
+  font-size: clamp(14px, 1vw, 22px);
   position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .nav-item a {
   color: rgb(0, 41, 153);
   text-decoration: none;
   cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   gap: 5px;
-  font-size: clamp(14px, 1.1vw, 24px);
+  font-size: clamp(14px, 1vw, 22px);
 }
 .nav-item a:hover {
   text-shadow: 0 0 6px rgb(0, 41, 153);
@@ -76,9 +78,9 @@
   justify-content: space-between;
 }
 
-.espacio-logo img {
-  height: 50px; /* Tamaño reducido para móvil */
-  width: auto;
+.espacio-logo-mobile img {
+  width: auto; height: 50px;
+  margin: 0;
 }
 
 .menu-toggle {

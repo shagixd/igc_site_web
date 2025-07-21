@@ -1,8 +1,9 @@
 import React, { useState, useEffect , useRef} from 'react';
-import { FaBullseye, FaEye } from "react-icons/fa";
+import { FaBullseye, FaEye , FaGraduationCap, FaPuzzlePiece} from "react-icons/fa";
 import '../public/styles/SobreIGC.css'; 
 import BotonConsultodo from '../props/BotonConsultodo';
-import { MdOutlineStarBorder } from "react-icons/md";
+import { MdOutlineStarBorder, MdEvent, MdSupportAgent } from "react-icons/md";
+import { IoLibrarySharp } from "react-icons/io5";
 
 export default function Sobreigc() {
   const textos = [
@@ -113,7 +114,11 @@ export default function Sobreigc() {
       <div className='seccion-4'>
         <div className='seccion4-texto'>
           <h3>¿Que ofrecemos?</h3>
-          <h2>Nuestros servicios</h2>
+          <div className='titulo-con-lineas'>
+            <span className="linea"></span>
+            <h2>Nuestros servicios</h2>
+            <span className="linea"></span>
+          </div>       
           <p>Brindamos programas de capacitación y especialización diseñados para fortalecer el desempeño profesional en sectores públicos y privados.</p>
         </div>
 
@@ -121,7 +126,7 @@ export default function Sobreigc() {
           <div className='cajas'>
               <div className='caja-contenedora1'>
                 <div className='caja-logo'>
-        
+                  <FaGraduationCap />
                 </div>
               </div>
               <div className='caja-contenedora2'>
@@ -137,11 +142,11 @@ export default function Sobreigc() {
           <div className='cajas'>
               <div className='caja-contenedora1'>
                 <div className='caja-logo'>
-          
+                  <IoLibrarySharp />
                 </div>
               </div>
               <div className='caja-contenedora2'>
-                <h3>Cursos de Especializacion</h3>
+                <h3>Cursos de Gestion Publica</h3>
               <p>Programas técnicos y operativos en gestión administrativa, financiera y tecnológica para el sector público y privado</p>
               <ul>
                 <li>1.</li>
@@ -153,11 +158,11 @@ export default function Sobreigc() {
           <div className='cajas'>
               <div className='caja-contenedora1'>
                 <div className='caja-logo'>
-   
+                  <FaPuzzlePiece />
                 </div>
               </div>
               <div className='caja-contenedora2'>
-                <h3>Programa de Cursos In-House a Medida</h3>
+                <h3>Cursos a la medida</h3>
               <p>Diseño personalizado de programas de capacitación adaptados a las necesidades específicas de empresas y entidades públicas.</p>
               <ul>
                 <li>1.</li>
@@ -169,11 +174,11 @@ export default function Sobreigc() {
           <div className='cajas'>
               <div className='caja-contenedora1'>
                 <div className='caja-logo'>
-
+                  <MdEvent />
                 </div>
               </div>
               <div className='caja-contenedora2'>
-                <h3>Congresos</h3>
+                <h3>Congresos y Eventos</h3>
               <p>Organización de congresos, foros y convenciones de alto impacto a nivel nacional e internacional.</p>
               <ul>
                 <li>1.</li>
@@ -185,7 +190,7 @@ export default function Sobreigc() {
           <div className='cajas'>
               <div className='caja-contenedora1'>
                 <div className='caja-logo'>
-
+                  <MdSupportAgent />
                 </div>
               </div>
               <div className='caja-contenedora2'>
