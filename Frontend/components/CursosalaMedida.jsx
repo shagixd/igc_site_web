@@ -6,9 +6,9 @@ import { HiMiniChevronDoubleRight } from "react-icons/hi2";
 function CursosalaMedida() {
   const imagenes = [
     "/img/1.jpg",
-    "/img/foto2.jpg",
-    "/img/foto3.jpg",
-    "/img/foto4.jpg",
+    "/img/2.jpg",
+    "/img/3.jpg",
+    "/img/4.jpg",
     "/img/foto5.jpg",
     "/img/foto6.jpg",
     "/img/foto7.jpg",
@@ -37,8 +37,13 @@ function CursosalaMedida() {
     <>
       {/* Título */}
       <div className="cursosalamedida-titulo">
-        <h2>Cursos a la Medida Institucional</h2>
-        <p>Instituto de Gerencia Intercontinental</p>
+        <div className='texto-medida'>
+          <h2>CURSOS HECHOS A LA MEDIDA</h2>
+          <p>Instituto de Gerencia Intercontinental</p>
+        </div>
+        <div className='img-medida'>
+          <img src="./img/logo-prueba.png" alt="" />
+        </div>
       </div>
 
       {/* Zona 1 */}
@@ -100,58 +105,47 @@ function CursosalaMedida() {
       </div>
 
       {/* Tarjetas informativas */}
+      <div className='caja-titulo'>
+        <h3>¿Por que deberias elegirnos?</h3>
+      </div>
+
       <div className="zona3-carta">
         <div className='carta-cuerpo'>
           <div className='carta-cuerpo-texto'>
             <h4>NUESTRA EXPERIENCIA</h4>
+          </div>
+          <div className='carta-cuerpo-icon'>
             <p>Durante nuestra trayectoria hemos capacitado muchas instituciones del Gobierno Nacional, Regional, 
               Local y Organismos Autónomos, los mismos que están publicados en el SEACE, que fueron registrados por las 
               instituciones a quienes desarrollamos las capacitaciones de acuerdo al Buscador de Proveedores del Estado 
               del OSCE, allí se acreditan nuestra experiencia como proveedores de capacitación.</p>
-          </div>
-          <div className='contenedor-icon'>
-            <HiMiniChevronDoubleRight className='contenido-icon' />
-          </div>
-          <div className='carta-cuerpo-icon'>
             <FcContacts className='icono-principal'/>
           </div>
         </div>
-
         <div className='carta-cuerpo'>
           <div className='carta-cuerpo-texto'>
             <h4>SERVICIOS DE ACUERDO A SUS REQUERIMIENTOS DE CAPACITACIÓN ESPECIALIZADA</h4>
-            <p>Contamos con un Staff de Consultores para brindarte una asesoría especializada para elaborar tu PDP y priorizar las acciones de capacitación respectivas.</p>
-          </div>
-          <div className='contenedor-icon'>
-            <HiMiniChevronDoubleRight className='contenido-icon' />
           </div>
           <div className='carta-cuerpo-icon'>
+            <p>Contamos con un Staff de Consultores para brindarte una asesoría especializada para elaborar tu PDP y priorizar las acciones de capacitación respectivas.</p>
             <FcGraduationCap className='icono-principal'/>
           </div>
         </div>
-
         <div className='carta-cuerpo'>
           <div className='carta-cuerpo-texto'>
             <h4>PLANIFICACION DE PDP ANUAL</h4>
-            <p>Asesoramos en la planificación estratégica de las acciones de capacitación que debe incluir el PDP ANUAL de tu institución. Brindamos orientación sobre los contenidos mínimos requeridos, los ejes temáticos, la metodología de cada acción formativa, así como la modalidad, duración e inversión estimada del programa, entre otros aspectos clave.</p>
-          </div>
-          <div className='contenedor-icon'>
-            <HiMiniChevronDoubleRight className='contenido-icon' />
           </div>
           <div className='carta-cuerpo-icon'>
+            <p>Asesoramos en la planificación estratégica de las acciones de capacitación que debe incluir el PDP ANUAL de tu institución. Brindamos orientación sobre los contenidos mínimos requeridos, los ejes temáticos, la metodología de cada acción formativa, así como la modalidad, duración e inversión estimada del programa, entre otros aspectos clave.</p>
             <FcLineChart className='icono-principal'/>
           </div>
         </div>
-
         <div className='carta-cuerpo'>
           <div className='carta-cuerpo-texto'>
             <h4>EJECUTAR TU PDP ANUAL</h4>
-            <p>Te asesoramos en los contenidos mínimos para planificar estratégicamente las acciones de capacitación que debe contener el PDP ANUAL de tu institución, en los ejes temáticos y metodología de cada acción de capacitación, inversión aproximada del programa, modalidad, duración, entre otros.</p>
-          </div>
-          <div className='contenedor-icon'>
-            <HiMiniChevronDoubleRight className='contenido-icon' />
           </div>
           <div className='carta-cuerpo-icon'>
+            <p>Te asesoramos en los contenidos mínimos para planificar estratégicamente las acciones de capacitación que debe contener el PDP ANUAL de tu institución, en los ejes temáticos y metodología de cada acción de capacitación, inversión aproximada del programa, modalidad, duración, entre otros.</p>
             <FcNegativeDynamic className='icono-principal'/>
           </div>
         </div>

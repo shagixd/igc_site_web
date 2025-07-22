@@ -10,6 +10,7 @@ function Instituto() {
       <h2>Instituto</h2>
       <p>Instituto de Gerencia Intercontinental</p>
     </div>
+
     <div className="contenedor-instituto">
         <div className="imagen-grande">
             <img src="/img/1.jpg" alt="imagen1" />
@@ -18,6 +19,7 @@ function Instituto() {
             <h3>EDUCACION EJECUTIVA Y GERENCIAL A TRAVEZ DE PROGRAMAS DE ESPECIALIZACION EN GESTIÓN PUBLICA Y ACTIVIDAD EMPRESARIAL</h3>
         </div>
     </div>
+    
     <div className="panel-formulario">
         <div className="texto-relleno">
             <p>ESCUELA Y CENTRO DE ESTUDIOS DE GESTIÓN PUBLICA CON MAS 23 AÑOS IMPARTIENDO CONOCIMIENTOS PARA EL EXITO</p>
@@ -58,6 +60,7 @@ function Instituto() {
             </div> 
         </div>
     </div>
+
     <div className="letras-cierres">
         <h6>Destaca en el mundo laboral con  tu  educacion ejecutiva y certificaciones</h6>
         <p>Requisitos para llevar nuestros programas <br />

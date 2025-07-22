@@ -7,15 +7,14 @@ body {
   width: 100%;
   padding: 8% 0;
   margin: 0;
-  /* No uses height: auto aquí, deja que el contenido defina la altura */
-  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
+  overflow: hidden;
 }
 
 .fondo-inicio-central::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* capa negra semitransparente */
+  background-color: rgba(0, 0, 0, 0.527); /* capa negra semitransparente */
   z-index: 1;
   pointer-events: none; /* para que no bloquee interacciones con el contenido */
 }
@@ -28,23 +27,24 @@ body {
 
 .fondo-inicio-central h3 {
   font-size: clamp(10px, 3vw, 32px);
-  color: #cceeff;
+  color: #003cff;
   margin: 0;
-  text-shadow: #0077ff 0px 0px 3px, #0077ff 1px 0px 2px;
+  text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
   text-align: center;
 }
 
 .fondo-inicio-central h2 {
-  font-size: clamp(20px, 9vw, 125px);
-  margin: 0 0 2% 0;
+  font-size: clamp(50px, 7vw, 100px);
+  margin-bottom: 3%;
   color: #ffffff;
-  text-shadow: #006eff 0px 0px 10px, #fff 1px 0px 2px;
+  text-shadow: #006eff 0px 0px 10px, #002fff 0px 0px 5px;
   text-align: center;
 }
 
 .fondo-inicio-central p {
   font-size: clamp(8px, 3vw, 30px);
   color: #ffffff;
+  text-shadow: 0 0 3px black;
   margin: 0;
   text-align: center;
 }

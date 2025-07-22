@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AllPost from './sub_blog/AllPost.jsx';
+import Todos from './sub_blog/Todos.jsx';
 import Digital from './sub_blog/Digital.jsx';
 import Educacion from './sub_blog/Educacion.jsx';
 import Eventos from './sub_blog/Eventos.jsx';
@@ -20,14 +20,14 @@ function BlogSectionContent({ section, onExpandChange }) {
             return <Innovacion onExpandChange={onExpandChange} />;
         case 'Sin categoría':
             return <SinCategoria onExpandChange={onExpandChange} />;
-        case 'AllPost':
+        case 'Todos':
         default:
-            return <AllPost onExpandChange={onExpandChange} />;
+            return <Todos onExpandChange={onExpandChange} />;
     }
 }
 
 function Blog() {
-    const [activeSection, setActiveSection] = useState('AllPost');
+    const [activeSection, setActiveSection] = useState('Todos');
     const [expandView, setExpandView] = useState(false);
 
     return (
@@ -41,13 +41,27 @@ function Blog() {
                 <h3>Últimas publicaciones y noticias</h3>
                 <p>Bienvenido al blog del Instituto de Gerencia Intercontinental</p>
             </div>
-            <nav className='blog-nav'>
-                <button onClick={() => setActiveSection('AllPost')}>All Post</button>
-                <button onClick={() => setActiveSection('Digital')}>Digital</button>
-                <button onClick={() => setActiveSection('Educación')}>Educación</button>
-                <button onClick={() => setActiveSection('Eventos')}>Eventos</button>
-                <button onClick={() => setActiveSection('Innovación')}>Innovación</button>
-                <button onClick={() => setActiveSection('Sin categoría')}>Sin categoría</button>
+           <nav className='blog-nav'>
+                <button
+                    className={activeSection === 'Todos' ? 'active' : ''}
+                    onClick={() => setActiveSection('Todos')}>Todos</button>
+                <button
+                    className={activeSection === 'Digital' ? 'active' : ''}
+                    onClick={() => setActiveSection('Digital')}>Digital</button>
+                <button
+                    className={activeSection === 'Educación' ? 'active' : ''}
+                    onClick={() => setActiveSection('Educación')}>Educación</button>
+                <button
+                    className={activeSection === 'Eventos' ? 'active' : ''}
+                    onClick={() => setActiveSection('Eventos')}>Eventos
+                </button>
+                <button
+                    className={activeSection === 'Innovación' ? 'active' : ''}
+                    onClick={() => setActiveSection('Innovación')}>Innovación</button>
+                <button
+                    className={activeSection === 'Sin categoría' ? 'active' : ''}
+                    onClick={() => setActiveSection('Sin categoría')}>Sin categoría
+                </button>
             </nav>
             <div className="blog-content-flex-container">
                 <div className={`blog-content${expandView ? " expand" : ""}`}>

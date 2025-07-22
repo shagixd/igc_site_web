@@ -1,5 +1,5 @@
 import React from 'react';
-import DiplomaCard from '../props/PlantillaCursos.jsx';
+import CardCursos from '../props/PlantillaCursos.jsx';
 import '../public/styles/DiplomasEspecialidad.css'; // Asegúrate de tener este archivo CSS
 
 const diplomas = [
@@ -128,12 +128,12 @@ const diplomas = [
 const DiplomasEspecialidad = () => (
 	<div>
 		<div className="diplomas-titulo">
-			<h2>Diplomas de Especializacion</h2>
+			<h2>DIPLOMAS DE ESPECIALIZACION</h2>
 			<p>Instituto de gerencia Intercontinental</p>
 		</div>
 		<div className="diplomas-container">
 			{diplomas.map((diploma) => (
-				<DiplomaCard 
+				<CardCursos 
 					imagen={diploma.imagen}
 					key={diploma.link}
 					titulo={diploma.titulo}
@@ -142,14 +142,11 @@ const DiplomasEspecialidad = () => (
 					certificado={diploma.certificado}
 					boton={
 						<a
-							href={`${diploma.link}?titulo=${encodeURIComponent(
-								diploma.titulo
-							)}&inicioClases=${encodeURIComponent(
-								diploma.inicioClases
-							)}`}
-						>
-							Más información
-						</a>
+						href={`${diploma.link}?titulo=${encodeURIComponent(
+							diploma.titulo
+						)}&inicioClases=${encodeURIComponent(
+							diploma.inicioClases
+						)}`}>Más información</a>
 					}
 				/>
 			))}

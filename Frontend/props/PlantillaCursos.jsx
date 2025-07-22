@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DiplomaCard = ({
+const CardCursos = ({
   titulo,
   descripcion,
   imagen,
@@ -10,23 +10,24 @@ const DiplomaCard = ({
   boton
 }) => (
   <div
-    className="diploma-card"
+    className="card-cursos"
     style={{
       ...style
     }}
   >
-    <div className='cubo0'>
-    <img style={{width: '100%', height: 'auto'}} src={imagen} alt={titulo}/>
+    <div className='card-1'>
+    <img style={{ width: '100%', height:'auto', margin: '0' }} src={imagen} alt={titulo}/>
     </div>
-    <div className='cubo1'>
-      <p>{descripcion}</p>
-      {certificado && <p className='p2'>Certificado: {certificado}</p>}
+    <div className='card-2'>
+      <p className='parrafo-3'>{descripcion}</p>
+      {certificado && <p>Certificado: {certificado}</p>}
       {boton}
     </div>
-    <div className='cubo2'>
-      {inicioClases && <p className='p1'>Inicio<br />{inicioClases}</p>}
+    <div className='card-3'>
+      <p className='parrafo-4'>Inicio:</p>
+      {inicioClases && <p>{inicioClases}</p>}
     </div>
   </div>
 );
 
-export default DiplomaCard;
+export default CardCursos;

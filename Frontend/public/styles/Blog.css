@@ -1,74 +1,58 @@
 .blog-titulo {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  width: 100%;
-  height: 300px;
-  margin: 0 auto 5rem auto;
+  width: 100%; height: auto;
   background-image: linear-gradient(
     to right,
     rgb(245, 245, 245),
-    rgb(0, 101, 253),
-    rgb(0, 24, 133)
+    rgb(20, 114, 255),
+    rgb(0, 22, 119)
   );
-  padding-right: 100px;
   box-sizing: border-box;
+  padding: 3% 5%;
+  margin-bottom: 3%;
 }
 
 .blog-titulo h2 {
-  font-size: 7rem;
-  font-weight: bold;
+  font-size: clamp(50px, 8vw, 100px);
+  font-weight: 700;
+  text-align: end;
   color: #ffffff;
   letter-spacing: 1px;
   margin: 0;
 }
-
 .blog-titulo p {
-  font-size: 2rem;
-  color: #dadada;
-  opacity: 0.8;
+  font-size: clamp(24px, 4vw, 40px);
+  text-align: end;
+  color: #e0e0e0;
   margin: 0;
 }
 
 .blog-subtitulo {
   text-align: center;
+  margin: 3% 0;
 }
 
 .blog-subtitulo h4 {
   font-size: clamp(16px, 2vw, 30px);
   font-weight: 700;
-  color: #0544e6;
-  margin: 0;
+  color: #0048ff;
+  text-decoration: underline;
+  margin: 1% 0;
   letter-spacing: 1px;
 }
 
 .blog-subtitulo h3 {
   font-size: clamp(28px, 5vw, 60px);
   font-weight: 600;
-  color: #222;
+  color: #000000;
   margin: 0;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
 }
 
 .blog-subtitulo p {
   font-size: clamp(14px, 2vw, 28px);
-  color: #333333;
+  color: #444444;
   margin: 0;
 }
-
-
-.blog-nav-descripcion {
-  text-align: center;
-  font-size: 1.25rem;
-  color: #0d1e4a;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
-  margin-top: -2.5rem;
-  text-shadow: 0 2px 8px rgba(13,30,74,0.08), 0 1px 0 #fff;
-}
-
 
 .blog-nav {
   display: flex;
@@ -77,16 +61,15 @@
   padding: 1% 0;
   justify-content: space-evenly;
   position: relative;
-  background-color: rgba(231, 248, 255, 0.637);
 }
-
 .blog-nav button {
   background: #fff;
   color: #3969e4;
-  border: 1px solid #315bc5;
-  border-radius: 8px;
-  padding: 0.5% 1%;
-  font-size: clamp(10px, 1.5vw, 20px);
+  border: 2px solid #315bc5;
+  border-radius: 1px;
+  padding: 0.5% 2.2%;
+  font-weight: 700;
+  font-size: clamp(14px, 1.2vw, 24px);
   cursor: pointer;
   transition: background 0.2s, color 0.2s, border 0.2s;
   outline: none;
@@ -107,7 +90,6 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: 1.5% auto;
-  background-color: rgba(241, 241, 241, 0.384);
 }
 .blog-section-list {
   display: flex;
@@ -126,13 +108,13 @@
   align-items: center;
   margin: 1% 2%;
   padding: 1% 2%;
-  box-shadow: 0 0 3px black;
+  box-shadow: 0 0 3px rgb(0, 52, 131);
   background-color: rgb(255, 255, 255);
 }
 
 /* === Estado expandido (diseño diferente) === */
 .blog-section-card.expanded {
-  width: 90%;
+  width: 80%;
   align-items: center;
 }
 
@@ -140,8 +122,8 @@
 .card-imagen {
   width: 60%; height: auto; max-height: 200px;
   overflow: hidden;
-  margin: 0 auto 1rem auto;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+  margin: 2% 0;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
 
 /* === Imagen responsiva dentro de la tarjeta === */
@@ -167,7 +149,6 @@
 .blog-section-card h3 {
   font-size: clamp(18px, 3vw, 30px);
   color: #003fdd;
-  text-shadow: 0 0 2px #195bff;
   margin-bottom: 1%;
   text-align: center;
 }
@@ -175,14 +156,14 @@
 .descripcion-1 {
   font-size: clamp(10px, 2vw, 22px);
   flex-grow: 1;
-  color: #3d3d3d;
+  color: #303030;
 }
 .descripcion-2 {
   font-size: clamp(10px, 2vw, 20px);
   color: #000000;
   flex-grow: 1;
   padding: auto 0;
-  margin: 2% 0;
+  margin: 2.5% 0;
 }
 .descripcion-3 {
   font-size: clamp(10px, 2vw, 20px);
@@ -196,14 +177,14 @@
 .blog-section-card .btn {
   display: inline-block;
   margin: auto;
-  padding: 0.6rem 1.2rem;
-  background-color: #2cd5ff; /* Celeste */
+  padding: 1% 2%;
+  background-color: #0077ff; /* Celeste */
   color: #fff;
   text-decoration: none;
   font-weight: 600;
   border: none;
-  font-size: 1rem;
-  border-radius: 6px;
+  font-size: clamp(18px, 1.3vw, 24px);
+  border-radius: 1px;
   text-align: center;
   transition: background 0.2s ease, box-shadow 0.2s ease;
   cursor: pointer;
@@ -215,14 +196,14 @@
 
 /* Hover */
 .blog-section-card .btn:hover {
-  background-color: #007b8b; /* Azul oscuro */
+  background-color: #0054d3; /* Azul oscuro */
   color: #ffffff;
 }
 
 /* Foco y active para evitar destellos blancos */
 .blog-section-card .btn:focus,
 .blog-section-card .btn:active {
-  background-color: #2cd5ff !important;
+  background-color: #0077ff !important;
 
   outline: none;
 }

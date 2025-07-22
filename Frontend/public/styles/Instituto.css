@@ -43,13 +43,13 @@
   margin: 2% auto; padding: 1%;
   display: flex;
   flex-wrap: wrap;
-  background-color: rgba(243, 243, 243, 0.459);
 }
 .imagen-grande {
     width: 45%; height: auto;
     position: relative;
     padding: 0;
     margin: 2% 1%;
+    animation: Intercambiado 7s infinite linear;
 }
 .imagen-grande img {
     width: 100%; height: auto;
@@ -72,34 +72,55 @@
   text-shadow: #bbbbbb 0px 0px 4px, #c2c2c2 0px 0px 8px;
   text-align: center;
 }
+@keyframes Intercambiado{
+    0% {
+        order: 1;
+        opacity: 1;
+    }
+    45% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.1;
+    }
+    51% {
+        opacity: 1;
+    }
+    95%{
+        opacity: 1;
+    }
+    100% {
+        order: 0;
+        opacity: 0.1;
+    }
+}
+
 
 .panel-formulario{
-    background-color: #f1f1f1d8;
     width: 75%; height: auto;
     margin: 2% auto;
     display: flex;
     position: relative;
     border-radius: 10px;
+    background: url(../img/prueba.jpg) no-repeat center center / cover;
 }
 .texto-relleno {
     width: 50%; height: auto;
     margin: 2% auto;
-    background: url(../img/prueba.jpg) no-repeat center center / cover;
     position: relative;
-    border-radius: 10%;
-}
-.texto-relleno p {
-    font-size: clamp(16px, 2vw, 36px);
-    border-radius: 10%;
-    color: #ffffff;
-    text-shadow: 0 0 4px rgb(194, 194, 194);
-    margin: 0;
     display: flex;
-    text-align: center;
     align-items: center;
     justify-content: center;
-    width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.301);
+}
+.texto-relleno p {
+    font-size: clamp(24px, 2.5vw, 38px);
+    border-radius: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.596);
+    background-color: rgba(0, 0, 0, 0.39);
+    margin: 0;
+    padding: 2% 3%;
+    width: 100%; height: auto;
 }
 .espacio-form {
     width: 40%; height: auto;

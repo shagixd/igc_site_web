@@ -4,21 +4,22 @@ import { FaShopify, FaGraduationCap } from "react-icons/fa";
 import { IoLibrarySharp } from "react-icons/io5";
 import { IoIosWallet } from "react-icons/io";
 import { MdEvent } from "react-icons/md";
+import { FcSimCardChip } from "react-icons/fc";
 import '../public/styles/TiendaVirtual.css';
 
 const inventario = [
   {
-    titulo: 'Curso de Prueba1',
+    titulo: 'CURSO DE PRUEBA OBRAS PUBLICAS POR ADMINISTRACION DIRECTA',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/1.jpg',
+    imagen: '/img/pruebatienda.png',
     colorFondo: '#ffffffff',
     precio: '$/24.00',
-    tipo: 'curso'
+    tipo: 'cursos'
   },
   {
     titulo: 'Curso de Prueba2',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/1.jpg',
+    imagen: '/img/pruebatienda1.png',
     colorFondo: '#ffffffff',
     precio: '$/26.00',
     tipo: 'cursos'
@@ -26,7 +27,7 @@ const inventario = [
   {
     titulo: 'Curso de Prueba3',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/1.jpg',
+    imagen: '/img/pruebatienda2.png',
     colorFondo: '#ffffffff',
     precio: '$/25.00',
     tipo: 'diplomas'
@@ -34,7 +35,7 @@ const inventario = [
   {
     titulo: 'Curso de Prueba4',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/1.jpg',
+    imagen: '/img/pruebatienda3.png',
     colorFondo: '#ffffffff',
     precio: '$/29.00',
     tipo: 'congresos'
@@ -42,10 +43,18 @@ const inventario = [
   {
     titulo: 'Curso de Prueba5',
     descripcion: 'Modalidad: Virtual',
-    imagen: '/img/1.jpg',
+    imagen: '/img/pruebatienda4.png',
     colorFondo: '#ffffffff',
     precio: '$/26.00',
     tipo: 'diplomas'
+  },
+  {
+    titulo: 'Curso de Prueba6',
+    descripcion: 'Modalidad: Virtual',
+    imagen: '/img/pruebatienda5.png',
+    colorFondo: '#ffffffff',
+    precio: '$/26.00',
+    tipo: 'cursos'
   }
 ];
 
@@ -96,6 +105,9 @@ const TiendaVirtual = () => {
         <div className='texto-tienda'>
           <h2>Tienda de IGC</h2>
           <p>Instituto de Gerencia Intercontinental</p>
+          <div className='espacio-icon'>
+            <FcSimCardChip />
+          </div>
         </div>
         <div className='img-tienda'>
           <img src="./img/tienda-igc.png" alt="Tienda IGC" />
@@ -116,13 +128,14 @@ const TiendaVirtual = () => {
             onClick={() => setDesplegado(!desplegado)}
             style={{
               padding: '2% 4%',
+              color: '#000000ff',
               fontSize: 'clamp(12px, 2vw, 24px)',
               border: '1px solid #ccc',
               background: '#fff',
               cursor: 'pointer',
               width: '100%',
               borderRadius: '6px',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+              boxShadow: '0 2px 3px rgba(0, 0, 0, 0.29)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
@@ -148,6 +161,7 @@ const TiendaVirtual = () => {
               style={{
                 listStyle: 'none',
                 padding: 0,
+                color: '#222222ff',
                 margin: 0,
                 border: '1px solid #ccc',
                 borderTop: 'none',
@@ -173,7 +187,7 @@ const TiendaVirtual = () => {
                       padding: '2% 5%',
                       border: 'none',
                       background: filtroTipo === (tipo === 'todos' ? '' : tipo)
-                        ? '#007bff'
+                        ? '#2240a0ff'
                         : 'transparent',
                       color: filtroTipo === (tipo === 'todos' ? '' : tipo)
                         ? 'white'

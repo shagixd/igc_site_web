@@ -7,10 +7,10 @@ import { IoLibrarySharp } from "react-icons/io5";
 
 export default function Sobreigc() {
   const textos = [
-  "Fortalece tu perfil.",
-  "Lidera cambios",
-  "Impulsa tu potencial",
-  "Domina el conocimiento",
+  "FORTALECE TU PERFIL",
+  "LIDERA CAMBIOS",
+  "IMPULSA TU POTENCIAL",
+  "DOMINA EL CONOCIMIENTO",
 ];
 
   const [seccion5Visible, setSeccion5Visible] = useState(false);
@@ -61,6 +61,7 @@ export default function Sobreigc() {
           <h3>INSTITUTO DE GERENCIA INTERNACIONAL</h3>
           <h2>{textoAnimado}</h2>
           <p>Integrate para un futuro más exitoso con nuestros cursos especializados</p>
+          <p>...</p>
         </div>
 
       <div className='seccion-1'>

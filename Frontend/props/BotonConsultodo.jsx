@@ -22,14 +22,14 @@ function BotonConsultodo({ texto, style = {}, ...props }) {
       onMouseDown={() => setIsActive(true)}
       onMouseUp={() => setIsActive(false)}
       style={{
-        padding: '0.75em 2.2em',                   // padding fijo para espacio cómodo
+        padding: '0.75em 2.2em',               
         fontSize: 'clamp(7px, 2vw, 18px)',        // texto responsivo con clamp
         borderRadius: '8px',
         fontWeight: 700,
         background: isActive
-          ? '#e6f0fa'
+          ? '#0059ffff'
           : isHovered
-            ? '#001ec9'
+            ? '#0051ffff'
             : '#fff',
         color: isActive
           ? '#005ec9'
@@ -37,10 +37,10 @@ function BotonConsultodo({ texto, style = {}, ...props }) {
             ? '#fff'
             : '#003ec9',
         border: isActive
-          ? '1px solid #005ec9'
+          ? '1px solid #ffffffff'
           : isHovered
-            ? '1px solid #001ec9'
-            : '1px solid #003ec9',
+            ? '1px solid #0041a3ff'
+            : '1px solid #003c97ff',
         cursor: 'pointer',
         display: 'inline-block',                   // para que la caja se ajuste al contenido
         margin: '0 auto',
@@ -50,8 +50,7 @@ function BotonConsultodo({ texto, style = {}, ...props }) {
         outline: 'none',
         ...style
       }}
-      className="boton-consultodo"
-    >
+      className="boton-consultodo">
       {texto}
     </button>
   );

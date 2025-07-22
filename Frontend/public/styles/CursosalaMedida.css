@@ -1,48 +1,65 @@
 .cursosalamedida-titulo {
-  position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
+  position: relative;
   background: url(../img/prueba.jpg) no-repeat center center / cover;
   width: 100%;
-  padding: 8% 0;
+  padding: 2% 0;
   margin: 0;
-  /* No uses height: auto aquí, deja que el contenido defina la altura */
-  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
+  overflow: hidden; 
 }
-
 .cursosalamedida-titulo::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* capa negra semitransparente */
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
-  pointer-events: none; /* para que no bloquee interacciones con el contenido */
+  pointer-events: none;
 }
-
 .cursosalamedida-titulo * {
   position: relative;
-  z-index: 2; /* para que el texto esté encima del overlay */
+  z-index: 2;
 }
-
-
-.cursosalamedida-titulo h2 {
-  font-size: 3.5rem;
-  color: #000d81;
+.cursosalamedida-titulo {
+  display: flex;
+}
+.texto-medida {
+  width: 65%; height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 5%;
+}
+.img-medida {
+  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.img-medida img {
+  width: 55%; height: auto;
+  filter: drop-shadow(0 0 1px white);
+}
+.texto-medida h2 {
+  font-size: clamp(28px, 3.5vw, 62px);
+  color: #001aff;
   margin: 0;
-  text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
-  text-align: center;
+  text-shadow: #ffffff 0px 0px 6px, #ffffff 0px 0px 4px;
+  text-align: start;
 }
-.cursosalamedida-titulo p {
-  font-size: 28px;
+.texto-medida p {
+  font-size: clamp(18px, 1.5vw, 28px);
+  text-shadow: 0 0 3px black;
   color: #ffffff;
   margin: 0;
-  text-align: center;
+  text-align: start;
 }
+
 
 .zona-1 {
   width: 80%; height: auto;
   margin: 5% auto;
   display: flex;
-  background-color: #e9e9e9a6;
   padding: 2% 1%;
+  box-shadow: 0 0 3px rgb(0, 132, 255);
 }
 .zona1-imagen {
   width: 45%; height: auto;
@@ -52,15 +69,58 @@
   justify-content: center;
 }
 .zona1-imagen img {
-  width: 90%; height: auto;
-  border-radius: 50%;
-  box-shadow: 0 5px 10px rgb(17, 17, 17);
+  width: 90%;
+  height: auto;
+  border-radius: 10% 30% 40% 60%; /* Forma inicial: círculo perfecto */
+  box-shadow: 0 5px 10px rgb(0, 110, 255);
+  /* Para que la animación funcione bien */
+  object-fit: cover; /* Mantiene la imagen bien ajustada */
+  display: block;
+  overflow: hidden;
+  animation: variarBorderRadius 10s linear infinite;
 }
+@keyframes variarBorderRadius {
+  0% {
+    border-radius: 10% 30% 40% 60%;
+  }
+  10% {
+    border-radius: 40% 60% 80% 25%;
+  }
+  20% {
+    border-radius: 20% 45% 60% 60%;
+  }
+  30% {
+    border-radius: 60% 35% 30% 80%;
+  }
+  40% {
+    border-radius: 40% 60% 80% 25%;
+  }
+  50% {
+    border-radius: 20% 45% 60% 70%;
+  }
+  60% {
+    border-radius: 40% 35% 30% 80%;
+  }
+  70% {
+    border-radius: 60% 60% 80% 25%;
+  }
+  80% {
+    border-radius: 20% 45% 60% 50%;
+  }
+  90% {
+    border-radius: 40% 55% 15% 60%;
+  }
+  100% {
+    border-radius: 10% 30% 40% 60%;
+  }
+}
+
+
 .zona1-texto {
   width: 55%; height: auto;
   margin: 0;
   padding: 2% 4%;
-  background-color: rgba(255, 255, 255, 0.911);
+  box-shadow: 0 0 10px rgb(226, 226, 226);
 }
 .zona1-texto h3 {
   text-align: center;
@@ -87,7 +147,7 @@
   border-radius: 8px;
   overflow: hidden;
   padding:0;
-  background-color: #eeeeee9c;
+  background-color: #2382ff;
   padding: 1%;
 }
 
@@ -95,6 +155,7 @@
   width: 42%;
   padding: 2% 1%;
   background-color: rgb(255, 255, 255);
+  border-radius: 8px;
 }
 
 .carrusel-texto h3 {
@@ -112,11 +173,11 @@
 }
 
 .carrusel-texto li {
-  padding: 1% 0;
+  padding: 0.5% 0;
   font-size: clamp(10px, 1.2vw, 18px);
   list-style: none;
   margin: 0 0 0 2%;
-  color: rgb(27, 27, 27);
+  color: rgb(37, 37, 37);
 }
 .carrusel-texto li::before {
   content: "✔";
@@ -138,7 +199,7 @@
   margin: auto;
   object-fit: cover;
   transition: opacity 0.4s ease-in-out;
-  box-shadow: 0 0 3px rgb(51, 51, 51), 0 0 10px rgb(46, 46, 46);
+  box-shadow: 0 0 3px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
   border-radius: 22%;
 }
 
@@ -146,9 +207,9 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgb(182, 182, 182);
+  background-color: rgb(255, 255, 255);
   border: none;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   font-size: 40px;
   padding: 1% 2%;
   cursor: pointer;
@@ -165,64 +226,84 @@
   right: 4%;
   font-size: clamp(30px, 5vw, 50px);
 }
+
+.caja-titulo {
+  width: 100%; height: auto;
+  margin: 3% 0;
+}
+.caja-titulo h3 {
+  text-align: center;
+  text-decoration: unset;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em; /* Espacio entre las líneas y el texto */
+  font-size: clamp(22px, 3.5vw, 42px);
+  color: rgb(0, 110, 255);
+  margin: 1% auto;
+}
+
+.caja-titulo h3::before,
+.caja-titulo h3::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background-color: rgb(0, 110, 255); /* Cambia a otro color si lo deseas */
+}
+
+
 .zona3-carta {
-    width: 75%; height: auto;
+    width: 80%; height: auto;
     margin: 3% auto;
     display: flex;
     border-radius: 10px;
     flex-wrap: wrap;
 }
 .carta-cuerpo {
-    width: 90%; height: auto;
+    width: 49%; height: auto;
     margin: 1% auto;
-    box-shadow: 0 0 5px rgba(228, 228, 228, 0.795);
+    box-shadow: 0 0 5px rgba(126, 126, 126, 0.795);
     display: flex;
-    padding: 1.5% 0;
+    flex-direction: column;
+    padding: 0;
     align-items: center;
     justify-content: center;
 }
 .carta-cuerpo-icon {
-    width: 19%; height: auto;
+    width: 100%; height: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-grow: 1;
     border-bottom: 4px double rgb(27, 27, 27);
 }
 .carta-cuerpo-texto {
-    width: 45%; height: auto;
-    border: 4px solid rgb(0, 89, 255);
-}
-.contenedor-icon {
-  width: 20%; height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contenido-icon {
-  font-size: clamp(50px, 7vw, 150px);
-  color: rgb(0, 0, 0);
-  margin: 0; padding: 0;
-  animation: Señal 1.5s infinite;
+    width: 100%; height: auto;
+    background-color: rgb(27, 107, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .carta-cuerpo-texto h4 {
   text-align: center;
   font-size: clamp(12px, 1.5vw, 26px);
-  margin: 3% 0;
+  margin: 0;
   padding: 1%;
-  background-color: rgb(0, 89, 255);
   color: rgb(255, 255, 255);
   text-shadow: 0 0 2px rgb(20, 20, 20);
 }
-.carta-cuerpo-texto p {
+.carta-cuerpo-icon p {
+  width: 75%; height: auto;
   text-align: start;
   font-size: clamp(10px, 1.5vw, 19px);
   margin: 2% 3%;
 }
 .icono-principal {
-  font-size: clamp(80px, 10vw, 150px);
-  filter: drop-shadow(0 0px 12px rgba(0, 0, 0, 0.623));
-  animation: Señal 1.25s infinite;
+  width: 25%; height: auto;
+  padding: 1%;
+  filter: drop-shadow(0 0px 6px rgba(121, 121, 121, 0.829));
 }
+
+
 .texto-extra {
   width: 75%; height: auto;
   margin: 3% auto;
@@ -232,8 +313,12 @@
 }
 .texto-extra-1 {
   width: 40%; height: auto;
+  padding: 0.5% 1%;
   margin: 0;
-  background-color: rgba(241, 241, 241, 0.774);
+  background-color: rgb(255, 255, 255);
+  border-bottom: #2e81ff 1px solid;
+  border-top: #2e81ff 1px solid;
+  box-shadow: 0 0 3px #2e81ff;
 }
 .texto-extra-1 h3 {
   text-align: center;
@@ -242,15 +327,17 @@
   margin: 2% auto;
 }
 .texto-extra-1 ul{
-  padding-left: 5%;
+  padding-left: 8%;
 }
 .texto-extra-1 li {
   font-size: clamp(10px, 1vw, 16px);
   color: rgb(0, 0, 0);
   margin: 1% 0;
 }
+
+
 .texto-de-salida {
-  background-color: rgb(73, 126, 175);
+  background-color: rgb(32, 123, 207);
   width: 75%; height: auto;
   margin: 3% auto;
   padding: 2% 3%;
@@ -280,20 +367,3 @@
   font-size: clamp(10px, 2vw, 18px);
   text-align: center;
 }
-/*
-@keyframes Scale {
-  0% {
-    scale: 1;
-  }
-  100% {
-    scale: 1.25;
-  }
-}
-@keyframes Señal {
-  0% {
-    position: x(-5px);
-  }
-  100% {
-    scale: x(0);
-  }
-}*/

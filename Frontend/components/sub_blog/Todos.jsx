@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import PropsVariados from '../../props/PropBlog.jsx';
 import Datos from '../../props/ContenidoBlog.js';
 
-function AllPost({ onExpandChange }) {
+function Todos({ onExpandChange }) {
   const [expandedId, setExpandedId] = useState(null);
 
   const categorias = [...new Set(Datos.map(post => post.categoria))];
@@ -32,15 +32,15 @@ function AllPost({ onExpandChange }) {
               style={{
                 flex: 1,
                 border: '0',
-                borderTop: '2px solid #0015a1', // Línea gris clara
+                borderTop: '2px solid #0044ffff', // Línea gris clara
                 margin: 0
               }}
             />
             <h2
               style={{
-                fontSize: '2rem',
+                fontSize: 'clamp(28px, 4vw, 42px)',
                 fontWeight: 'bold',
-                color: '#0015a1',
+                color: '#0044ffff',
                 margin: '0 10px',
                 textTransform: 'capitalize'
               }}
@@ -51,7 +51,7 @@ function AllPost({ onExpandChange }) {
               style={{
                 flex: 1,
                 border: '0',
-                borderTop: '2px solid #0015a1',
+                borderTop: '2px solid #0044ffff',
                 margin: 0
               }}
             />
@@ -76,4 +76,4 @@ function AllPost({ onExpandChange }) {
   );
 }
 
-export default AllPost;
+export default Todos;

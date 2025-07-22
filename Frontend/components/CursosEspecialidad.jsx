@@ -1,9 +1,9 @@
 import React from 'react';
-import DiplomaCard from '../props/PlantillaCursos.jsx';
+import CardCursos from '../props/PlantillaCursos.jsx';
 import '../public/styles/CursosEspecialidad.css';
 import { SlArrowRight } from "react-icons/sl";
 
-const diplomas = [
+const cursos = [
   {
     titulo: 'GESTION PUBLICA Y MODERNIZACION DEL ESTADO',
     descripcion: 'Modalidad: Virtual',
@@ -90,23 +90,23 @@ const diplomas = [
 const CursosEspecialidad = () => (
   <>
     <div className='titulo-cursos'>
-      <h2>Cursos Especializados</h2>
+      <h2>CURSOS DE GESTION PUBLICA</h2>
       <p>Instituto de gerencia Intercontinental</p>
     </div>
     <div className="cursos-container">
-        {diplomas.map((diploma, index) => (
-          <div key={diploma.link} style={{ '--color-fondo': diploma.colorFondo, animationDelay: `${index * 0.1}s`  }}>
-            <DiplomaCard
+        {cursos.map((cursos, index) => (
+          <div key={cursos.link} style={{ '--color-fondo': cursos.colorFondo, animationDelay: `${index * 0.1}s`  }}>
+            <CardCursos
               /*titulo={diploma.titulo}*/
-              descripcion={diploma.descripcion}
-              imagen={diploma.imagen}
-              colorFondo={diploma.colorFondo}
-              inicioClases={diploma.inicioClases}
-              certificado={diploma.certificado}
+              descripcion={cursos.descripcion}
+              imagen={cursos.imagen}
+              colorFondo={cursos.colorFondo}
+              inicioClases={cursos.inicioClases}
+              certificado={cursos.certificado}
               boton={
-                <a href={`${diploma.link}?titulo=${encodeURIComponent(diploma.titulo)}&inicioClases=${encodeURIComponent(diploma.inicioClases)}`}
+                <a href={`${cursos.link}?titulo=${encodeURIComponent(cursos.titulo)}&inicioClases=${encodeURIComponent(cursos.inicioClases)}`}
                   className="btn">
-                  Ver mas <SlArrowRight style={{fontSize: '12px'}}/></a> 
+                  Ver mas <SlArrowRight style={{fontSize: '12px', margin: 'auto 0'}}/></a> 
               }
             />
           </div>

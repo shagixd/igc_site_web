@@ -17,12 +17,12 @@ const CardShop = ({
     }}
   >
     <div className='parte-1'>
-        <h2>{titulo}</h2>
         <img src={imagen} alt={titulo}/>
     </div>
     <div className='parte-2'>
+      <h2 className='titulo-tienda'>{titulo}</h2>
       <p className='p-descripcion'>{descripcion}</p>
-      <p className='p-precio'>Precio: {precio}</p>
+      <p className='p-precio'>{precio}</p>
       <button className='buton-shop'><FaShoppingCart /> Añadir al carrito</button>
     </div>
   </div>
