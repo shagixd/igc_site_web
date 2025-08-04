@@ -1,14 +1,13 @@
-.congresos-titulo {
-  position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
+.titulo-congresos {
+  position: relative;
   background: url(../img/prueba.jpg) no-repeat center center / cover;
   width: 100%;
   padding: 8% 0;
   margin: 0;
-  /* No uses height: auto aquí, deja que el contenido defina la altura */
-  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
+  overflow: hidden;
 }
 
-.congresos-titulo::before {
+.titulo-congresos::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -17,45 +16,50 @@
   pointer-events: none; /* para que no bloquee interacciones con el contenido */
 }
 
-.congresos-titulo * {
+.titulo-congresos * {
   position: relative;
   z-index: 2; /* para que el texto esté encima del overlay */
 }
-.congresos-titulo h2 {
-  font-size: clamp(28px, 4vw, 62px);
+.titulo-congresos h2 {
+  font-size: clamp(20px, 4vw, 66px);
   color: #001aff;
   margin: 0 5%;
   text-shadow: #ffffff 0px 0px 6px, #ffffff 0px 0px 4px;
-  text-align: center;
+  text-align: end;
 }
-.congresos-titulo p {
-  font-size: clamp(18px, 1.5vw, 28px);
+.titulo-congresos p {
+  font-size: clamp(12px, 1.5vw, 34px);
   text-shadow: 0 0 3px black;
   color: #ffffff;
   margin: 0 5%;
-  text-align: center;
+  text-align: end;
 }
+
+
 
 .congresos-container {
     display: flex;
     width: 90%;
-    margin: 10px auto;
+    margin: 5% auto;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2%;
-  
+    gap: 3%;
 }
+.card-container {
+    width: 20%; min-width: 200px; height: auto;
+    margin: 2% 0;
+}
+
 .card-cursos {
-    min-width: 300px;
-    max-width: 380px;
+    width: 100%; height: auto;
     margin: 4% auto;
     display: flex;
     gap: 0;
     flex-wrap: wrap;
-    color: rgb(0, 0, 0);
     box-shadow: 0 0 5px black;
     padding: 0;
+    color: rgb(0, 0, 0);
     animation: aparecerTarjeta 0.7s ease forwards;
     animation-fill-mode: both;
 }
@@ -63,17 +67,22 @@
     width: 100%; height: auto;
     margin: 0; padding: 0;
 }
+.card-1 img {
+  width: 100%; height: 100%;
+  margin: 0;
+  object-fit: cover;
+  margin: 0;
+  display: block; /* elimina espacios en línea */
+}
 .card-2{
-    width: 65%;
-    height: auto;
+    width: 60%; height: auto;
     margin: 0; padding: 0;
     flex-direction: column;
     justify-items: center;
     text-align: center;
 }
 .card-3{
-    width: 35%;
-    height: auto;
+    width: 40%; height: auto;
     margin: 0; padding: 0;
     background-color: #00a2ff;
     display: flex;
@@ -82,40 +91,39 @@
     flex-direction: column;
     gap: 2%;
 }
-.congresos-container .card-3 p {
-    font-size: clamp(35px, 3.5vw, 44px);
+.card-3 p {
+    font-size: clamp(22px, 2.5vw, 46px);
     color: white;
     overflow: hidden;
     font-weight: 700;
-    color: white;
     text-align: center;
     margin: 0;
 }
 .parrafo-4 {
-    font-size: clamp(16px, 1vw, 26px) !important;
+    font-size: clamp(12px, 1vw, 26px) !important;
     letter-spacing: 2px;
 }
 .card-2 p {
-  font-size: clamp(16px, 1.4vw, 26px);
+  font-size: clamp(11px, 1.1vw, 25px);
   color: #000000;
   margin: 8% 0;
 }
-.parrafo-3 {
-  font-size: clamp(16px, 1vw, 24px) !important;
+.card-2 .parrafo-3 {
+  font-size: clamp(12px, 1vw, 22px);
   text-decoration: underline;
-  color: rgb(46, 46, 46) !important;
+  color: rgb(99, 99, 99);
 }
 
 
 .card-2 a {
-  background-color: #777777;
+  background-color: #535353;
   border: none;
   color: white;
   padding: 5% 10%;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: clamp(16px, 1vw, 24px);
+  font-size: clamp(12px, 1vw, 22px);
   margin-bottom: 5%;
 }
 .card-2 a:hover {
@@ -139,3 +147,44 @@
     transform: scale(1);
   }
 }
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+  .congresos-container {
+    width: 95%;
+    margin: 4% auto;
+    gap: 4%;
+    }
+  .card-container {
+      width: 25%; min-width: 180px; height: auto;
+      margin: 2% 0;
+  }
+  .card-2 p {
+  margin: 6% 0;
+  }
+  .card-2 a {
+  padding: 4% 8%;
+  margin-bottom: 4%;
+  }
+}
+
+/*--------------------DISEÑO PARA MOVIL-----------------*/
+@media (max-width: 700px) {
+  .congresos-container {
+    width: 99%;
+    margin: 5% auto;
+    gap: 5%;
+    }
+  .card-container {
+      width: 40%; min-width: 140px; height: auto;
+      margin: 2% 0;
+  }
+  .card-2 p {
+  margin: 4% 0;
+  }
+  .card-2 a {
+  padding: 3% 6%;
+  margin-bottom: 3%;
+  }
+}
+

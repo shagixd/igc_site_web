@@ -55,11 +55,12 @@
 
 
 .zona-1 {
-  width: 80%; height: auto;
-  margin: 5% auto;
+  width: 100%; height: auto;
+  margin: 3% 0;
+  padding: 0 5%;
   display: flex;
-  padding: 2% 1%;
-  box-shadow: 0 0 3px rgb(0, 132, 255);
+  flex-wrap: wrap;
+  background-color: #edf1f7e5;
 }
 .zona1-imagen {
   width: 45%; height: auto;
@@ -69,16 +70,13 @@
   justify-content: center;
 }
 .zona1-imagen img {
-  width: 90%;
-  height: auto;
-  border-radius: 10% 30% 40% 60%; /* Forma inicial: círculo perfecto */
-  box-shadow: 0 5px 10px rgb(0, 110, 255);
-  /* Para que la animación funcione bien */
+  width: 100%; height: 100%;
   object-fit: cover; /* Mantiene la imagen bien ajustada */
   display: block;
   overflow: hidden;
-  animation: variarBorderRadius 10s linear infinite;
 }
+/*
+animation: variarBorderRadius 10s linear infinite;
 @keyframes variarBorderRadius {
   0% {
     border-radius: 10% 30% 40% 60%;
@@ -113,25 +111,24 @@
   100% {
     border-radius: 10% 30% 40% 60%;
   }
-}
-
+}*/
 
 .zona1-texto {
-  width: 55%; height: auto;
-  margin: 0;
-  padding: 2% 4%;
-  box-shadow: 0 0 10px rgb(226, 226, 226);
+  width: 40%; height: auto;
+  margin: 1% 2%;
+  padding: 2% 2%;
+  background-color: #ffffff;
 }
 .zona1-texto h3 {
   text-align: center;
   color: #006eff;
-  text-shadow: 0 0 8px #a7a7a7;
-  font-size: clamp(20px, 3.2vw, 38px);
+  text-shadow: 0 0 6px #a7a7a7;
+  font-size: clamp(16px, 2vw, 38px);
 }
 .parrafo-1 {
-  text-align: center;
+  text-align: center; 
   color: rgb(0, 13, 70);
-  font-size: clamp(14px, 2vw, 22px);
+  font-size: clamp(14px, 1.5vw, 22px);
 }
 .parrafo-2 {
   color: rgb(41, 41, 41);
@@ -139,31 +136,29 @@
   margin: 2% 0;
 }
 
+
 .carrusel {
   width: 80%;
   margin: 5% auto;
   display: flex;
   flex-wrap: wrap;
-  border-radius: 8px;
   overflow: hidden;
-  padding:0;
-  background-color: #2382ff;
   padding: 1%;
+  background-color: rgba(240, 242, 247, 0.637);
+  box-shadow: 0 0 2px black;
 }
 
 .carrusel-texto {
   width: 42%;
   padding: 2% 1%;
-  background-color: rgb(255, 255, 255);
-  border-radius: 8px;
 }
 
 .carrusel-texto h3 {
   font-size: clamp(12px, 2.2vw, 32px);
   text-align: center;
   margin: 2% auto;
-  color: rgb(0, 89, 255);
-  border-bottom: rgb(0, 89, 255) 3px solid;
+  color:rgb(0, 89, 255);
+  border-bottom: rgb(42, 116, 255) 3px solid;
   padding-bottom: 1%;
 }
 
@@ -199,15 +194,14 @@
   margin: auto;
   object-fit: cover;
   transition: opacity 0.4s ease-in-out;
-  box-shadow: 0 0 3px rgb(255, 255, 255), 0 0 10px rgb(255, 255, 255);
-  border-radius: 22%;
+  box-shadow: 0 0 3px rgb(17, 17, 17);
 }
 
 .btn-carrusel {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.185);
   border: none;
   color: rgb(0, 0, 0);
   font-size: 40px;
@@ -239,7 +233,7 @@
   align-items: center;
   justify-content: center;
   gap: 1em; /* Espacio entre las líneas y el texto */
-  font-size: clamp(22px, 3.5vw, 42px);
+  font-size: clamp(20px, 3vw, 42px);
   color: rgb(0, 110, 255);
   margin: 1% auto;
 }
@@ -285,7 +279,7 @@
 }
 .carta-cuerpo-texto h4 {
   text-align: center;
-  font-size: clamp(12px, 1.5vw, 26px);
+  font-size: clamp(12px, 1vw, 26px);
   margin: 0;
   padding: 1%;
   color: rgb(255, 255, 255);
@@ -294,14 +288,16 @@
 .carta-cuerpo-icon p {
   width: 75%; height: auto;
   text-align: start;
-  font-size: clamp(10px, 1.5vw, 19px);
+  font-size: clamp(11px, 1vw, 19px);
   margin: 2% 3%;
 }
 .icono-principal {
   width: 25%; height: auto;
   padding: 1%;
+  font-size: clamp(12px, 3vw, 32px);
   filter: drop-shadow(0 0px 6px rgba(121, 121, 121, 0.829));
 }
+
 
 
 .texto-extra {
@@ -309,6 +305,7 @@
   margin: 3% auto;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .texto-extra-1 {
@@ -322,7 +319,7 @@
 }
 .texto-extra-1 h3 {
   text-align: center;
-  font-size: clamp(12px, 1.5vw, 26px);
+  font-size: clamp(11px, 1.1vw, 26px);
   color: rgb(0, 119, 255);
   margin: 2% auto;
 }
@@ -338,7 +335,7 @@
 
 .texto-de-salida {
   background-color: rgb(32, 123, 207);
-  width: 75%; height: auto;
+  width: 80%; height: auto;
   margin: 3% auto;
   padding: 2% 3%;
 }
@@ -350,7 +347,7 @@
   align-items: center;
   justify-content: center;
   gap: 1em; /* Espacio entre las líneas y el texto */
-  font-size: clamp(12px, 3vw, 24px);
+  font-size: clamp(10px, 2vw, 24px);
   color: white;
   margin: 1% auto;
 }
@@ -364,6 +361,107 @@
 }
 .texto-de-salida p{
   color: white;
-  font-size: clamp(10px, 2vw, 18px);
+  font-size: clamp(10px, 1.1vw, 18px);
   text-align: center;
+}
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+  .zona1 {
+    padding: 0 3%;
+  }
+  .zona1-texto {
+    width: 42%;
+  }
+  .zona3-carta {
+    width: 90%; height: auto;
+    margin: 2% auto;
+  }
+  .carta-cuerpo {
+    width: 47%; height: auto;
+    box-shadow: 0 0 4px rgba(126, 126, 126, 0.795);
+  }
+  .texto-extra {
+  width: 80%; height: auto;
+  }
+  .texto-extra-1 ul{
+  padding-left: 9%;
+  }
+  .texto-extra-1 li {
+    margin: 1% 0;
+  }
+  .texto-de-salida {
+  width: 85%; height: auto;
+  margin: 2% auto;
+  padding: 1% 2%;
+}
+.carrusel {
+  width: 90%;
+  margin: 4% auto;
+}
+.carrusel-texto li {
+  padding: 0.4% 0;
+}
+
+}
+
+/*--------------------DISEÑO PARA MOVIL-----------------*/
+@media (max-width: 700px) {
+  .zona1 {
+    padding: 0 0.5%;
+  }
+  .zona1-imagen {
+    width: 90%;
+    max-height: 140px;
+    margin: 1% 0;
+    order: 2;
+  }
+  .zona1-texto {
+    width: 82%;
+    order: 1;
+  }
+  .zona3-carta {
+    width: 99%; height: auto;
+    margin: 1% auto;
+}
+.carta-cuerpo {
+    width: 80%; height: auto;
+    box-shadow: 0 0 4px rgba(126, 126, 126, 0.795);
+  }
+  .texto-extra {
+  width: 90%; height: auto;
+  }
+  .texto-extra-1 ul{
+  padding-left: 10%;
+  }
+  .texto-extra-1 li {
+    margin: 0.5% 0;
+  }
+  .texto-extra-1 {
+  width: 60%; height: auto;
+  padding: 0.5% 1%;
+  margin: 1% auto;
+}
+.texto-de-salida {
+  width: 90%; height: auto;
+  margin: 1.5 auto;
+  padding: 1% 2%;
+}
+.carrusel {
+  width: 98%;
+  margin: 3% auto;
+}
+.carrusel-texto {
+  width: 80%;
+  align-items: start;
+  padding: 2% 1%;
+}
+.carrusel-imagenes {
+  width: 85%;
+  min-height: 140px;
+  margin: 1% auto;
+}
+.carrusel-texto li {
+  padding: 0.2% 0;
+}
 }

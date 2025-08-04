@@ -79,8 +79,9 @@
 }
 
 .espacio-logo-mobile img {
-  width: auto; height: 50px;
+  width: auto; height: 35px;
   margin: 0;
+  margin-left: 2%;
 }
 
 .menu-toggle {
@@ -88,6 +89,7 @@
   border: none;
   cursor: pointer;
   padding: 0 1%;
+  margin-left: 2%;
 }
 .menu-toggle svg {
   color: #032583;
@@ -98,7 +100,7 @@
   position: absolute;
   top: 60px; /* Ajuste según altura del header */
   right: 20px; /* Márgen derecho para que no toque el borde */
-  width: 280px;
+  width: 250px;
   max-height: 0;
   overflow: hidden;
   background-color: white;
@@ -113,18 +115,6 @@
   max-height: 450px;
   overflow: auto;
   transition: max-height 0.4s ease-in;
-}
-
-.close-btn {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  font-size: clamp(16px, 2vw, 24px);
-  background: none;
-  border: none;
-  color: #002f94;
-  font-weight: bold;
-  cursor: pointer;
 }
 
 .mobile-nav-list {
@@ -162,7 +152,25 @@
   }
 }
 
+
 @media (max-width: 1100px) {
+  
+}
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: block;
+  }
+}
+
+
+/*--------------------DISEÑO PARA MOVIL-----------------*/
+@media (max-width: 700px) {
   .nav-desktop {
     display: none;
   }

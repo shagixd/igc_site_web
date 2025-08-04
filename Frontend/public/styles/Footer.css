@@ -9,6 +9,7 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+  justify-content: center;
 }
 .cuerpo1, .cuerpo2, .cuerpo3 {
   width: 30%; height: auto;
@@ -25,29 +26,29 @@
   width: 80%;
   text-align: center;
   margin: 0.5% 0;
-  font-size: clamp(11px, 1vw, 20px);
+  font-size: clamp(8px, 1vw, 20px);
 }
 .cuerpo3 ul {
   padding-left: 5%;
 }
 .cuerpo3 li {
   margin: 0;
-  font-size: clamp(10px, 1vw, 18px);
+  font-size: clamp(8px, 1vw, 18px);
 }
 .footer-contenedor h3 {
   text-align: center;
-  font-size: clamp(9px, 1vw, 30px);
+  font-size: clamp(7px, 1vw, 30px);
   margin: 1% 0;
 }
 .footer-enlaces {
   width: 50%; height: auto;
-  margin: 0 auto;
+  margin: 1.5% auto;
   display: flex;
   justify-content: space-around;
 
 }
 .footer-enlaces svg {
-  font-size: clamp(20px, 2.5vw, 40px);
+  font-size: clamp(16px, 2.2vw, 40px);
   text-align: center;
   display: flex;
   align-items: center;
@@ -83,7 +84,7 @@
   border-radius: 25%;
 }
 .zona-abajo {
-  width: 80%;
+  width: 50%;
   margin: 1% auto;
   border-top: 5px double white;
   padding: 1%;
@@ -93,16 +94,26 @@
   font-size: clamp(10px, 1vw, 22px);
 }
 
-/*----------------DISEÑO PARA TABLET---------------*/
-@media screen and (max-width: 1100px){
-  .footer-flex {
-    width: 95%;
+/*----------------DISEÑO PARA IPAD---------------*/
+@media (max-width: 1100px){
+  .footer-enlaces {
+    width: 75%; height: auto;
   }
   .zona-abajo {
-    width: 95%;
+  margin: 1% auto;
+  width: 75%;
+  border-top: 3px double white;
   }
 }
 
 /*----------------DISEÑO PARA MOVIL---------------*/
-@media screen and (max-width: 700px){
+@media (max-width: 700px){
+  .footer-enlaces {
+    width: 80%; height: auto;
+  }
+  .zona-abajo {
+  margin: 0.5% auto;
+  width: 80%;
+  border-top: 2px double white;
+  }
 }

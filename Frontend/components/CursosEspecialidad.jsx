@@ -95,18 +95,18 @@ const CursosEspecialidad = () => (
     </div>
     <div className="cursos-container">
         {cursos.map((cursos, index) => (
-          <div key={cursos.link} style={{ '--color-fondo': cursos.colorFondo, animationDelay: `${index * 0.1}s`  }}>
+          <div key={cursos.link} className="card-container" style={{ '--color-fondo': cursos.colorFondo, animationDelay: `${index * 0.1}s`  }}>
             <CardCursos
               /*titulo={diploma.titulo}*/
-              descripcion={cursos.descripcion}
               imagen={cursos.imagen}
+              descripcion={cursos.descripcion}
               colorFondo={cursos.colorFondo}
               inicioClases={cursos.inicioClases}
               certificado={cursos.certificado}
               boton={
                 <a href={`${cursos.link}?titulo=${encodeURIComponent(cursos.titulo)}&inicioClases=${encodeURIComponent(cursos.inicioClases)}`}
                   className="btn">
-                  Ver mas <SlArrowRight style={{fontSize: '12px', margin: 'auto 0'}}/></a> 
+                  Ver mas <SlArrowRight style={{fontSize: 'clamp(8px, 0.8vw, 14px)', justifyContent: 'center'}}/></a> 
               }
             />
           </div>

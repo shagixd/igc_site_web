@@ -67,7 +67,6 @@ function Nav() {
         </div>
 
         <div className="mobile-menu">
-          <button className="close-btn">×</button>
           <ul className="mobile-nav-list">
             <li><Link to="/instituto"><IoHome /> Instituto</Link></li>
             <li><Link to="/nuestrosprogramas"><MdLibraryBooks /> Nuestros Programas</Link></li>

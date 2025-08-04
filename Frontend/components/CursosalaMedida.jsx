@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../public/styles/CursosalaMedida.css';
 import { FcContacts, FcGraduationCap, FcLineChart, FcNegativeDynamic } from "react-icons/fc";
-import { HiMiniChevronDoubleRight } from "react-icons/hi2";
 
 function CursosalaMedida() {
   const imagenes = [
@@ -151,7 +150,6 @@ function CursosalaMedida() {
         </div>
       </div>
 
-      {/* Mini carruseles */}
       <div className="texto-extra">
         <div className="texto-extra-1">
           <h3>DIVERSIDAD DE PROGRAMAS DE ESTUDIOS</h3>

@@ -17,7 +17,7 @@ const inventario = [
     tipo: 'cursos'
   },
   {
-    titulo: 'Curso de Prueba2',
+    titulo: 'CUURSO DE PRUEBA REGISTROS CONTINENTALES',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda1.png',
     colorFondo: '#ffffffff',
@@ -210,17 +210,17 @@ const TiendaVirtual = () => {
       {/* Contenedor de productos */}
       <div className="tienda-contenedora">
         {inventarioFiltrado.length > 0 ? (
-          inventarioFiltrado.map((item, index) => (
+          inventarioFiltrado.map((objeto, index) => (
             <div
-              key={item.titulo}
-              style={{ '--color-fondo': item.colorFondo, animationDelay: `${index * 0.1}s` }}
-            >
+            className='card-tienda'
+              key={objeto.titulo}
+              style={{ '--color-fondo': objeto.colorFondo, animationDelay: `${index * 0.1}s` }}>
               <CardShop
-                titulo={item.titulo}
-                descripcion={item.descripcion}
-                imagen={item.imagen}
-                colorFondo={item.colorFondo}
-                precio={item.precio}
+                titulo={objeto.titulo}
+                descripcion={objeto.descripcion}
+                imagen={objeto.imagen}
+                colorFondo={objeto.colorFondo}
+                precio={objeto.precio}
               />
             </div>
           ))
