@@ -43,7 +43,7 @@ function BotonConsultodo({ texto, style = {}, ...props }) {
             : '1px solid #003c97ff',
         cursor: 'pointer',
         display: 'inline-block',                   // para que la caja se ajuste al contenido
-        margin: '0 auto',
+        margin: '1% auto',
         textAlign: 'center',
         letterSpacing: '0.5px',
         transition: 'all 0.2s cubic-bezier(.4,0,.2,1)',

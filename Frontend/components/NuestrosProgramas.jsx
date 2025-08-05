@@ -55,17 +55,20 @@ function NuestrosProgramas() {
         <h2>Nuestros Programas</h2>
         <p>Instituto de Gerencia Intercontinental</p>
       </div>
+
       <div className='programas-intro-container'>
         <div className='programas-intro'>
           <h4>PROGRAMA DE EDUCACIÓN EJECUTIVA IGC</h4>
-          <p>El Instituto de Gerencia Intercontinental-IGC, ha diseñado cinco (05) líneas de
-            acción a través de programas académicos y mediante los cuales capacita a
-            profesionales de los diversos sistemas administrativos del sector del Estado y la
-            actividad Empresarial en temas relacionados con gestión pública y desarrollo de
-            competencias según detalle.</p>
+          <p>
+            El Instituto de Gerencia Intercontinental - IGC, ha diseñado cinco (05) líneas de acción 
+            a través de programas académicos y mediante los cuales capacita a profesionales de los 
+            diversos sistemas administrativos del sector del Estado y la actividad Empresarial en 
+            temas relacionados con gestión pública y desarrollo de competencias según detalle.
+          </p>
         </div>
+
         <div className='imagen-intro'>
-          <img src="/img/1.jpg" alt="imagen" />
+          <img src="/img/5.jpg" alt="Programas Ejecutivos IGC" />
         </div>
       </div>
 

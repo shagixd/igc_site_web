@@ -10,23 +10,30 @@ import { GiHamburgerMenu } from "react-icons/gi";
 function Nav() {
   // Efecto para manejar el menú móvil
   useEffect(() => {
-    const menuToggle = document.querySelector('.menu-toggle');
-    const mobileMenu = document.querySelector('.mobile-menu');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-    const handleClick = (e) => {
-      if (menuToggle.contains(e.target)) {
-        mobileMenu.classList.toggle('activo');
-      } else if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-        mobileMenu.classList.remove('activo');
-      }
-    };
+  const handleClick = (e) => {
+    // Si se hace clic en el botón del menú, alternar
+    if (menuToggle.contains(e.target)) {
+      mobileMenu.classList.toggle('activo');
+    }
+    // Si se hace clic en un enlace dentro del menú, cerrar
+    else if (mobileMenu.contains(e.target) && e.target.closest('a')) {
+      mobileMenu.classList.remove('activo');
+    }
+    // Si se hace clic fuera del menú y fuera del botón, cerrar
+    else if (!mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      mobileMenu.classList.remove('activo');
+    }
+  };
 
-    document.addEventListener('click', handleClick);
+  document.addEventListener('click', handleClick);
 
-    return () => {
-      document.removeEventListener('click', handleClick);
-    };
-  }, []);
+  return () => {
+    document.removeEventListener('click', handleClick);
+  };
+}, []);
 
   return (
     <>

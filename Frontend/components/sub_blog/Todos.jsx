@@ -24,8 +24,8 @@ function Todos({ onExpandChange }) {
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              gap: '10px',
-              marginBottom: '20px'
+              gap: '2.5%',
+              marginBottom: '2%'
             }}
           >
             <hr
@@ -38,7 +38,7 @@ function Todos({ onExpandChange }) {
             />
             <h2
               style={{
-                fontSize: 'clamp(28px, 4vw, 42px)',
+                fontSize: 'clamp(18px, 3vw, 42px)',
                 fontWeight: 'bold',
                 color: '#0044ffff',
                 margin: '0 10px',

@@ -56,14 +56,14 @@
 
 .zona-1 {
   width: 100%; height: auto;
-  margin: 3% 0;
-  padding: 0 5%;
+  margin: 0;
+  padding: 2% 2%;
   display: flex;
   flex-wrap: wrap;
-  background-color: #edf1f7e5;
+  background-color: #eff9fff6;
 }
 .zona1-imagen {
-  width: 45%; height: auto;
+  width: 50%; height: auto;
   margin: 0;
   display: flex;
   align-items: center;
@@ -114,9 +114,10 @@ animation: variarBorderRadius 10s linear infinite;
 }*/
 
 .zona1-texto {
-  width: 40%; height: auto;
-  margin: 1% 2%;
+  width: 44%; height: auto;
+  margin: 0% 2%;
   padding: 2% 2%;
+  box-sizing: border-box;
   background-color: #ffffff;
 }
 .zona1-texto h3 {
@@ -138,25 +139,25 @@ animation: variarBorderRadius 10s linear infinite;
 
 
 .carrusel {
-  width: 80%;
-  margin: 5% auto;
+  width: 100%; height: auto;
+  margin: 3% auto;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  padding: 1%;
-  background-color: rgba(240, 242, 247, 0.637);
-  box-shadow: 0 0 2px black;
+  padding: 2% 2%;
+  background-color: #eff9fff6;
 }
 
 .carrusel-texto {
-  width: 42%;
+  width: 45%;
   padding: 2% 1%;
+  box-sizing: border-box;
 }
 
 .carrusel-texto h3 {
   font-size: clamp(12px, 2.2vw, 32px);
   text-align: center;
-  margin: 2% auto;
+  margin: 1.5% auto;
   color:rgb(0, 89, 255);
   border-bottom: rgb(42, 116, 255) 3px solid;
   padding-bottom: 1%;
@@ -171,8 +172,8 @@ animation: variarBorderRadius 10s linear infinite;
   padding: 0.5% 0;
   font-size: clamp(10px, 1.2vw, 18px);
   list-style: none;
-  margin: 0 0 0 2%;
-  color: rgb(37, 37, 37);
+  margin-left: 2%;
+  color: rgb(0, 0, 0);
 }
 .carrusel-texto li::before {
   content: "✔";
@@ -181,20 +182,22 @@ animation: variarBorderRadius 10s linear infinite;
 
 .carrusel-imagenes {
   width: 55%;
+  box-sizing: border-box;
   position: relative;
   min-height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 2%;
+  box-sizing: border-box;
 }
 
 .carrusel-img {
-  width: 75%;
-  height: 75%;
+  width: 75%; height: auto;
   margin: auto;
   object-fit: cover;
   transition: opacity 0.4s ease-in-out;
-  box-shadow: 0 0 3px rgb(17, 17, 17);
+  box-shadow: 0 0 4px rgb(17, 17, 17);
 }
 
 .btn-carrusel {
@@ -205,25 +208,25 @@ animation: variarBorderRadius 10s linear infinite;
   border: none;
   color: rgb(0, 0, 0);
   font-size: 40px;
-  padding: 1% 2%;
+  padding: 0.5% 1.5%;
   cursor: pointer;
   z-index: 2;
   border-radius: 50%;
 }
 
 .btn-carrusel.anterior {
-  left: 4%;
-  font-size: clamp(30px, 5vw, 50px);
+  left: 5%;
+  font-size: clamp(22px, 4vw, 50px);
 }
 
 .btn-carrusel.siguiente {
-  right: 4%;
-  font-size: clamp(30px, 5vw, 50px);
+  right: 5%;
+  font-size: clamp(22px, 4vw, 50px);
 }
 
 .caja-titulo {
   width: 100%; height: auto;
-  margin: 3% 0;
+  margin: 4% 0;
 }
 .caja-titulo h3 {
   text-align: center;
@@ -232,8 +235,8 @@ animation: variarBorderRadius 10s linear infinite;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1em; /* Espacio entre las líneas y el texto */
-  font-size: clamp(20px, 3vw, 42px);
+  gap: 1%; /* Espacio entre las líneas y el texto */
+  font-size: clamp(16px, 2.5vw, 40px);
   color: rgb(0, 110, 255);
   margin: 1% auto;
 }
@@ -257,7 +260,7 @@ animation: variarBorderRadius 10s linear infinite;
 .carta-cuerpo {
     width: 49%; height: auto;
     margin: 1% auto;
-    box-shadow: 0 0 5px rgba(126, 126, 126, 0.795);
+    box-shadow: 0 0 4px rgba(126, 126, 126, 0.795);
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -279,7 +282,7 @@ animation: variarBorderRadius 10s linear infinite;
 }
 .carta-cuerpo-texto h4 {
   text-align: center;
-  font-size: clamp(12px, 1vw, 26px);
+  font-size: clamp(11px, 1vw, 26px);
   margin: 0;
   padding: 1%;
   color: rgb(255, 255, 255);
@@ -288,8 +291,8 @@ animation: variarBorderRadius 10s linear infinite;
 .carta-cuerpo-icon p {
   width: 75%; height: auto;
   text-align: start;
-  font-size: clamp(11px, 1vw, 19px);
-  margin: 2% 3%;
+  font-size: clamp(10px, 1.1vw, 19px);
+  margin: 1% 2%;
 }
 .icono-principal {
   width: 25%; height: auto;
@@ -367,22 +370,22 @@ animation: variarBorderRadius 10s linear infinite;
 
 /*--------------------DISEÑO PARA AIPAD-----------------*/
 @media (max-width: 1100px) {
-  .zona1 {
-    padding: 0 3%;
+  
+  .zona-1 {
+    padding: 2% 1%;
   }
   .zona1-texto {
-    width: 42%;
+    width: 46%;
   }
   .zona3-carta {
     width: 90%; height: auto;
-    margin: 2% auto;
   }
   .carta-cuerpo {
     width: 47%; height: auto;
     box-shadow: 0 0 4px rgba(126, 126, 126, 0.795);
   }
   .texto-extra {
-  width: 80%; height: auto;
+  width: 85%; height: auto;
   }
   .texto-extra-1 ul{
   padding-left: 9%;
@@ -394,30 +397,26 @@ animation: variarBorderRadius 10s linear infinite;
   width: 85%; height: auto;
   margin: 2% auto;
   padding: 1% 2%;
-}
-.carrusel {
-  width: 90%;
-  margin: 4% auto;
-}
-.carrusel-texto li {
-  padding: 0.4% 0;
-}
+  }
+  .carrusel-texto {
+    padding: 1% 1%;
+  }
+  .carrusel-texto li {
+    padding: 0.4% 0;
+  }
 
 }
 
 /*--------------------DISEÑO PARA MOVIL-----------------*/
 @media (max-width: 700px) {
-  .zona1 {
-    padding: 0 0.5%;
-  }
   .zona1-imagen {
-    width: 90%;
-    max-height: 140px;
-    margin: 1% 0;
+    width: 80%; max-height: 160px;
+    margin: 1% auto;
     order: 2;
   }
   .zona1-texto {
-    width: 82%;
+    width: 80%;
+    margin: 1% auto;
     order: 1;
   }
   .zona3-carta {
@@ -425,11 +424,11 @@ animation: variarBorderRadius 10s linear infinite;
     margin: 1% auto;
 }
 .carta-cuerpo {
-    width: 80%; height: auto;
-    box-shadow: 0 0 4px rgba(126, 126, 126, 0.795);
+    width: 85%; height: auto;
+    box-shadow: 0 0 3px rgba(126, 126, 126, 0.795);
   }
   .texto-extra {
-  width: 90%; height: auto;
+  width: 95%; height: auto;
   }
   .texto-extra-1 ul{
   padding-left: 10%;
@@ -438,7 +437,7 @@ animation: variarBorderRadius 10s linear infinite;
     margin: 0.5% 0;
   }
   .texto-extra-1 {
-  width: 60%; height: auto;
+  width: 65%; height: auto;
   padding: 0.5% 1%;
   margin: 1% auto;
 }
@@ -448,20 +447,19 @@ animation: variarBorderRadius 10s linear infinite;
   padding: 1% 2%;
 }
 .carrusel {
-  width: 98%;
-  margin: 3% auto;
-}
-.carrusel-texto {
-  width: 80%;
-  align-items: start;
   padding: 2% 1%;
 }
+.carrusel-texto {
+  width: 98%;
+  align-items: center;
+}
 .carrusel-imagenes {
-  width: 85%;
+  width: 80%;
   min-height: 140px;
-  margin: 1% auto;
+  margin: 0.5% auto;
 }
 .carrusel-texto li {
   padding: 0.2% 0;
+  margin-left: 4%;
 }
 }

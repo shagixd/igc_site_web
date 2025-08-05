@@ -2,6 +2,8 @@ import FormularioEmail from "../props/FormularioEmail";
 import '../public/styles/Instituto.css'
 import { FcRatings, FcMultipleDevices } from "react-icons/fc";
 import { HiOutlineChevronDoubleDown } from "react-icons/hi2";
+import { LiaAccusoft, LiaAdSolid, LiaAddressCard } from "react-icons/lia";
+import { PiAddressBook, PiAirplay  } from "react-icons/pi";
 
 function Instituto() {
   return (
@@ -22,7 +24,16 @@ function Instituto() {
     
     <div className="panel-formulario">
         <div className="texto-relleno">
-            <p>ESCUELA Y CENTRO DE ESTUDIOS DE GESTIÓN PUBLICA CON MAS 23 AÑOS IMPARTIENDO CONOCIMIENTOS PARA EL EXITO</p>
+            <div className="relleno-texto">
+                <p>ESCUELA Y CENTRO DE ESTUDIOS DE GESTIÓN PUBLICA CON MAS 23 AÑOS IMPARTIENDO CONOCIMIENTOS PARA EL EXITO</p>
+            </div>
+            <div className="relleno-icon">
+                <LiaAccusoft />
+                <LiaAdSolid />
+                <LiaAddressCard />
+                <PiAddressBook />
+                <PiAirplay />
+            </div>
         </div>
         <div className="espacio-form">
             <FormularioEmail 

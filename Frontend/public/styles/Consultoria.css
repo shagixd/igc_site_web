@@ -1,29 +1,25 @@
 .asesoria-titulo {
-  position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
+  position: relative;
   background: url(../img/prueba.jpg) no-repeat center center / cover;
   width: 100%;
   padding: 6% 0;
   margin: 0;
-  /* No uses height: auto aquí, deja que el contenido defina la altura */
-  overflow: hidden; /* opcional, para evitar que el contenido o pseudo-elementos se desborden */
+  overflow: hidden;
 }
-
 .asesoria-titulo::before {
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.2); /* capa negra semitransparente */
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 1;
-  pointer-events: none; /* para que no bloquee interacciones con el contenido */
+  pointer-events: none;
 }
-
 .asesoria-titulo * {
   position: relative;
   z-index: 2; /* para que el texto esté encima del overlay */
 }
-
 .asesoria-titulo-texto {
-  background: rgba(255, 255, 255, 0.767);
+  background: rgba(255, 255, 255, 0.815);
   width: 40%; height: auto;
   box-shadow: 0 2px 16px rgba(0,0,0,0.07);
   border-radius: 12px;
@@ -33,9 +29,8 @@
   flex-direction: column;
   justify-content: center;
 }
-
 .asesoria-titulo-texto h2 {
-  font-size: clamp(18px, 4vw, 54px);
+  font-size: clamp(16px, 3vw, 50px);
   font-weight: bold;
   color: #041e5f;
   text-align: center;
@@ -44,49 +39,90 @@
 
 .asesoria-titulo-texto p {
   color: #1a1a1a;
-  font-size: clamp(12px, 3vw, 30px);
+  font-size: clamp(11px, 2vw, 28px);
   text-align: center;
-  margin: 1% 0;
+  margin: 0.5% 0;
 }
 
+
+
+.contenedor-de-asesoria {
+  background-color: rgba(241, 241, 241, 0.699);
+  width: 100%; height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; justify-content: center;
+  padding: 2% 1%; margin: 2% 0;
+  gap: 3%
+}
 .caja-flex {
   display: flex;
-  width: 80%; height: auto;
+  width: 55%; height: auto;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 5% auto;
-  background-color: rgba(241, 250, 255, 0.459);
+  margin: 0;
 }
 .cubo-flex {
-  min-width: 300px; height: auto; width: 40%;
+  height: auto; width: 40%;
   box-shadow: 0 0 3px rgb(6, 43, 112);
-  margin: 2% 4%;
-  padding: 2% 1%;
+  margin: 2% 2%;
+  padding: 1% 2%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: white;
 }
 .cubo-flex h3 {
-  font-size: clamp(16px, 2.2vw, 30px);
+  font-size: clamp(14px, 1.2vw, 28px);
   text-align: center;
 }
 .cubo-flex p {
-  font-size: clamp(11px, 2vw, 20px);
+  font-size: clamp(10px, 1vw, 20px);
   text-align: center;
 }
 .cubo-flex span {
-  font-size: clamp(28px, 4vw, 48px);
+  font-size: clamp(22px, 3vw, 46px);
   text-align: center;
   margin: 2% 0;
 }
 
 .asesoria-formulario {
-  width: 50%; height: auto;
-  margin: 3% auto;
-  background-color: rgba(230, 230, 230, 0.61);
+  width: 30%; height: auto;
+  margin: 0;
   padding: 2% 1%;
 }
 .asesoria-formulario h3 {
   text-align: center;
-  font-size: clamp(12px, 3vw, 24px);
+  font-size: clamp(10px, 2vw, 25px);
+}
+
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+  .contenedor-de-asesoria {
+  padding: 2% 0.5%;
+  }
+  .caja-flex {
+  width: 60%; height: auto;
+  }
+  .asesoria-titulo-texto {
+  width: 55%; height: auto;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.07);
+  border-radius: 10px;
+  padding: 2% 2%;
+  margin-left: 5%;
+}
+}
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 700px) {
+   .contenedor-de-asesoria {
+  padding: 2% 0.3%;
+   }
+   .caja-flex {
+  width: 98%; height: auto;
+  }
+  .asesoria-formulario {
+  width: 60%; height: auto;
+  }
 }

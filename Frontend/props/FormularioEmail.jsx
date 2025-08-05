@@ -151,7 +151,7 @@ const FormularioEmail = ({
             if (counter) counter.textContent = `${count}/200`;
           }}
         ></textarea>
-        <div style={{ fontSize: "25px", color: "black", textAlign: "right" }}>
+        <div style={{ fontSize: "clamp(14px, 1.1vw, 24px)", color: "black", textAlign: "right" }}>
           <span id="contador-comentario">0/200</span>
         </div>
       </div>

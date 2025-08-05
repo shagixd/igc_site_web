@@ -21,46 +21,6 @@
   position: relative;
   z-index: 2; /* para que el texto esté encima del overlay */
 }
-
-.programas-intro-container {
-  width: 80%; height: auto;
-  margin: 3% auto;
-  display: flex;
-  background-color: #0053be;
-  padding: 0;
-  max-height: 500px;
-}
-.programas-intro {
-    width: 50%; height: auto;
-    margin: 5% auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.programas-intro h4 {
-    font-size: clamp(20px, 3vw, 48px);
-    color: #ffffff;
-    text-shadow: 0 0 6px #cccccc;
-    margin: 0;
-    text-align: center;
-}
-.programas-intro p {
-    font-size: clamp(16px, 2vw, 34px);
-    color: #ffffff;
-    text-shadow: 0 0 6px #a8a8a8;
-    margin: 1% 0;
-    text-align: center;
-}
-.imagen-intro {
-  width: 45%; height: auto;
-  display: flex;
-  justify-content: center;
-}
-.imagen-intro img {
-  width: 100%; height: auto;
-  border-radius: 40% 1% 1% 40%;
-
-}
 .programas-titulo h2 {
   font-size: clamp(18px, 3vw, 54px);
   color: #000d81;
@@ -74,6 +34,82 @@
   margin: 0;
   text-align: center;
 }
+
+
+.programas-intro-container {
+  width: 80%;
+  margin: 3% auto;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #003d8a; /* Azul institucional más profundo */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.programas-intro {
+  width: 60%;
+  padding: 5% 4%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.imagen-intro {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.imagen-intro img {
+  width: 85%;
+  margin: 1%;
+  height: auto;
+  border-radius: 40% 0 0 40%;
+  object-fit: cover;
+  box-shadow: -8px 0 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.imagen-intro img:hover {
+  transform: scale(1.03);
+}
+
+.programas-intro h4 {
+  font-size: clamp(12px, 2.5vw, 30px);
+  font-weight: 600;
+  color: #ffffff;
+  text-align: left;
+  letter-spacing: 0.5px;
+  position: relative;
+  margin-bottom: 4%;
+}
+
+.programas-intro h4::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4%;
+  width: 60px;
+  height: 3px;
+  background-color: #ffd700; /* Toque dorado sutil (opcional) */
+  border-radius: 2px;
+}
+.programas-intro p {
+  font-size: clamp(9px, 1.2vw, 20px);
+  line-height: 1.7;
+  color: #e6eefc;
+  text-align: justify;
+  margin: 0;
+  font-weight: 400;
+}
+
+
 .caja-programas-padre {
     width: 80%; height: auto;
     margin: 2% auto;
@@ -163,4 +199,22 @@
   font-size: 40px;
   color: white;
   cursor: pointer;
+}
+
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+  .programas-intro-container {
+  width: 90%;
+  }
+  .programas-intro {
+    padding: 3% 3%;
+  }
+}
+
+/*--------------------DISEÑO PARA MOVIL-----------------*/
+@media (max-width: 700px) {
+  .programas-intro-container {
+  width: 99%;
+  }
 }
