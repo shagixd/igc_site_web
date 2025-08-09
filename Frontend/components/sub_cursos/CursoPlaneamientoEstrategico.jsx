@@ -22,40 +22,27 @@ const CursoPlaneamientoEstrategico = () => {
   const titulo = query.get('titulo') || "PLANEAMIENTO ESTRATÉGICO";
   const fechaInicio = query.get('inicioClases') || "Julio 2024";
 
-  return (
-    <div>
-      <section>
-        <CursoPropEntrada
-          titulo={titulo}
-          fechaInicio={fechaInicio}
-          descripcion="Desarrolla habilidades para la formulación y ejecución de planes estratégicos en el sector público y privado."
-          imagenSrc="/img/node.png"
-        />
-      </section>
-      <section>
-        <CursoPropCuerpo
-          texto="Selecciona una opción:"
-          contenidos={contenidos}
-        />
-      </section>
-      <section>
-        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
-        <h3 style={{
-          fontSize: '2em',
-          fontWeight: 'bold',
-          color: '#888',
-          marginBottom: '2rem',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          textShadow: '1px 2px 8px #bbb'
-        }}>
-          Temario
-        </h3>
-        <CursoPropSalida secciones={contenidoCursos.planeamientoEstrategico} />
-      </section>
-    </div>
-  );
+    return (    
+      <div>
+        <section>
+          <CursoPropEntrada
+            titulo={titulo}
+            fechaInicio={fechaInicio}
+            descripcion="Desarrolla habilidades para la formulación y ejecución de planes estratégicos en el sector público y privado."
+            imagenSrc="/img/1.jpg"
+          />
+        </section>
+        <section>
+          <CursoPropCuerpo
+            texto="Selecciona una opción:"
+            contenidos={contenidos}
+          />
+        </section>
+        <section>
+          <CursoPropSalida secciones={contenidoCursos.planeamientoEstrategico} />
+        </section>
+      </div>
+    );
 };
 
 export default CursoPlaneamientoEstrategico;

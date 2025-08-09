@@ -29,7 +29,7 @@ const CursoInviertePE = () => {
           titulo={titulo}
           fechaInicio={fechaInicio}
           descripcion="Este curso te permitirá dominar el sistema Invierte.pe para la gestión eficiente de proyectos de inversión pública."
-          imagenSrc="/img/react.png"
+          imagenSrc="/img/1.jpg"
         />
       </section>
       <section>
@@ -39,19 +39,6 @@ const CursoInviertePE = () => {
         />
       </section>
       <section>
-        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
-        <h3 style={{
-          fontSize: '2em',
-          fontWeight: 'bold',
-          color: '#888',
-          marginBottom: '2rem',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          textShadow: '1px 2px 8px #bbb'
-        }}>
-          Temario
-        </h3>
         <CursoPropSalida secciones={contenidoCursos.inviertePE} />
       </section>
     </div>

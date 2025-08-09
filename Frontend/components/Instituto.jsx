@@ -15,7 +15,7 @@ function Instituto() {
 
     <div className="contenedor-instituto">
         <div className="imagen-grande">
-            <img src="/img/1.jpg" alt="imagen1" />
+            <img src="/img/10.jpg" alt="imagen1" />
         </div>
         <div className="texto-grande">
             <h3>EDUCACION EJECUTIVA Y GERENCIAL A TRAVEZ DE PROGRAMAS DE ESPECIALIZACION EN GESTIÓN PUBLICA Y ACTIVIDAD EMPRESARIAL</h3>
@@ -37,9 +37,13 @@ function Instituto() {
         </div>
         <div className="espacio-form">
             <FormularioEmail 
-                opciones={["Diplomado en Gestión Pública", "Diplomado en Gerencia de Proyectos", "Diplomado en Gerencia de Obras Públicas"]}
-                placeholderSelect="Seleccione un Diplomado"/>
+                opciones={["Curso de asistentes de Gerencia", "Curso de contrataciones del Estado", "Curso de Gestion Documental", "Curso de Gestion Publica", "Curso invierte PE.", "Curso de obras Publicas", "Curso de Ofimatica 2025", "Curso de planteaminto Estrategico", "Curso de presupuesto Publico",
+                            "Diplomado de Administracion Financiera", "Diplomado de Asistente Administrativa", "Diplomado de Asistente de Gerencia Administrativa", "Diplomado de Finanzas Publicas", "Diplomado de Gestion Documental", "Diplomado de gestion Financiera y Tesoreria", "Diplomado de planeamiento y presupuesto", "Diplomado de planificacion de presupuesto de resultados", "Diplomado de redaccin de Documentos", "Diplomado de redaccion Ortografica", "Diplomado de Siaf-RP", "Diplomado de Siaf-SP", "Diplomado de Sistema Nacional de Abastecimiento", "Diplomado de Sistemas Informaticos", "Diplomado de Tributacion",
+                            "Congreso de Gerencia Finanzas Publicas", "Congreso de Innovacion Secretarial", "Congreso Internacional de Asistentes de Gerencia", "Congreso Internacional Gerencial 2do.", "Congreso Nacional de Administracion 1er.", "Congreso de Nacional de Asistentes XIV", "Congreso Nacional de Presupuesto 3er.", "Congreso Nacional Presupuesto IV", "Congreso Nacional de Secretarias 11", "Congreso Nacional de Secretarias 12"]}
+                placeholderSelect="Seleccione un Curso"/>
         </div>
+    </div>
+    <div className="espacio-instituto">
     </div>
     <div className="cajas-de-opciones">
         <div className="caja-opcion">
@@ -82,7 +86,7 @@ function Instituto() {
     <div className="publicidad-instituto">
         <h4>INSTITUCIONES QUE CONFIARON EN NUESTROS SERVICIOS</h4>
         <HiOutlineChevronDoubleDown className="icono-flecha" />
-        <img src="/img/1.jpg" alt="imagen" />
+        <img src="/img/11.jpg" alt="imagen" />
         <p>NUESTROS  WHATSAP  AQUI  Y  COMUNICATE  AHORA MISMOS  AL <br />
                         945504555 - 972628566</p>
     </div>

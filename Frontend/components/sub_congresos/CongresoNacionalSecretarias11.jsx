@@ -27,7 +27,7 @@ const CongresoNacionalSecretarias11 = () => {
           titulo={titulo}
           fechaInicio={fechaInicio}
           descripcion="Ética y transparencia en la función pública."
-          imagenSrc="/img/congreso-etica.png"
+          imagenSrc="/img/1.jpg"
         />
       </section>
       <section>
@@ -37,20 +37,7 @@ const CongresoNacionalSecretarias11 = () => {
         />
       </section>
       <section>
-        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
-        <h3 style={{
-          fontSize: '2em',
-          fontWeight: 'bold',
-          color: '#888',
-          marginBottom: '2rem',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          textShadow: '1px 2px 8px #bbb'
-        }}>
-          Temario
-        </h3>
-        <CursoPropSalida secciones={contenidoCongresos.congresoNacionalSecretarias11} />
+        <CursoPropSalida secciones={contenidoCongresos.CongresoNacionalSecretarias11} />
       </section>
     </div>
   );

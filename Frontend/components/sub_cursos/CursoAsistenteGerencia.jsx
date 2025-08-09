@@ -29,7 +29,7 @@ const CursoAsistenteGerencia = () => {
           titulo={titulo}
           fechaInicio={fechaInicio}
           descripcion="El curso de Asistente de Gerencia y Secretaría busca desarrollar habilidades profesionales, tecnológicas y emocionales para destacar en el entorno laboral actual."
-          imagenSrc="/img/cloud.png"
+          imagenSrc="/img/1.jpg"
         />
       </section>
       <section>
@@ -39,19 +39,6 @@ const CursoAsistenteGerencia = () => {
         />
       </section>
       <section>
-        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
-        <h3 style={{
-          fontSize: '2em',
-          fontWeight: 'bold',
-          color: '#888',
-          marginBottom: '2rem',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          textShadow: '1px 2px 8px #bbb'
-        }}>
-          Temario
-        </h3>
         <CursoPropSalida secciones={contenidoCursos.asistenteGerencia} />
       </section>
     </div>

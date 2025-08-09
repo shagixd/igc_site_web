@@ -34,7 +34,6 @@ function CursosalaMedida() {
 
   return (
     <>
-      {/* Título */}
       <div className="cursosalamedida-titulo">
         <div className='texto-medida'>
           <h2>CURSOS HECHOS A LA MEDIDA</h2>

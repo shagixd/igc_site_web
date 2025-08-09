@@ -27,7 +27,7 @@ const CongresoInternacionalGerencia2do = () => {
           titulo={titulo}
           fechaInicio={fechaInicio}
           descripcion="Innovación en servicios públicos y atención al ciudadano."
-          imagenSrc="/img/congreso-servicios.png"
+          imagenSrc="/img/1.jpg"
         />
       </section>
       <section>
@@ -37,19 +37,6 @@ const CongresoInternacionalGerencia2do = () => {
         />
       </section>
       <section>
-        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
-        <h3 style={{
-          fontSize: '2em',
-          fontWeight: 'bold',
-          color: '#888',
-          marginBottom: '2rem',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          textShadow: '1px 2px 8px #bbb'
-        }}>
-          Temario
-        </h3>
         <CursoPropSalida secciones={contenidoCongresos.congresoInternacionalGerencia2do} />
       </section>
     </div>

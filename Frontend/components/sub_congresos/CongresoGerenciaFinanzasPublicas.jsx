@@ -27,7 +27,7 @@ const CongresoGerenciaFinanzasPublicas = () => {
           titulo={titulo}
           fechaInicio={fechaInicio}
           descripcion="Tendencias en gestión de talento en el sector público."
-          imagenSrc="/img/congreso-rrhh.png"
+          imagenSrc="/img/1.jpg"
         />
       </section>
       <section>
@@ -37,19 +37,6 @@ const CongresoGerenciaFinanzasPublicas = () => {
         />
       </section>
       <section>
-        <hr style={{ border: 'none', borderTop: '2px solid #e0e0e0', margin: '48px 0 16px 0' }} />
-        <h3 style={{
-          fontSize: '2em',
-          fontWeight: 'bold',
-          color: '#888',
-          marginBottom: '2rem',
-          letterSpacing: '1px',
-          textTransform: 'uppercase',
-          textAlign: 'center',
-          textShadow: '1px 2px 8px #bbb'
-        }}>
-          Temario
-        </h3>
         <CursoPropSalida secciones={contenidoCongresos.congresoGerenciaFinanzasPublicas} />
       </section>
     </div>

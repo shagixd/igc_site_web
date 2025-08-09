@@ -15,38 +15,35 @@ function NuestrosProgramas() {
     'img/7.jpg',
     'img/8.jpg'
   ];
-
   const imagenesCursos = [
-    'img/curso1.jpg',
-    'img/curso2.jpg',
-    'img/curso3.jpg',
-    'img/curso4.jpg',
-    'img/curso5.jpg',
-    'img/curso6.jpg',
-    'img/curso7.jpg',
-    'img/curso8.jpg'
+    'img/11.jpg',
+    'img/12.jpg',
+    'img/13.jpg',
+    'img/14.jpg',
+    'img/15.jpg',
+    'img/16.jpg',
+    'img/17.jpg',
+    'img/18.jpg'
   ];
-
   const imagenesCongresos = [
-    'img/congreso1.jpg',
-    'img/congreso2.jpg',
-    'img/congreso3.jpg',
-    'img/congreso4.jpg',
-    'img/congreso5.jpg',
-    'img/congreso6.jpg',
-    'img/congreso7.jpg',
-    'img/congreso8.jpg'
+    'img/19.jpg',
+    'img/20.jpg',
+    'img/21.jpg',
+    'img/24.jpg',
+    'img/25.jpg',
+    'img/26.jpg',
+    'img/29.jpg',
+    'img/28.jpg'
   ];
-
   const imagenesInHouse = [
-    'img/inhouse1.jpg',
-    'img/inhouse2.jpg',
-    'img/inhouse3.jpg',
-    'img/inhouse4.jpg',
-    'img/inhouse5.jpg',
-    'img/inhouse6.jpg',
-    'img/inhouse7.jpg',
-    'img/inhouse8.jpg'
+    'img/31.jpg',
+    'img/32.jpg',
+    'img/33.jpg',
+    'img/34.jpg',
+    'img/29.jpg',
+    'img/36.jpg',
+    'img/37.jpg',
+    'img/38.jpg'
   ];
 
   return (
@@ -78,7 +75,6 @@ function NuestrosProgramas() {
         <div className='caja-programas'>
           <h2>DIPLOMAS DE ESPECIALIZACION</h2>
           <p>Programa diseñados para contribuir a la especialización técnica y profesional en las áreas administrativas, contables, tributarios, financieros, recursos humanos, gestión logística, tecnología y habilidades blandas en el sector público y la gestión empresarial desde 12 horas a 90 horas de duración</p>
-
           <div className='galeria-imagenes'>
             {imagenesDiplomas.map((src, index) => (
               <img

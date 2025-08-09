@@ -41,8 +41,10 @@ function Consultoria() {
         <div className='asesoria-formulario'>
           <h3>¡Solicita una cotización sin costo y compromiso!</h3>
           <FormularioEmail 
-                  opciones={["Diplomado en Gestión Pública", "Diplomado en Gerencia de Proyectos", "Diplomado en Gerencia de Obras Públicas"]}
-                  placeholderSelect="Seleccione un Diplomado"/>
+                opciones={["Curso de asistentes de Gerencia", "Curso de contrataciones del Estado", "Curso de Gestion Documental", "Curso de Gestion Publica", "Curso invierte PE.", "Curso de obras Publicas", "Curso de Ofimatica 2025", "Curso de planteaminto Estrategico", "Curso de presupuesto Publico",
+                            "Diplomado de Administracion Financiera", "Diplomado de Asistente Administrativa", "Diplomado de Asistente de Gerencia Administrativa", "Diplomado de Finanzas Publicas", "Diplomado de Gestion Documental", "Diplomado de gestion Financiera y Tesoreria", "Diplomado de planeamiento y presupuesto", "Diplomado de planificacion de presupuesto de resultados", "Diplomado de redaccin de Documentos", "Diplomado de redaccion Ortografica", "Diplomado de Siaf-RP", "Diplomado de Siaf-SP", "Diplomado de Sistema Nacional de Abastecimiento", "Diplomado de Sistemas Informaticos", "Diplomado de Tributacion",
+                            "Congreso de Gerencia Finanzas Publicas", "Congreso de Innovacion Secretarial", "Congreso Internacional de Asistentes de Gerencia", "Congreso Internacional Gerencial 2do.", "Congreso Nacional de Administracion 1er.", "Congreso de Nacional de Asistentes XIV", "Congreso Nacional de Presupuesto 3er.", "Congreso Nacional Presupuesto IV", "Congreso Nacional de Secretarias 11", "Congreso Nacional de Secretarias 12"]}
+                placeholderSelect="Seleccione un Curso"/>
         </div>
       </div>
     </>

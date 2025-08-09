@@ -1,12 +1,64 @@
-# React + Vite
+# 📦 Proyecto React - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación frontend creada con **React**. Sigue los pasos a continuación para iniciar el proyecto localmente.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🧾 Requisitos previos
 
-## Expanding the ESLint configuration
+- [Node.js y npm](https://nodejs.org/) instalados.
+- Un editor de código como [Visual Studio Code](https://code.visualstudio.com/).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Pasos para iniciar el proyecto
+
+## 1. Accede a la carpeta del frontend
+
+cd Frontend
+
+## 2. Instala las dependencias
+
+npm install
+
+## 3. Inicia la aplicacion en modo desarrollo
+
+npm run dev
+
+- Esto abrirá automáticamente tu navegador en [http://localhost:5173].
+
+## 👍 Datos del proyecto
+
+- Frontend
+  ¿Qué almacena?
+  Archivo principal y raiz que contiene todo el proyecto.
+
+public/
+¿Qué almacena?
+Archivos de diseño de la pagina
+imgagenes y Carperte de estilos "img" "syles"
+
+props/
+¿Qué almacena?
+Props de componentes para reutilizar en muchos lugares del sitio.
+
+src/
+¿Qué almacena?
+El main del proyecto.
+➤ Punto de entrada de la app. Aquí se monta <App /> en el HTML.
+
+.gitignore/
+Omitir ese archivo.
+
+node_modules/
+Omitir ese archivo, modulos que se usan al crear el proyecto.
+
+components/
+➤ Componentes reutilizables (botones, tarjetas, formularios, etc.).
+
+package.json
+Define el nombre del proyecto, versiones, scripts (npm run dev, etc.) y dependencias instaladas.
+
+vite.config.js
+Configuración del bundler (cómo se compila y sirve la app).
+Vite es más rápido y moderno que Webpack.

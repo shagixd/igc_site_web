@@ -118,7 +118,7 @@
     width: 100%; height: auto;
     box-sizing: border-box;
     padding: 1% 8%;
-    margin: 0;
+    margin: 2% 0;
     flex-wrap: wrap;
     display: flex;
     position: relative;
@@ -170,6 +170,11 @@
     margin: 0;
 }
 
+.espacio-instituto {
+    width: 100%; height: 30px;
+    margin: 1% 0;
+    background-color: #0d3a7f;
+}
 
 .cajas-de-opciones {
     width: 75%; height: auto;
@@ -290,6 +295,9 @@
     .publicidad-instituto p {
     border-top: rgb(0, 0, 0) 3px solid;
     }
+    .espacio-instituto {
+    width: 100%; height: 25px;
+    }
 }
 
 /*--------------------DISEÑO PARA MOVIL-----------------*/
@@ -317,6 +325,9 @@
     }
     .publicidad-instituto p {
     border-top: rgb(0, 0, 0) 2px solid;
+    }
+    .espacio-instituto {
+    width: 100%; height: 20px;
     }
 }
 

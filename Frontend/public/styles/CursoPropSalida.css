@@ -1,0 +1,142 @@
+/* src/components/CursoPropSalida.css */
+
+/* --- Header del Temario --- */
+.temario-header {
+  text-align: center;
+  margin: 2% 1%;
+}
+
+.divider {
+  border: none;
+  border-top: 5px solid #003366;
+  margin: 2% auto;
+  width: 80%;
+}
+
+.temario-title {
+  font-size: clamp(18px, 2vw, 36px);
+  font-weight: bold;
+  color: #003366; /* Azul oscuro profesional */
+  margin-bottom: 2%;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow: 1px 2px 5px #e0e0e0;
+}
+
+/* --- Contenedor principal --- */
+.secciones-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Cada sección del temario --- */
+.seccion-box {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 0.5% 1%;
+  width: 75%;
+  margin: 1% auto;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.seccion-box:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Botón desplegable --- */
+.seccion-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: clamp(9px, 1.2vw, 30px);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 1% 2%;
+  border-radius: 8px;
+  color: #222;
+  transition: all 0.3s ease;
+  gap: 1%;
+}
+
+.seccion-toggle.open {
+  background-color: #0051ff; /* Azul brillante */
+  color: white;
+}
+
+.seccion-toggle .seccion-titulo-text {
+  flex: 1;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* --- Flecha (triángulo desplegable) --- */
+.arrow {
+  font-size: clamp(10px, 1.2vw, 30px);
+  transition: transform 0.3s ease;
+  color: inherit;
+}
+
+.seccion-toggle.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* --- Contenido desplegable --- */
+.seccion-contenido {
+  font-size: clamp(9px, 1vw, 24px);
+  color: #333;
+  padding-left: 4%;
+  width: 90%;
+}
+
+.seccion-contenido p,
+.seccion-contenido ul,
+.seccion-contenido ol {
+  margin: 12px 0;
+}
+
+/* --- Mensaje si no hay datos --- */
+.no-data {
+  text-align: center;
+  font-size: clamp(14px, 1.3vw, 18px);
+  color: #777;
+  margin: 20px 0;
+  font-style: italic;
+}
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+    .seccion-box {
+    width: 85%;
+    }
+    .divider {
+    border-top: 3px solid #003366;
+    }
+    .seccion-contenido {
+    padding-left: 5%;
+    }
+}
+
+/*--------------------DISEÑO PARA MOVIL-----------------*/
+@media (max-width: 700px) {
+    .seccion-box {
+    width: 95%;
+    }
+    .divider {
+    border-top: 2px solid #003366;
+    }
+    .seccion-contenido {
+    padding-left: 7%;
+    }
+}

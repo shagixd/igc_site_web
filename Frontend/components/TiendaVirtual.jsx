@@ -9,7 +9,7 @@ import '../public/styles/TiendaVirtual.css';
 
 const inventario = [
   {
-    titulo: 'CURSO DE PRUEBA OBRAS PUBLICAS POR ADMINISTRACION DIRECTA',
+    titulo: 'Curso de asistentes de Gerencia',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda.png',
     colorFondo: '#ffffffff',
@@ -17,7 +17,7 @@ const inventario = [
     tipo: 'cursos'
   },
   {
-    titulo: 'CUURSO DE PRUEBA REGISTROS CONTINENTALES',
+    titulo: 'Curso de contrataciones del Estado',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda1.png',
     colorFondo: '#ffffffff',
@@ -25,7 +25,7 @@ const inventario = [
     tipo: 'cursos'
   },
   {
-    titulo: 'Curso de Prueba3',
+    titulo: 'Diplomado de Gestion Documental',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda2.png',
     colorFondo: '#ffffffff',
@@ -33,7 +33,7 @@ const inventario = [
     tipo: 'diplomas'
   },
   {
-    titulo: 'Curso de Prueba4',
+    titulo: 'Congreso Internacional Gerencial 2do.',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda3.png',
     colorFondo: '#ffffffff',
@@ -41,7 +41,7 @@ const inventario = [
     tipo: 'congresos'
   },
   {
-    titulo: 'Curso de Prueba5',
+    titulo: 'Diplomado de Finanzas Publicas',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda4.png',
     colorFondo: '#ffffffff',
@@ -49,9 +49,25 @@ const inventario = [
     tipo: 'diplomas'
   },
   {
-    titulo: 'Curso de Prueba6',
+    titulo: 'Curso de obras Publicas',
     descripcion: 'Modalidad: Virtual',
     imagen: '/img/pruebatienda5.png',
+    colorFondo: '#ffffffff',
+    precio: '$/26.00',
+    tipo: 'cursos'
+  },
+  {
+    titulo: 'Curso de Ofimatica 2025',
+    descripcion: 'Modalidad: Virtual',
+    imagen: '/img/pruebatienda5.png',
+    colorFondo: '#ffffffff',
+    precio: '$/26.00',
+    tipo: 'cursos'
+  },
+  {
+    titulo: 'Curso de planteaminto Estrategico',
+    descripcion: 'Modalidad: Virtual',
+    imagen: '/img/pruebatienda2.png',
     colorFondo: '#ffffffff',
     precio: '$/26.00',
     tipo: 'cursos'
@@ -127,7 +143,7 @@ const TiendaVirtual = () => {
             type="button"
             onClick={() => setDesplegado(!desplegado)}
             style={{
-              padding: '2% 4%',
+              padding: '1.5% 4%',
               color: '#000000ff',
               fontSize: 'clamp(12px, 2vw, 24px)',
               border: '1px solid #ccc',
@@ -168,7 +184,7 @@ const TiendaVirtual = () => {
                 borderRadius: '0 0 6px 6px',
                 backgroundColor: '#fff',
                 position: 'absolute',
-                width: '28%',
+                width: '31%',
                 zIndex: 10,
                 boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
               }}

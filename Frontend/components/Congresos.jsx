@@ -38,7 +38,7 @@ const congresos = [
     inicioClases: 'Agosto 2024',
     colorFondo: '#00825f',
     certificado: 'Participación',
-    link: '/congresos/congreso-gerencia-finanzas-publicas'
+    link: '/congresos/congreso-internacional-de-gerencia-y-finanzas-publicas'
   },
   {
     titulo: '11° congreso nacional de secretarias y asistentes de gerencia en gestión pública',

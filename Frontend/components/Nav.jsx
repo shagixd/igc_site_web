@@ -48,7 +48,15 @@ function Nav() {
             <li className="nav-item"><Link to="/nuestrosprogramas"><MdLibraryBooks /> Nuestros Programas</Link></li>
             <li className="nav-item"><Link to="/consultoria"><MdSupportAgent /> Consultoría</Link></li>
             <li className="nav-item"><Link to="campusvirtual"><MdComputer /> Campus Virtual</Link></li>
-            <li className="nav-item"><Link to=""><MdContactMail /> Contáctenos</Link></li>
+            <li className="nav-item">
+              <a
+                href="https://wa.me/51945504555?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios."
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Contáctanos por WhatsApp">
+                <MdContactMail /> Contáctenos
+              </a>
+            </li>
           </ul>
           <ul className="nav-list2">
             <li className="nav-item"><Link to="/"><MdInfo /> Sobre IGC</Link></li>  
@@ -79,7 +87,14 @@ function Nav() {
             <li><Link to="/nuestrosprogramas"><MdLibraryBooks /> Nuestros Programas</Link></li>
             <li><Link to="/consultoria"><MdSupportAgent /> Consultoría</Link></li>
             <li><Link to=""><MdComputer /> Campus Virtual</Link></li>
-            <li><Link to=""><MdContactMail /> Contáctenos</Link></li>
+            <li>
+              <a
+                href="https://wa.me/51945504555?text=Hola,%20deseo%20más%20información%20sobre%20sus%20servicios."
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Contáctanos por WhatsApp">
+                <MdContactMail /> Contáctenos</a>
+            </li>
 
             <li><Link to="/"><MdInfo /> Sobre IGC</Link></li>  
             <li><Link to="/cursosespecialidad"><IoLibrarySharp /> Cursos Gestión Pública</Link></li>

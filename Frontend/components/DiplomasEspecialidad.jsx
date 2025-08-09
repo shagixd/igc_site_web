@@ -11,7 +11,7 @@ const diplomas = [
 		colorFondo: '#00825f',
 		inicioClases: 'Julio 2024',
 		certificado: 'Diploma de Especialidad',
-		link: '/diplomas/siaf-rp-siga-seace'
+		link: '/diplomas/siaf-rp'
 	},
 	{
 		titulo: 'Diploma de Asistente Administrativa en Gestión Pública',

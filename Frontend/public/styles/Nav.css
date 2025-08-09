@@ -55,8 +55,7 @@
   font-size: clamp(14px, 1vw, 22px);
 }
 .nav-item a:hover {
-  text-shadow: 0 0 6px rgb(0, 41, 153);
-  color: white;
+  text-shadow: 0 0 5px rgba(0, 38, 189, 0.536);
   scale: 1.05;
   text-decoration: underline;
 }

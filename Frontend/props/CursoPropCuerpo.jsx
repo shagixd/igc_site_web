@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
-import FormularioEmail from "../props/FormularioEmail";
+import FormularioEmail from '../props/FormularioEmail';
+import { FaMedal } from "react-icons/fa6";
+import '../public/styles/CursoPropCuerpo.css';
+import { GrCertificate } from "react-icons/gr";
 
 const labels = [
   'Presentacion',
@@ -9,208 +12,123 @@ const labels = [
   'Metodo de evaluacion'
 ];
 
-const boxStyle = {
-  border: '1px solid #0084ffff',
-  borderRadius: '10px',
-  padding: '16px',
-  background: '#ffffffff',
-  width: '680px', // duplicado el ancho
-  minHeight: '120px',
-  boxSizing: 'border-box',
-  transition: 'height 0.2s'
-};
-
-const CursoPropCuerpo = ({contenidos }) => {
+const CursoPropCuerpo = ({ contenidos }) => {
   const [selected, setSelected] = useState(null);
   const [showCert, setShowCert] = useState(false);
   const [showBenef, setShowBenef] = useState(false);
 
   return (
-    <div style={{ width: '80%', margin: '0 auto'}}>
-      
-      {/* Contenedor principal: cajas a la izquierda, formulario a la derecha */}
-      <div style={{ display: 'flex', marginTop: '2%', gap: '2%' }}>
+    <div className="curso-cuerpo-container">
+      {/* Contenedor principal: cajas izquierda, formulario derecha */}
+      <div className="curso-cuerpo-layout">
         
-        {/* Columna izquierda: dos cajas */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '3%', width: '60%' }}>
+        {/* Columna izquierda: pestañas y beneficios/certificados */}
+        <div className="left-column">
           
-          {/* Caja de botones y contenido */}
-          <div
-            style={{
-              ...boxStyle,
-              width: '100%',
-              background: 'none',
-              border: 'none',
-              color: '#222'
-            }}
-          >
-            <div style={{ marginBottom: '12px', display: 'flex', gap: 0 }}>
+          {/* Pestañas de navegación */}
+          <div className="tabs-container">
+            <div className="tab-buttons">
               {labels.map((label, idx) => (
                 <button
                   key={label}
                   onClick={() => setSelected(idx)}
-                  style={{
-                    flex: 1,
-                    background: selected === idx ? '#fff' : '#d1d1d1ff',
-                    color: selected === idx ? '#444' : '#222',
-                    border: '1px solid #bbb',
-                    padding: '1% 2%',
-                    width: '20%',
-                    fontSize: 'clamp(8px, 1vw, 18px)',
-                    fontWeight: 'bold',
-                    cursor: 'pointer',
-                    transition: 'background 0.2s, color 0.2s'
-                  }}>
+                  className={`tab-button ${selected === idx ? 'active' : ''}`}
+                >
                   {label}
                 </button>
               ))}
             </div>
-            <div>
+            <div className="tab-content">
               {selected !== null && (
-                <p style={{ color: '#222', margin: 0, border: '1px solid #bbb', padding: '1%',fontSize: 'clamp(11px, 1vw, 21px)' }}>{contenidos[selected]}</p>
+                <p className="content-text">{contenidos[selected]}</p>
               )}
             </div>
           </div>
 
-          {/* Caja de beneficio y certificado */}
-          <div style={{ ...boxStyle, width: '100%', background: 'none', border: 'none', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: 0 }}>
-            {/* Beneficio section */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              marginBottom: '3%',
-              background: '#fff',
-              border: '1px solid #0077ffff',
-              borderRadius: 0,
-              padding: 0,
-              minWidth: '80%',
-              justifyContent: 'center'
-            }}>
-              <div style={{
-                fontSize: 'clamp(20px, 2vw, 40px)',
-                background: '#0077ffff',
-                width: '10%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#fff',
-                borderRadius: 0
-              }}>🎁</div>
-              <div style={{ fontWeight: 'bold',color:'#222222ff', flex: 1, fontSize: 'clamp(20px, 1.5vw, 30px)', textAlign: 'center' }}>Beneficio</div>
-              <button
-                style={{
-                  fontSize: 'clamp(20px, 2vw, 40px)',
-                  background: '#0077ffff',
-                  padding: '2%',
-                  border: 'none',
-                  borderRadius: 0,
-                  color: '#ffffffff',
-                  width: '10%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                onClick={() => setShowBenef((prev) => !prev)}
-                aria-label="Mostrar información de beneficio"
-              >
-                {showBenef ? '−' : '+'}
-              </button>
-            </div>
-            <div style={{ width: '80%', textAlign: 'center' }}>
+          {/* Sección de Beneficios y Certificado */}
+          <div className="info-cards">
+
+            {/* Beneficio */}
+            <div className="info-card">
+              <div className="info-header">
+                <div className="icon-box">
+                  <GrCertificate />
+                </div>
+                <span className="info-title">Beneficio</span>
+                <button
+                  className="toggle-btn"
+                  onClick={() => setShowBenef((prev) => !prev)}
+                  aria-label="Mostrar beneficios">
+                  {showBenef ? '−' : '+'}
+                </button>
+              </div>
               {showBenef && (
-                <div style={{ marginBottom: '22px', border: '1.5px solid #0077ffff', padding: 28, fontSize: 'clamp(10px, 1vw, 18px)' }}>
-                  <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
+                <div className="info-content">
+                  <ul className="info-list">
                     <li>Al concluir el curso de capacitación recibirá el certificado correspondiente válido por la cantidad de horas realizadas</li>
                     <li>Materiales impresos de todo el curso</li>
                     <li>Material del contenido de las clases en DVD o formato digital</li>
                     <li>Examen por módulos (opcional)</li>
                   </ul>
-                  <div style={{ marginTop: 16, textAlign: 'left' }}>
-                    <b>Plataforma Virtual:</b> Acceso a nuestra plataforma virtual donde podrás seguir las clases en vivo, descargar material y resolver las evaluaciones de cada sesión.<br />
-                    <b>Soporte Constante:</b> Nuestros asesores estarán pendientes en lo que usted pueda necesitar apoyo académico.<br />
-                    <b>Descargas de Clases:</b> Puedes descargar la grabación de tus sesiones desarrolladas en vivo una vez concluida la clase.<br />
-                    <b>Envío a Domicilio:</b> Enviaremos los materiales y certificados correspondientes a tu domicilio a nivel nacional previo adicional de pago para el envío.<br />
-                    <b>Clases en Vivo:</b> Tus clases en vivo desde nuestra plataforma virtual.<br />
-                    <b>50 Horas Académicas:</b> Recibirás 50 horas académicas a lo largo del ciclo lectivo.
+                  <div className="info-details">
+                    <p><strong>Plataforma Virtual:</strong> Acceso a nuestra plataforma virtual donde podrás seguir las clases en vivo, descargar material y resolver las evaluaciones de cada sesión.</p>
+                    <p><strong>Soporte Constante:</strong> Nuestros asesores estarán pendientes en lo que usted pueda necesitar apoyo académico.</p>
+                    <p><strong>Descargas de Clases:</strong> Puedes descargar la grabación de tus sesiones desarrolladas en vivo una vez concluida la clase.</p>
+                    <p><strong>Envío a Domicilio:</strong> Enviaremos los materiales y certificados correspondientes a tu domicilio a nivel nacional previo adicional de pago para el envío.</p>
+                    <p><strong>Clases en Vivo:</strong> Tus clases en vivo desde nuestra plataforma virtual.</p>
+                    <p><strong>50 Horas Académicas:</strong> Recibirás 50 horas académicas a lo largo del ciclo lectivo.</p>
                   </div>
                 </div>
               )}
             </div>
-            {/* Certificado section */}
-            <div style={{
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              marginBottom: '14px',
-              background: '#fff',
-              border: '1.5px solid #0077ffff',
-              borderRadius: 0,
-              padding: 0,
-              minWidth: '80%',
-              justifyContent: 'center'
-            }}>
-              <div style={{
-                fontSize: 'clamp(20px, 2vw, 40px)',
-                background: '#0077ffff',
-                width: '10%',
-                height: '100%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: '#fff',
-                borderRadius: 0
-              }}>🏅</div>
-              <div style={{ fontWeight: 'bold',color:'#222222ff', flex: 1, fontSize: 'clamp(20px, 1.5vw, 30px)', paddingLeft: 16, textAlign: 'center' }}>Certificado</div>
-              <button
-                style={{
-                  fontSize: 'clamp(26px, 2vw, 40px)',
-                  background: '#0077ffff',
-                  padding: '2%',
-                  border: 'none',
-                  borderRadius: 0,
-                  color: '#ffffffff',
-                  width: '10%',
-                  height: '100%',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-                onClick={() => setShowCert((prev) => !prev)}
-                aria-label="Mostrar información de certificado"
-              >
-                {showCert ? '−' : '+'}
-              </button>
-            </div>
-            <div style={{ width: '80%', textAlign: 'center' }}>
+
+            {/* Certificado */}
+            <div className="info-card">
+              <div className="info-header">
+                <div className="icon-box">
+                  <FaMedal />
+                </div>
+                <span className="info-title">Certificado</span>
+                <button
+                  className="toggle-btn"
+                  onClick={() => setShowCert((prev) => !prev)}
+                  aria-label="Mostrar certificado"
+                >
+                  {showCert ? '−' : '+'}
+                </button>
+              </div>
               {showCert && (
-                <div style={{ border: '1.5px solid #0077ffff', padding: 28, fontSize: 'clamp(10px, 1vw, 18px)' }}>
-                  <p style={{ marginBottom: 16 }}>La CERTIFICACIÓN es válida de acuerdo a los estándares de SERVIR, según la Normativa de la Presidencia Ejecutiva Nº 141-2016-SERVIR-PE sobre “Normas para la gestión del proceso de capacitación en las entidades públicas”.</p>
-                  <ul style={{ margin: 0, paddingLeft: 38, textAlign: 'left' }}>
+                <div className="info-content">
+                  <p className="cert-intro">
+                    La CERTIFICACIÓN es válida de acuerdo a los estándares de SERVIR, según la Normativa de la Presidencia Ejecutiva Nº 141-2016-SERVIR-PE sobre “Normas para la gestión del proceso de capacitación en las entidades públicas”.
+                  </p>
+                  <ul className="info-list">
                     <li>Asimismo los participantes que cumplan con los requisitos del Congreso y que obtengan nota aprobatoria en las evaluaciones del Congreso obtendrán el certificado otorgado por EGG (Indispensable aprobar el curso y récord de Asistencia al 90%).</li>
                     <li>Un Certificado válido para postular a convocatorias Públicas y Privadas</li>
                   </ul>
-                  <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: 22 }}>
+                  <div className="cert-image-container">
                     <img
                       src="https://www.universia.net/content/dam/universia/images/certificado-ejemplo.png"
                       alt="Ejemplo de certificado"
-                      style={{ maxWidth: '520px', width: '100%', height: 'auto', maxheight: '260px', objectFit: 'contain', border: '1px solid #000', borderRadius: 0, display: 'block' }}
+                      className="cert-image"
                     />
                   </div>
                 </div>
               )}
             </div>
+
           </div>
         </div>
-        {/* Formulario a la derecha */}
-        <div style={{ width: '38%' , height: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: '#f7fbffe3', padding: '1%'}}>
+
+        {/* Columna derecha: Formulario */}
+        <div className="right-column">
           <FormularioEmail 
-                opciones={["Diplomado en Gestión Pública", "Diplomado en Gerencia de Proyectos", "Diplomado en Gerencia de Obras Públicas"]}
+                opciones={["Curso de asistentes de Gerencia", "Curso de contrataciones del Estado", "Curso de Gestion Documental", "Curso de Gestion Publica", "Curso invierte PE.", "Curso de obras Publicas", "Curso de Ofimatica 2025", "Curso de planteaminto Estrategico", "Curso de presupuesto Publico",
+                            "Diplomado de Administracion Financiera", "Diplomado de Asistente Administrativa", "Diplomado de Asistente de Gerencia Administrativa", "Diplomado de Finanzas Publicas", "Diplomado de Gestion Documental", "Diplomado de gestion Financiera y Tesoreria", "Diplomado de planeamiento y presupuesto", "Diplomado de planificacion de presupuesto de resultados", "Diplomado de redaccin de Documentos", "Diplomado de redaccion Ortografica", "Diplomado de Siaf-RP", "Diplomado de Siaf-SP", "Diplomado de Sistema Nacional de Abastecimiento", "Diplomado de Sistemas Informaticos", "Diplomado de Tributacion",
+                            "Congreso de Gerencia Finanzas Publicas", "Congreso de Innovacion Secretarial", "Congreso Internacional de Asistentes de Gerencia", "Congreso Internacional Gerencial 2do.", "Congreso Nacional de Administracion 1er.", "Congreso de Nacional de Asistentes XIV", "Congreso Nacional de Presupuesto 3er.", "Congreso Nacional Presupuesto IV", "Congreso Nacional de Secretarias 11", "Congreso Nacional de Secretarias 12"]}
                 placeholderSelect="Seleccione un Curso"/>
         </div>
+
       </div>
     </div>
   );

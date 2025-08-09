@@ -1,0 +1,74 @@
+.curso-prop-entrada {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: #1b7ecfff;
+  padding: 2%;
+  margin-bottom: 4%;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.curso-prop-entrada-textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 44%;
+  box-sizing: border-box;
+}
+
+.curso-prop-entrada-titulo {
+  margin: 0;
+  font-weight: bold;
+  font-size: clamp(18px, 3vw, 46px);
+  text-align: center;
+  color: white;
+}
+
+.curso-prop-entrada-descripcion {
+  margin-top: 2%;
+  text-align: center;
+  font-size: clamp(14px, 1.2vw, 28px);
+  color: white;
+}
+
+.curso-prop-entrada-fecha {
+  color: #666;
+  font-size: clamp(10px, 1vw, 22px);
+  margin-top: 2%;
+  margin-bottom: 1%;
+  background: #fff;
+  padding: 1% 2%;
+  border-radius: 6px;
+}
+
+.curso-prop-entrada-img {
+  width: 50%;
+  box-sizing: border-box;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+
+/*--------------------DISEÑO PARA AIPAD-----------------*/
+@media (max-width: 1100px) {
+    .curso-prop-entrada-img {
+    width: 50%;
+    max-height: 150px;
+    }
+}
+
+
+/*--------------------DISEÑO PARA MOVIL-----------------*/
+@media (max-width: 700px) {
+    .curso-prop-entrada-textos {
+    width: 90%;
+    margin: 0 auto;
+    }
+    .curso-prop-entrada-img {
+    width: 90%;
+    max-height: 120px;
+    margin: 0 auto;
+    }
+}
