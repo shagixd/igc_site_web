@@ -56,14 +56,14 @@ export default function Sobreigc() {
   
   return (
     <>
+    <div className="fondo-inicio-central">
+        <h3>INSTITUTO DE GERENCIA INTERNACIONAL</h3>
+        <h2>{textoAnimado}</h2>
+        <p>Integrate para un futuro más exitoso con nuestros cursos especializados</p>
+        <p>...</p>
+    </div>
+    <div className='sobreigc'>
       {/* Texto animado centrado */}
-        <div className="fondo-inicio-central">
-          <h3>INSTITUTO DE GERENCIA INTERNACIONAL</h3>
-          <h2>{textoAnimado}</h2>
-          <p>Integrate para un futuro más exitoso con nuestros cursos especializados</p>
-          <p>...</p>
-        </div>
-
       <div className='seccion-1'>
         <div className="seccion1-texto">
           <h2>Sobre Nosotros</h2>
@@ -98,7 +98,7 @@ export default function Sobreigc() {
           <div className="seccion3-vision">
             <div className='caja-icon'>< FaBullseye className='icon'/></div>
             <h3>Visión</h3>
-            <p>Ser líderes en la industria de la capacitación, consolidándonos como el aliado estratégico preferido de las organizaciones, promoviendo el desarrollo continuo del talento profesional y empresarial mediante programas innovadores, eficaces y adaptados a las exigencias del entorno global y competitivo.</p>
+            <p>Ser líderes en la industria de la capacitación, consolidándonos como el aliado estratégico preferido de las organizaciones, promoviendo el desarrollo continuo del talento profesional y empresarial mediante programas innovadores, eficaces y adaptados a las exigencias del entorno global.</p>
           </div>
           <div className="seccion3-mision">
             <div className='caja-icon'>< FaEye className='icon'/></div>
@@ -134,9 +134,9 @@ export default function Sobreigc() {
                 <h3>Diplomas de Especializacion</h3>
               <p>Formación de nivel postgrado en áreas como administración, contabilidad, finanzas, logística, TI y habilidades blandas.</p>
               <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
+                <li>Diploma en Administración Financiera</li>
+                <li>Diploma en Gestión Documental</li>
+                <li>Diploma en Finanzas Públicas</li>
               </ul>
               </div>   
           </div>
@@ -150,9 +150,9 @@ export default function Sobreigc() {
                 <h3>Cursos de Gestion Publica</h3>
               <p>Programas técnicos y operativos en gestión administrativa, financiera y tecnológica para el sector público y privado</p>
               <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
+                <li>Curso de Asistente de Gerencia</li>
+                <li>Curso de Contrataciones del Estado</li>
+                <li>Curso de Presupuesto Público</li>
               </ul>
               </div>   
           </div>
@@ -166,9 +166,9 @@ export default function Sobreigc() {
                 <h3>Cursos a la medida</h3>
               <p>Diseño personalizado de programas de capacitación adaptados a las necesidades específicas de empresas y entidades públicas.</p>
               <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
+                <li>Capacitación Personalizada</li>
+                <li>Programas In-House</li>
+                <li>Desarrollo de Habilidades Específicas</li>
               </ul>
               </div>   
           </div>
@@ -182,9 +182,9 @@ export default function Sobreigc() {
                 <h3>Congresos y Eventos</h3>
               <p>Organización de congresos, foros y convenciones de alto impacto a nivel nacional e internacional.</p>
               <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
+                <li>Congresos Nacionales</li>
+                <li>Congresos Internacionales</li>
+                <li>Foros y Convenciones</li>
               </ul>
               </div>   
           </div>
@@ -198,9 +198,9 @@ export default function Sobreigc() {
                 <h3>Consultores</h3>
               <p>Capacitación para profesionales en gestión pública y empresarial, fortaleciendo competencias administrativas y de liderazgo.</p>
               <ul>
-                <li>1.</li>
-                <li>2.</li>
-                <li>3.</li>
+                <li>Asesoría en Gestión Pública</li>
+                <li>Capacitación Empresarial</li>
+                <li>Desarrollo de Liderazgo</li>
               </ul>
               </div>   
           </div>
@@ -212,6 +212,7 @@ export default function Sobreigc() {
         ref={seccion5Ref}>
         <img src="/img/I-1.png" alt="1" /><img src="/img/I-2.png" alt="2" /><img src="/img/I-3.jpg" alt="3" /><img src="/img/I-4.jpg" alt="4" /><img src="/img/I-5.png" alt="5" />
       </div>
+    </div>
     </>
   );
 }

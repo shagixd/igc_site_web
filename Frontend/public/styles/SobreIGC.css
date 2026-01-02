@@ -1,12 +1,17 @@
 body {
     background-color: #ffffff;
+    margin: 0; padding: 0;
+}
+.sobreigc {
+    width: 100%; height: auto;
+    margin: 0; padding: 1% 15%;
+    box-sizing: border-box;
 }
 .fondo-inicio-central {
   position: relative; /* necesario para que ::before se posicione relativo a este contenedor */
   background: url(../img/prueba.jpg) no-repeat center center / cover;
-  width: 100%;
-  padding: 8% 0;
-  margin: 0;
+  width: 100%; height: auto;
+  margin-top: 125px; padding: 5% 0;
   overflow: hidden;
 }
 
@@ -24,9 +29,8 @@ body {
   z-index: 2; /* para que el texto esté encima del overlay */
 }
 
-
 .fondo-inicio-central h3 {
-  font-size: clamp(12px, 2vw, 28px);
+  font-size: clamp(12px, 2vw, 20px);
   color: #003cff;
   margin: 0;
   text-shadow: #ffffff 0px 0px 3px, #ffffff 1px 0px 2px;
@@ -34,15 +38,15 @@ body {
 }
 
 .fondo-inicio-central h2 {
-  font-size: clamp(20px, 7vw, 100px);
-  margin-bottom: 3%;
+  font-size: clamp(20px, 6vw, 65px);
+  margin-bottom: 2%;
   color: #ffffff;
   text-shadow: #006eff 0px 0px 10px, #002fff 0px 0px 5px;
   text-align: center;
 }
 
 .fondo-inicio-central p {
-  font-size: clamp(8px, 2vw, 30px);
+  font-size: clamp(10px, 2vw, 22px);
   color: #ffffff;
   text-shadow: 0 0 3px black;
   margin: 0;
@@ -51,25 +55,26 @@ body {
 
 .seccion-1 {
     display: flex;
-    width: 70%; height: auto;
-    margin: 6% auto;
-    gap: 1%;
+    width: 80%; height: auto;
+    justify-content: space-between;
+    margin: 3% auto;
 }
 .seccion1-texto {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 60%;
+    width: 50%;
 }
 .seccion1-texto h2 {
-    font-size: clamp(12px, 5vw, 64px);
-    margin: 0;
+    font-size: clamp(12px, 4vw, 50px);
+    text-decoration: underline;
+    margin-bottom: 5%;
     color: #0067ee;
     text-align: center;
 }
 .seccion1-texto p {
-    font-size: clamp(9px, 3vw, 25px);
+    font-size: clamp(8px, 2vw, 22px);
     text-align: center;
     margin: 0;
     color: #363636;
@@ -113,22 +118,22 @@ body {
 .seccion2-texto h3 {
     color: #1a73e8;
     margin-bottom: 0.2%; /* Reduce el espacio debajo del h3 */
-    font-size: clamp(8px, 2vw, 25px);
+    font-size: clamp(8px, 2vw, 22px);
 }
 
 .seccion2-texto h2 {
-    font-size: clamp(12px, 5vw, 55px);
+    font-size: clamp(10px, 4vw, 42px);
     font-weight: 800;
     margin-top: 0;
     margin-bottom: 0.1em;
 }
 .seccion2-texto p {
     color: #1f1f1f;
-    font-size: clamp(8px, 3vw, 25px);
+    font-size: clamp(8px, 2vw, 22px);
 }
 .seccion2-texto li {
     color: #1a1a1a;
-    font-size: clamp(8px, 2vw, 22px);
+    font-size: clamp(8px, 1.5vw, 18px);
 }
 .seccion2-img {
     flex: 0 0 50%;
@@ -172,26 +177,25 @@ body {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 }
 .seccion3-vision, .seccion3-mision {
-    width: 45%;
+    width: 42%;
     height: auto;
-    margin: 2% 1%;
     border: 1px solid  #007bff;
 }
 .seccion3-mision h3, .seccion3-vision h3, .seccion3-metodologia h3 {
     text-align: center;
     margin: 0;
     padding-top: 1.5%;
-    font-size: clamp(14px, 3vw, 40px);
+    font-size: clamp(11px, 2.2vw, 30px);
     color: #000000;                    
 }
 .seccion3-mision p, .seccion3-vision p, .seccion3-metodologia p{
     text-align: center;
     color: rgb(26, 26, 26);
     margin: 3%;   
-    font-size: clamp(12px, 2vw, 24px);
+    font-size: clamp(10px, 1vw, 18px);
 }
 .caja-icon {
     display: flex;
@@ -202,13 +206,12 @@ body {
     background-color:  #0069da;
 }
 .icon {
-    font-size: clamp(26px, 4vw, 72px);
+    font-size: clamp(20px, 4vw, 55px);
     margin: 2.5% auto;
     color: #ffffff;
 }
 .seccion3-metodologia {
-    width: 80%; min-width: 250px;
-    height: auto;
+    width: 80%; height: auto;
     margin: 1.5% 1%;
     border: 1px solid  #007bff;
 }
@@ -233,7 +236,7 @@ body {
 }
 .titulo-con-lineas h2 {
     margin: 0;
-    font-size: clamp(24px, 3.5vw, 56px);
+    font-size: clamp(18px, 3vw, 36px);
     color: #0077ff;
     flex-shrink: 0;
 }
@@ -245,11 +248,11 @@ body {
 }
 .seccion4-texto h3 {
     margin: 0;
-    font-size: clamp(12px, 1.2vw, 25px);
+    font-size: clamp(10px, 1vw, 22px);
 }
 .seccion4-texto p {
     margin: 1% auto;
-    font-size: clamp(10px, 1.2vw, 24px);
+    font-size: clamp(9px, 1vw, 18px);
     color: #1f1f1f;
 }
 
@@ -260,10 +263,9 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    box-shadow: 0 0 3px rgb(184, 184, 184);
 }
 .cajas {
-    width: 40%; height: auto;
+    max-width: 500px; width: 45%; height: auto;
     display: flex;
     margin: 2.5% auto;
     box-shadow: 0px 0px 2px rgba(56, 136, 255, 0.986),0px 0px 5px rgba(56, 136, 255, 0.753);
@@ -297,11 +299,11 @@ body {
     text-align: center;
     color: rgb(255, 255, 255);
     margin: 1% 0;
-    font-size: clamp(12px, 1.3vw, 24px);
+    font-size: clamp(10px, 1vw, 20px);
 }
 .caja-contenedora2 p{
     text-align: center;
-    font-size: clamp(9px, 1.1vw, 18px);
+    font-size: clamp(8px, 1vw, 16px);
     color: #ffffff;
     margin: 2% 0;
 }
@@ -312,10 +314,10 @@ body {
   overflow-wrap: break-word;
   list-style: none;
   list-style-type: circle; /* aquí pones circle */
-  padding-left: 20px;
+  padding-left: 10%;
 }
 .caja-contenedora2 li {
-  font-size: clamp(8px, 1vw, 18px);
+  font-size: clamp(8px, 1vw, 16px);
   color: #ffffff;
   margin: 1% 0;
 }

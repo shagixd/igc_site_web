@@ -2,8 +2,19 @@
 .nav-desktop {
   display: flex;
   width: 100%;
-  align-items: center;
-  padding: 1% 0;
+  align-items: center; justify-content: space-evenly;
+  padding: 1% 10%; margin: 0;
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  position: fixed; box-sizing: border-box;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-desktop.hidden {
+  transform: translateY(-100%);
 }
 
 .espacio-logo {
@@ -19,8 +30,8 @@
 
 .espacio-nav {
   width: 70%;
-  margin-right: 5%;
   display: flex;
+  margin: 0 2.5%;
   flex-wrap: wrap;
 }
 
@@ -40,11 +51,11 @@
   flex: 1;
   text-align: center;
   color: rgb(0, 41, 153);
-  font-size: clamp(14px, 1vw, 22px);
+  font-size: clamp(10px, 1vw, 14px);
   position: relative;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  align-items: stretch;
+  justify-content: space-evenly;
 }
 
 .nav-item a {
@@ -52,10 +63,14 @@
   text-decoration: none;
   cursor: pointer;
   gap: 5px;
-  font-size: clamp(14px, 1vw, 22px);
+  margin: 0 2%;
+  font-size: clamp(10px, 1vw, 16px);
 }
-.nav-item a:hover {
-  text-shadow: 0 0 5px rgba(0, 38, 189, 0.536);
+.nav-item svg {
+  font-size: clamp(12px, 1.5vw, 18px);
+}
+.nav-item svg:hover, a:hover {
+  text-shadow: 0 0 1px rgba(0, 68, 255, 0.76);
   scale: 1.05;
   text-decoration: underline;
 }
@@ -66,8 +81,15 @@
   width: 100%;
   background-color: #fff;
   border-top: 1px solid #ddd;
-  position: relative;
-  padding: 1% 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.nav-mobile.hidden {
+  transform: translateY(-100%);
 }
 
 .mobile-header {

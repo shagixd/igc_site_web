@@ -4,7 +4,7 @@
   align-items: center;
   background: #1b7ecfff;
   padding: 2%;
-  margin-bottom: 4%;
+  margin-bottom: 4%; margin-top: 125px;
   gap: 2%;
   flex-wrap: wrap;
 }
